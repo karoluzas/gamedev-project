@@ -54,20 +54,20 @@ Karolis Vėgėla
 |**Objectives** |**Deadline** |
 | - | - |
 |[Player movement mechanics](https://github.com/karoluzas/gamedev-project/issues/13) |October 16th|
-|Player ranged and melee mechanics |October 18th|
-|Enemy base implementation (moves towards the player, inflicts damage on contact) |October 23rd|
-|Finished tile set |October 23rd|
-|Finished character sprite work |October 23rd|
-|Main hub zone level design |October 26th|
-|Western zone level design |October 26th|
-|Material gathering implementation |October 31st  |
-|Multi-shot gun upgrade implementation |November 4th|
-|Bloodlust melee upgrade implementation |November 6th|
-|Working prototype for presentation |November 9th|
-|Upgrade/Repair station implementation |November 11th|
-|Eastern zone level design |November 17th|
-|Southern zone level design  |November 17th|
-|All upgrades implemented  |November 22nd|
-|Final UI implementation |November 26th|
-|Menu, credit, game over screens |November 20th|
-|Finished game prototype |November 30th|
+|[Player ranged and melee mechanics](https://github.com/karoluzas/gamedev-project/issues/1) |October 18th|
+|[Enemy base implementation (moves towards the player, inflicts damage on contact)](https://github.com/karoluzas/gamedev-project/issues/2) |October 23rd|
+|[Finished tile set](https://github.com/karoluzas/gamedev-project/issues/3) |October 23rd|
+|[Finished character sprite work](https://github.com/karoluzas/gamedev-project/issues/4) |October 23rd|
+|[Main hub zone level design](https://github.com/karoluzas/gamedev-project/issues/5) |October 26th|
+|[Western zone level design](https://github.com/karoluzas/gamedev-project/issues/6) |October 26th|
+|[Material gathering implementation](https://github.com/karoluzas/gamedev-project/issues/7) |October 31st  |
+|[Multi-shot gun upgrade implementation](https://github.com/karoluzas/gamedev-project/issues/8) |November 4th|
+|[Bloodlust melee upgrade implementation](https://github.com/karoluzas/gamedev-project/issues/9) |November 6th|
+|[Working prototype for presentation](https://github.com/karoluzas/gamedev-project/issues/10) |November 9th|
+|[Upgrade/Repair station implementation](https://github.com/karoluzas/gamedev-project/issues/11) |November 11th|
+|[Eastern zone level design](https://github.com/karoluzas/gamedev-project/issues/12) |November 17th|
+|[Southern zone level design](https://github.com/karoluzas/gamedev-project/issues/13)  |November 17th|
+|[All upgrades implemented](https://github.com/karoluzas/gamedev-project/issues/14)  |November 22nd|
+|[Final UI implementation](https://github.com/karoluzas/gamedev-project/issues/15) |November 26th|
+|[Menu, credit, game over screens](https://github.com/karoluzas/gamedev-project/issues/16) |November 20th|
+|[Finished game prototype](https://github.com/karoluzas/gamedev-project/issues/17) |November 30th|
