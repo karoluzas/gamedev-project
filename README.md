@@ -1,8 +1,6 @@
-# Team BASED
+# Team BASED - _Martialis Infernus_
 
-## Martialis Infernus
-
-### Team
+## Team
 
 Deividas Brazauskas
 
@@ -12,7 +10,7 @@ Ernestas Ščevinskas
 
 Karolis Vėgėla
 
-### Table 1 Simple Weapon Upgrades
+## Table 1 Simple Weapon Upgrades
 
 |**Simple upgrades** |
 | - |
@@ -22,7 +20,7 @@ Karolis Vėgėla
 |Range |“Swing” size |
 |Projectile speed |“Swing” speed |
 
-### Table 2 Special Weapon Upgrades
+## Table 2 Special Weapon Upgrades
 
 |**Special upgrades** |
 | - |
@@ -32,7 +30,7 @@ Karolis Vėgėla
 |Damage trail (A damaging line is created where projectiles pass for a couple seconds) |Projectile deflect (projectile contact is required) (hitting projectiles now deflects them towards enemies instead) |
 |Charged Shot (Bullets now need to be charged, but do area of effect damage) |Wind shield (a weak shield is created after a swing which stays around for a few seconds) |
 
-### Table 3 Enemy Types
+## Table 3 Enemy Types
 
 |**Enemy** |**Attacking Style** |**Description** |
 | - | - | - |
@@ -41,7 +39,7 @@ Karolis Vėgėla
 |Asmodeus |Shoots projectiles in a spiral. |It has a very low moving speed, but shoots multiple projectiles in a frame while rotating. |
 |Belphegor |Charges at the player and does heavy damage on contact. |Barely moves while idle, but after charging, movement speed is the highest of all creatures, but only goes in a line. |
 
-### Table 4 Key bindings
+## Table 4 Key bindings
 
 |**Key** |**Action** |**Key** |**Action** |
 | - | - | - | - |
@@ -51,7 +49,7 @@ Karolis Vėgėla
 |E |Interact with certain objects |Esc |Pause game |
 |Tab |Show inventory |||
 
-### Table 5 Detailed Schedule
+## Table 5 Detailed Schedule
 
 |**Objectives** |**Deadline** |
 | - | - |
