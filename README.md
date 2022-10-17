@@ -70,4 +70,4 @@ Karolis Vėgėla
 |[All upgrades implemented](https://github.com/karoluzas/gamedev-project/issues/15)  |November 22nd|
 |[Final UI implementation](https://github.com/karoluzas/gamedev-project/issues/16) |November 26th|
 |[Menu, credit, game over screens](https://github.com/karoluzas/gamedev-project/issues/17) |November 20th|
-|[Finished game prototype](https://github.com/karoluzas/gamedev-project/issues/17) |November 30th|
+|[Finished game prototype](https://github.com/karoluzas/gamedev-project/issues/18) |November 30th|
