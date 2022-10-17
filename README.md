@@ -53,8 +53,7 @@ Karolis Vėgėla
 
 |**Objectives** |**Deadline** |
 | - | - |
-|GitHub setup |October 14th|
-|Player movement mechanics |October 16th|
+|[Player movement mechanics](https://github.com/karoluzas/gamedev-project/issues/13) |October 16th|
 |Player ranged and melee mechanics |October 18th|
 |Enemy base implementation (moves towards the player, inflicts damage on contact) |October 23rd|
 |Finished tile set |October 23rd|
