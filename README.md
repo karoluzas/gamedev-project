@@ -43,11 +43,11 @@ Karolis Vėgėla
 
 |**Key** |**Action** |**Key** |**Action** |
 | - | - | - | - |
-|W |Moves the player up |A |Moves the player left |
-|S |Moves the player down |D |Moves the player right |
-|Right mouse button |Uses melee weapon |Left mouse button |Uses ranged weapon |
-|E |Interact with certain objects |Esc |Pause game |
-|Tab |Show inventory |||
+|A |Moves the player left |D |Moves the player right |
+|W |Moves the player up |S |Moves the player down |
+|Left mouse button |Uses ranged weapon |Right mouse button |Uses melee weapon |
+|E |Interact with certain objects |Tab |Show inventory|
+| Esc |Pause game |||
 
 ## Table 5 Detailed Schedule
 
