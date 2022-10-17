@@ -66,8 +66,8 @@ Karolis Vėgėla
 |[Working prototype for presentation](https://github.com/karoluzas/gamedev-project/issues/10) |November 9th|
 |[Upgrade/Repair station implementation](https://github.com/karoluzas/gamedev-project/issues/11) |November 11th|
 |[Eastern zone level design](https://github.com/karoluzas/gamedev-project/issues/12) |November 17th|
-|[Southern zone level design](https://github.com/karoluzas/gamedev-project/issues/13)  |November 17th|
-|[All upgrades implemented](https://github.com/karoluzas/gamedev-project/issues/14)  |November 22nd|
-|[Final UI implementation](https://github.com/karoluzas/gamedev-project/issues/15) |November 26th|
-|[Menu, credit, game over screens](https://github.com/karoluzas/gamedev-project/issues/16) |November 20th|
+|[Southern zone level design](https://github.com/karoluzas/gamedev-project/issues/14)  |November 17th|
+|[All upgrades implemented](https://github.com/karoluzas/gamedev-project/issues/15)  |November 22nd|
+|[Final UI implementation](https://github.com/karoluzas/gamedev-project/issues/16) |November 26th|
+|[Menu, credit, game over screens](https://github.com/karoluzas/gamedev-project/issues/17) |November 20th|
 |[Finished game prototype](https://github.com/karoluzas/gamedev-project/issues/17) |November 30th|
