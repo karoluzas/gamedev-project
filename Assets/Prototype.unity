@@ -1521,6 +1521,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5613741598075864364, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: sceneCamera
+      value: 
+      objectReference: {fileID: 941464300}
     - target: {fileID: 6411898890120153311, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1565,6 +1569,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7828182944061342768, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: sceneCamera
+      value: 
+      objectReference: {fileID: 941464300}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7b77d89355717841be7c25584620f1d, type: 3}
 --- !u!1 &1465241194
