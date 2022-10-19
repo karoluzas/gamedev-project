@@ -4,26 +4,21 @@ using UnityEngine;
 
 public class Slash : MonoBehaviour
 {
-    float slashLifetime = 0.3f;
-    float timeLeft;
+    float slashLifetime = 0.3f; 
 
     void Start()
     {
-        timeLeft = slashLifetime;
-
+        slashLifetime = 0.3f;
     }
-
-    //bool slashExists = false;
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        //Damage here over time (slashLifetime) it stays on screen
+    private void OnTriggerEnter2D(Collider2D other) {
+        //Damage if(other.gameOjbect.tag == "enemy") here over the time (slashLifetime) it stays on screen
     }
-
+    
     void Update()
     {
-        if(timeLeft > 0)
+        if(slashLifetime > 0)
         {
-            timeLeft -= Time.deltaTime;
+            slashLifetime -= Time.deltaTime;
         }
         else
         {

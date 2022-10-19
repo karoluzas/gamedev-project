@@ -6,18 +6,26 @@ public class Melee : MonoBehaviour
 {
     public Transform slashPoint;
     public GameObject slashPrefab;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
+    float slashCooldown = 0.6f; //Upgradable value
+    float timeLeft;
+    bool canSlash = true;
 
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire2"))
+        if(timeLeft > 0)
+        {
+            canSlash = false;
+            timeLeft -= Time.deltaTime;
+        }
+        else
+        {
+            canSlash = true;
+        }
+        if(Input.GetButtonDown("Fire2") && canSlash)
         {
             Swing();
+            timeLeft = slashCooldown;
         }
         
     }

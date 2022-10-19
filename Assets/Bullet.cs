@@ -6,7 +6,8 @@ public class Bullet : MonoBehaviour
 {
     void OnCollisionEnter2D(Collision2D collision)
     {
+        //Damage enemy here once
         Destroy(gameObject);
-        //Damage enemy here
+         Debug.Log("hits");
     }
 }
