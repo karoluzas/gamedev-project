@@ -234,6 +234,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4017991304010389345}
+  - component: {fileID: 3276699521363211520}
+  - component: {fileID: 7760234507670275660}
   m_Layer: 0
   m_Name: Aim
   m_TagString: Untagged
@@ -257,3 +259,32 @@ Transform:
   m_Father: {fileID: 6411898890120153311}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3276699521363211520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8820206091230525821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ef87fe67bccad49aee9796a38bb2d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 4199425622631045821}
+  bulletPrefab: {fileID: 2992932278811495360, guid: 5efaab38eae746a418c9bfb0a0d8d623, type: 3}
+  bulletForce: 10
+--- !u!114 &7760234507670275660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8820206091230525821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9a13536bada29d45a1a6d8a5fe77c6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slashPoint: {fileID: 4199425622631045821}
+  slashPrefab: {fileID: 7668388760291651899, guid: 426e15ef869b4344b9c9285ceeda7108, type: 3}

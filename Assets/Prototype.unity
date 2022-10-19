@@ -123,36 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &117236200 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8820206091230525821, guid: a7b77d89355717841be7c25584620f1d, type: 3}
-  m_PrefabInstance: {fileID: 1107048722}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &117236201 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4017991304010389345, guid: a7b77d89355717841be7c25584620f1d, type: 3}
-  m_PrefabInstance: {fileID: 1107048722}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &117236203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 117236200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94ef87fe67bccad49aee9796a38bb2d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 357244013}
-  bulletPrefab: {fileID: 2992932278811495360, guid: 5efaab38eae746a418c9bfb0a0d8d623, type: 3}
-  bulletForce: 10
---- !u!4 &357244013 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4199425622631045821, guid: a7b77d89355717841be7c25584620f1d, type: 3}
-  m_PrefabInstance: {fileID: 1107048722}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &359216873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,26 +1426,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &899943745 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3185557607124738935, guid: a7b77d89355717841be7c25584620f1d, type: 3}
-  m_PrefabInstance: {fileID: 1107048722}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &899943751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 899943745}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94ef87fe67bccad49aee9796a38bb2d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 117236201}
-  bulletPrefab: {fileID: 2992932278811495360, guid: 5efaab38eae746a418c9bfb0a0d8d623, type: 3}
-  bulletForce: 10
 --- !u!1 &941464298
 GameObject:
   m_ObjectHideFlags: 0
