@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Melee : MonoBehaviour
+public class MeleeController : MonoBehaviour
 {
     public Transform slashPoint;
     public GameObject slashPrefab;
