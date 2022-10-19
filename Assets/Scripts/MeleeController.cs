@@ -29,6 +29,6 @@ public class MeleeController : MonoBehaviour
     }
     void Swing()
     {
-        GameObject bullet = Instantiate(slashPrefab, slashPoint.position, slashPoint.rotation * Quaternion.Euler(0, 0, 90));
+        GameObject slash = Instantiate(slashPrefab, slashPoint.position, slashPoint.rotation * Quaternion.Euler(0, 0, 90));
     }
 }
