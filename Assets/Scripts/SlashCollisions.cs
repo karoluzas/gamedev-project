@@ -9,7 +9,7 @@ public class SlashCollisions : MonoBehaviour
         slashLifetime = 0.2f;
     }
     private void OnTriggerEnter2D(Collider2D other) {
-        //Damage if(other.gameOjbect.tag == "enemy") here over the time (slashLifetime) it stays on screen
+        //TODO - Damage if(other.gameOjbect.tag == "enemy") here over the time (slashLifetime) it stays on screen
     }
     
     void Update()
