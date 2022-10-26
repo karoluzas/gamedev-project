@@ -12,7 +12,6 @@ public class EnemyAI : MonoBehaviour
     public float maxSpeed = 1f;
     public float nextWaypointDistance = 3f;
 
-
     Path path;
     int currentWaypoint = 0;
     bool reachedEndOfPath = false;
@@ -39,19 +38,13 @@ public class EnemyAI : MonoBehaviour
 
     void OnPathComplete(Path p)
     {
-        if(!p.error)
+        if (!p.error)
         {
             path = p;
             currentWaypoint = 0;
         }
     }
 
-    void Update()
-    {
-        
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         if(path == null)

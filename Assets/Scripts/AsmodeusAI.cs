@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-public class SathanasAI : MonoBehaviour
+public class AsmodeusAI : MonoBehaviour
 {
 
     public Transform target;
@@ -11,12 +11,17 @@ public class SathanasAI : MonoBehaviour
 
     public float acceleration = 1f;
     public float maxSpeed = 1f;
-    
+
+    public float detectionRange = 1.25f;
     public float nextWaypointDistance = 3f;
-    public float detectionRange = 1f;
     
     public float bulletForce = 4f;
     public float rateOfFire = 1f;
+
+    float angle = 0f;
+
+    [SerializeField]
+    private float angleBetweenBullets = 10f;
 
     float timeLeft = 0f;
     bool canFire;
@@ -25,18 +30,13 @@ public class SathanasAI : MonoBehaviour
     int currentWaypoint = 0;
     bool reachedEndOfPath = false;
 
-     
+
     Seeker seeker;
     Rigidbody2D rb;
-    GameObject aim;
-
-    // Start is called before the first frame update
     void Start()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-        aim = this.transform.Find("Aim").gameObject;
-
         InvokeRepeating("UpdatePath", 0f, .5f);
         seeker.StartPath(rb.position, target.position, OnPathComplete);
     }
@@ -59,10 +59,6 @@ public class SathanasAI : MonoBehaviour
 
     private void Update()
     {
-        Vector2 direction = ((Vector2)target.position - rb.position).normalized;
-
-        aim.transform.localPosition = new Vector3(0.2f * direction.x, 0.2f * direction.y);
-
         if (InShootingRange())
         {
             if (timeLeft < 0f)
@@ -74,18 +70,10 @@ public class SathanasAI : MonoBehaviour
             {
                 timeLeft -= Time.deltaTime;
             }
-
+            
             if(canFire)
             {
-                var angle = Vector2.SignedAngle(Vector2.right, direction);
-                var targetRotation = new Vector3(0, 0, angle);
-                var lookTo = Quaternion.Euler(targetRotation);
-
-                GameObject bullet = Instantiate(bulletPrefab, aim.transform.position, lookTo * Quaternion.Euler(0, 0, 90));
-
-                Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
-                bulletRb.AddForce(direction * bulletForce, ForceMode2D.Impulse);
-
+                Fire();
                 canFire = false;
             }
         }
@@ -95,15 +83,16 @@ public class SathanasAI : MonoBehaviour
     void FixedUpdate()
     {
 
-        if(path == null)
+        if (path == null)
             return;
-        
-        if(currentWaypoint >= path.vectorPath.Count || Vector2.Distance(rb.position, target.position) < detectionRange)
+
+        if (currentWaypoint >= path.vectorPath.Count || Vector2.Distance(rb.position, target.position) < detectionRange)
         {
             reachedEndOfPath = true;
             return;
         }
-        else {
+        else
+        {
             reachedEndOfPath = false;
         }
 
@@ -116,7 +105,7 @@ public class SathanasAI : MonoBehaviour
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
-        if(distance < nextWaypointDistance)
+        if (distance < nextWaypointDistance)
         {
             ++currentWaypoint;
         }
@@ -129,5 +118,30 @@ public class SathanasAI : MonoBehaviour
             return true;
         }
         else return false;
+    }
+
+    void Fire()
+    {
+        for(int i = 0; i <= 1; ++i)
+        {
+            float bulDirX = transform.position.x + Mathf.Sin(((angle + 180f * i) * Mathf.PI) / 180f);
+            float bulDirY = transform.position.y + Mathf.Cos(((angle + 180f * i) * Mathf.PI) / 180f);
+
+            Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
+            Vector2 bulDir = (bulMoveVector - transform.position).normalized;
+
+            GameObject bullet = Instantiate(bulletPrefab, transform.localPosition, transform.localRotation);
+
+            Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
+            //bulletRb.velocity = bulDir * bulletForce;
+            bulletRb.AddForce(bulDir * bulletForce, ForceMode2D.Impulse);
+        }
+
+        angle += angleBetweenBullets;
+
+        if (angle >= 360f)
+        {
+            angle = 0f;
+        }
     }
 }
