@@ -18,9 +18,6 @@ public class EnemyBulletCollision : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Enemy") || collision.otherCollider.CompareTag("Enemy"))
-            return;
-
         if (collision.collider.CompareTag("Player") || collision.otherCollider.CompareTag("Player"))
         {
             if (playerController)
@@ -28,7 +25,6 @@ public class EnemyBulletCollision : MonoBehaviour
                 playerController.DecreaseHealth(damageOnHit);
             }
         }
-        Debug.Log("Bullet collision" + collision.collider.name);
         Destroy(gameObject);
     }
 

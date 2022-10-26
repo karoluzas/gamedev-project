@@ -33,10 +33,14 @@ public class AsmodeusAI : MonoBehaviour
 
     Seeker seeker;
     Rigidbody2D rb;
+    GameObject aim;
+
     void Start()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+        aim = this.transform.Find("Aim").gameObject;
+
         InvokeRepeating("UpdatePath", 0f, .5f);
         seeker.StartPath(rb.position, target.position, OnPathComplete);
     }
@@ -122,15 +126,15 @@ public class AsmodeusAI : MonoBehaviour
 
     void Fire()
     {
-        for(int i = 0; i <= 1; ++i)
+        for(int i = 0; i <= 2; ++i)
         {
-            float bulDirX = transform.position.x + Mathf.Sin(((angle + 180f * i) * Mathf.PI) / 180f);
-            float bulDirY = transform.position.y + Mathf.Cos(((angle + 180f * i) * Mathf.PI) / 180f);
+            float bulDirX = aim.transform.position.x + Mathf.Sin(((angle + 180f * i) * Mathf.PI) / 180f);
+            float bulDirY = aim.transform.position.y + Mathf.Cos(((angle + 180f * i) * Mathf.PI) / 180f);
 
             Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
             Vector2 bulDir = (bulMoveVector - transform.position).normalized;
 
-            GameObject bullet = Instantiate(bulletPrefab, transform.localPosition, transform.localRotation);
+            GameObject bullet = Instantiate(bulletPrefab, aim.transform.position, aim.transform.rotation);
 
             Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
             //bulletRb.velocity = bulDir * bulletForce;
