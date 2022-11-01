@@ -1249,6 +1249,7 @@ GameObject:
   - component: {fileID: 631103807}
   - component: {fileID: 631103806}
   - component: {fileID: 631103805}
+  - component: {fileID: 631103809}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1338,6 +1339,19 @@ RectTransform:
   m_AnchoredPosition: {x: 440.2, y: 195.4}
   m_SizeDelta: {x: 880.39996, y: 390.8}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &631103809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631103804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac6c90e202647641a52b0d27c5320be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 1048012923}
 --- !u!1 &738676581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1936,12 +1950,12 @@ GameObject:
   - component: {fileID: 1048012926}
   - component: {fileID: 1048012925}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Simple Upgrades Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1048012924
 RectTransform:
   m_ObjectHideFlags: 0

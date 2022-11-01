@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -18,7 +16,10 @@ public class PlayerController : MonoBehaviour
 
     void Update(){
         // Gun aiming rotation
-        mousePosition = sceneCamera.ScreenToWorldPoint(Input.mousePosition);
+        if (!MenuController.IsGamePaused)
+        {
+            mousePosition = sceneCamera.ScreenToWorldPoint(Input.mousePosition);
+        }
         Vector3 aimDirection = (mousePosition - transform.position).normalized;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
         aimTransform.eulerAngles = new Vector3(0, 0, aimAngle);

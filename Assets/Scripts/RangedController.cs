@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RangedController : MonoBehaviour
 {
-    public Transform firePoint;
+    public Transform firePoint; 
     public GameObject bulletPrefab;
     float fireCooldown = 0.3f; //Upgradable value
     float timeLeft = 0;
