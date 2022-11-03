@@ -3,8 +3,8 @@ using UnityEngine;
 //TODO - uncomment relevant places and update, when enemies are implemented
 public class BulletCollisions : MonoBehaviour
 {
-    public float damageOnHit = 5f * RangedWeaponUpgrades.Damage;
-    public float bulletLifetime = 0.2f * RangedWeaponUpgrades.BulletRange; //TODO - change this to range
+    public float damageOnHit = 5f;
+    public float bulletRange = 0.2f; //TODO - change this to range
 
     //GameObject enemy;
     //EnemyController enemyController;
@@ -34,9 +34,9 @@ public class BulletCollisions : MonoBehaviour
 
     void Update()
     {
-        if (bulletLifetime > 0)
+        if (bulletRange > 0)
         {
-            bulletLifetime -= Time.deltaTime;
+            bulletRange -= Time.deltaTime;
         }
         else
         {

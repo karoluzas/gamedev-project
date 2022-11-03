@@ -4,11 +4,11 @@ public class MeleeController : MonoBehaviour
 {
     public Transform slashPoint;
     public GameObject slashPrefab;
-    
-    float slashCooldown = 0.6f; //Upgradable value
-    float slashSize = 1.0f * MeleeWeaponUpgrades.SwingSize;
     float timeLeft;
     bool canSlash = true;
+    
+    public float slashCooldown = 0.6f;
+    public float slashSize = 1.0f;
 
     void Update()
     {

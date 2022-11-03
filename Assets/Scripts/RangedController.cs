@@ -4,11 +4,11 @@ public class RangedController : MonoBehaviour
 {
     public Transform firePoint; 
     public GameObject bulletPrefab;
-    float fireCooldown = 0.3f * RangedWeaponUpgrades.Cooldown; //Upgradable value
     float timeLeft = 0;
     bool canFire = true;
 
-    public float bulletForce = 10f * RangedWeaponUpgrades.BulletSpeed;
+    public float fireCooldown = 0.3f;
+    public float bulletForce = 10f;
 
     void Update()
     {  

@@ -10,11 +10,11 @@ public class PlayerController : MonoBehaviour
     private Vector3 mousePosition;
     public Camera sceneCamera;
 
-    void Start(){
+    void Start() {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update(){
+    void Update() {
         // Gun aiming rotation
         if (!MenuController.IsGamePaused)
         {

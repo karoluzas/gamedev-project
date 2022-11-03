@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SlashCollisions : MonoBehaviour
 {
-    public float damageOnHit = 5f * MeleeWeaponUpgrades.Damage;
+    public float damageOnHit = 5f;
     float slashLifetime;
 
     //GameObject enemy;
