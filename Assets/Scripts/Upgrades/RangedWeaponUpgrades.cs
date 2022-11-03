@@ -1,5 +1,7 @@
-public class RangedWeaponUpgrades : CommonWeaponUpgrades
+public static class RangedWeaponUpgrades
 {
-    public float BulletRange;
-    public float BulletSpeed;
+    public static float BulletRange = 1.0f;
+    public static float BulletSpeed = 1.0f;
+    public static float Cooldown = 1.0f;
+    public static float Damage = 1.0f;
 }
