@@ -2045,6 +2045,10 @@ PrefabInstance:
       propertyPath: bulletForce
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3276699521363211520, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: fireCooldown
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 5613741598075864364, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: sceneCamera
       value: 

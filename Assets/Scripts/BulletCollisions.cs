@@ -4,7 +4,8 @@ using UnityEngine;
 public class BulletCollisions : MonoBehaviour
 {
     public float damageOnHit = 5f;
-    public float bulletRange = 0.2f; //TODO - change this to range
+    public float bulletRange = 1f;
+    Vector3 lastPosition;
 
     //GameObject enemy;
     //EnemyController enemyController;
@@ -32,14 +33,21 @@ public class BulletCollisions : MonoBehaviour
         Destroy(gameObject);
     }
 
+    void Awake()
+    {
+        lastPosition = transform.position;
+    }
+
     void Update()
     {
         if (bulletRange > 0)
         {
-            bulletRange -= Time.deltaTime;
+            float traveledRange = Vector3.Distance(transform.position, lastPosition);
+            bulletRange -= traveledRange;
+            lastPosition = transform.position;
         }
-        else
-        {
+
+        if (bulletRange <= 0) {
             Destroy(gameObject);
         }
     }
