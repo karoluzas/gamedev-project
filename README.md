@@ -48,26 +48,3 @@ Karolis Vėgėla
 |Left mouse button |Uses ranged weapon |Right mouse button |Uses melee weapon |
 |E |Interact with certain objects |Tab |Show inventory|
 | Esc |Pause game |||
-
-## Table 5 Detailed Schedule
-
-|**Objectives** |**Deadline** |
-| - | - |
-|[Player movement mechanics](https://github.com/karoluzas/gamedev-project/issues/13) |October 16th|
-|[Player ranged and melee mechanics](https://github.com/karoluzas/gamedev-project/issues/1) |October 18th|
-|[Enemy base implementation (moves towards the player, inflicts damage on contact)](https://github.com/karoluzas/gamedev-project/issues/2) |October 23rd|
-|[Finished tile set](https://github.com/karoluzas/gamedev-project/issues/3) |October 23rd|
-|[Finished character sprite work](https://github.com/karoluzas/gamedev-project/issues/4) |October 23rd|
-|[Main hub zone level design](https://github.com/karoluzas/gamedev-project/issues/5) |October 26th|
-|[Western zone level design](https://github.com/karoluzas/gamedev-project/issues/6) |October 26th|
-|[Material gathering implementation](https://github.com/karoluzas/gamedev-project/issues/7) |October 31st  |
-|[Multi-shot gun upgrade implementation](https://github.com/karoluzas/gamedev-project/issues/8) |November 4th|
-|[Bloodlust melee upgrade implementation](https://github.com/karoluzas/gamedev-project/issues/9) |November 6th|
-|[Working prototype for presentation](https://github.com/karoluzas/gamedev-project/issues/10) |November 9th|
-|[Upgrade/Repair station implementation](https://github.com/karoluzas/gamedev-project/issues/11) |November 11th|
-|[Eastern zone level design](https://github.com/karoluzas/gamedev-project/issues/12) |November 17th|
-|[Southern zone level design](https://github.com/karoluzas/gamedev-project/issues/14)  |November 17th|
-|[All upgrades implemented](https://github.com/karoluzas/gamedev-project/issues/15)  |November 22nd|
-|[Final UI implementation](https://github.com/karoluzas/gamedev-project/issues/16) |November 26th|
-|[Menu, credit, game over screens](https://github.com/karoluzas/gamedev-project/issues/17) |November 20th|
-|[Finished game prototype](https://github.com/karoluzas/gamedev-project/issues/18) |November 30th|
