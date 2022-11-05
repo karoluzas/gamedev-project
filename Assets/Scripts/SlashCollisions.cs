@@ -15,7 +15,6 @@ public class SlashCollisions : MonoBehaviour
 
     void Start()
     {
-        damageOnHit = 5f;
         slashLifetime = 0.2f;
         //enemy = GameObject.Find("Enemy");
         //if (enemy)

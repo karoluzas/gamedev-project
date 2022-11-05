@@ -15,8 +15,6 @@ public class BulletCollisions : MonoBehaviour
 
     void Start()
     {
-        damageOnHit = 5f;
-        bulletRange = 1f;
         //enemy = GameObject.Find("Enemy");
         //if (enemy)
         //    enemyController = enemy.GetComponent<EnemyController>();
