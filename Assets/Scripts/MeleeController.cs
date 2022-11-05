@@ -9,6 +9,7 @@ public class MeleeController : MonoBehaviour
     
     public float slashCooldown = 0.6f;
     public float slashSize = 1.0f;
+    public float damageOnHit = 5f;
 
     void Update()
     {
@@ -31,10 +32,17 @@ public class MeleeController : MonoBehaviour
     void Swing()
     {
         GameObject slash = Instantiate(slashPrefab, slashPoint.position, slashPoint.rotation * Quaternion.Euler(0, 0, 90));
-        SetSize(slash);
+        SetSlashDamageOnHit(slash);
+        SetSlashSize(slash);
     }
 
-    private void SetSize(GameObject slash)
+    private void SetSlashDamageOnHit(GameObject slash)
+    {
+        var slashCollisions = slash.GetComponent<SlashCollisions>();
+        slashCollisions.DamageOnHit = damageOnHit;
+    }
+
+    private void SetSlashSize(GameObject slash)
     {
         Vector3 currentScale = slash.transform.localScale;
         currentScale.x *= slashSize;

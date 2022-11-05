@@ -9,6 +9,8 @@ public class RangedController : MonoBehaviour
 
     public float fireCooldown = 0.3f;
     public float bulletForce = 10f;
+    public float damageOnHit = 5f;
+    public float bulletRange = 1f;
 
     void Update()
     {  
@@ -31,7 +33,21 @@ public class RangedController : MonoBehaviour
     void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation * Quaternion.Euler(0, 0, 90));
+        SetBulletRange(bullet);
+        SetBulletDamageOnHit(bullet);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
+    }
+
+    private void SetBulletRange(GameObject bullet)
+    {
+        var bulletColissions = bullet.GetComponent<BulletCollisions>();
+        bulletColissions.BulletRange = bulletRange;
+    }
+
+    private void SetBulletDamageOnHit(GameObject bullet)
+    {
+        var bulletColissions = bullet.GetComponent<BulletCollisions>();
+        bulletColissions.DamageOnHit = damageOnHit;
     }
 }

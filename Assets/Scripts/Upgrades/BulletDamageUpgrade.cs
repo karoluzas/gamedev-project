@@ -2,11 +2,11 @@
 {
     protected override bool CanUpgrade()
     {
-        return bulletCollisions.damageOnHit < 15.0f;
+        return rangedController.damageOnHit < 15.0f;
     }
 
     protected override void UpgradeValue()
     {
-        bulletCollisions.damageOnHit += 1.0f;
+        rangedController.damageOnHit += 1.0f;
     }
 }

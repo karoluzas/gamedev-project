@@ -2,14 +2,20 @@ using UnityEngine;
 
 public class SlashCollisions : MonoBehaviour
 {
-    public float damageOnHit = 5f;
+    float damageOnHit;
     float slashLifetime;
+
+    public float DamageOnHit
+    {
+        set { damageOnHit = value; }
+    }
 
     //GameObject enemy;
     //EnemyController enemyController;
 
     void Start()
     {
+        damageOnHit = 5f;
         slashLifetime = 0.2f;
         //enemy = GameObject.Find("Enemy");
         //if (enemy)

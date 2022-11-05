@@ -3,19 +3,24 @@ using UnityEngine;
 //TODO - uncomment relevant places and update, when enemies are implemented
 public class BulletCollisions : MonoBehaviour
 {
-    public float damageOnHit = 5f;
-    public float bulletRange = 1f;
+    float damageOnHit;
+    float bulletRange;
     Vector3 lastPosition;
+
+    public float DamageOnHit { set => damageOnHit = value; }
+    public float BulletRange { set => bulletRange = value; }
 
     //GameObject enemy;
     //EnemyController enemyController;
 
-    //void Start()
-    //{
-    //    enemy = GameObject.Find("Enemy");
-    //    if (enemy)
-    //        enemyController = enemy.GetComponent<EnemyController>();
-    //}
+    void Start()
+    {
+        damageOnHit = 5f;
+        bulletRange = 1f;
+        //enemy = GameObject.Find("Enemy");
+        //if (enemy)
+        //    enemyController = enemy.GetComponent<EnemyController>();
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {

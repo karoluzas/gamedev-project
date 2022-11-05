@@ -2,11 +2,11 @@
 {
     protected override bool CanUpgrade()
     {
-        return slashCollisions.damageOnHit < 15.0f - floatingPointAllowedDeviation;
+        return meleeController.damageOnHit < 15.0f - floatingPointAllowedDeviation;
     }
 
     protected override void UpgradeValue()
     {
-        slashCollisions.damageOnHit += 2.5f;
+        meleeController.damageOnHit += 2.5f;
     }
 }
