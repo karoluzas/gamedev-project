@@ -3,8 +3,8 @@ using UnityEngine;
 //TODO - uncomment relevant places and update, when enemies are implemented
 public class BulletCollisions : MonoBehaviour
 {
-    float damageOnHit;
-    float bulletRange;
+    float damageOnHit = 5f;
+    float bulletRange = 1f;
     Vector3 lastPosition;
 
     public float DamageOnHit { set => damageOnHit = value; }

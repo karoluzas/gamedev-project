@@ -5,10 +5,10 @@ public abstract class SimpleUpgradeBase : MonoBehaviour
     protected RangedController rangedController;
     protected MeleeController meleeController;
     protected float floatingPointAllowedDeviation = 0.0001f;
+    public bool MaxUpgradeReached { get; private set; } = false;
 
     public float MaxValue = 0f;
     public float UpgradeValue = 0f;
-    public bool MaxUpgradeReached { get; private set; } = false;
 
     protected void Start()
     {

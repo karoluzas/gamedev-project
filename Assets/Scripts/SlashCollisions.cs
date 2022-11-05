@@ -2,12 +2,18 @@ using UnityEngine;
 
 public class SlashCollisions : MonoBehaviour
 {
-    float damageOnHit;
-    float slashLifetime;
+    float damageOnHit = 5f;
+    float slashLifetime = 0.2f;
 
     public float DamageOnHit
     {
         set { damageOnHit = value; }
+    }
+
+    public float SlashLifetime
+    {
+        get { return slashLifetime; }
+        set { slashLifetime = value; }
     }
 
     //GameObject enemy;
@@ -15,7 +21,6 @@ public class SlashCollisions : MonoBehaviour
 
     void Start()
     {
-        slashLifetime = 0.2f;
         //enemy = GameObject.Find("Enemy");
         //if (enemy)
         //    enemyController = enemy.GetComponent<EnemyController>();
@@ -35,7 +40,7 @@ public class SlashCollisions : MonoBehaviour
     
     void Update()
     {
-        if(slashLifetime > 0)
+        if (slashLifetime > 0)
         {
             slashLifetime -= Time.deltaTime;
         }

@@ -6,10 +6,11 @@ public class MeleeController : MonoBehaviour
     public GameObject slashPrefab;
     float timeLeft;
     bool canSlash = true;
-    
+
     public float slashCooldown = 0.6f;
-    public float slashSize = 1.0f;
+    public float slashSize = 1f;
     public float damageOnHit = 5f;
+    public float slashSpeed = 1f;
 
     void Update()
     {
@@ -29,11 +30,21 @@ public class MeleeController : MonoBehaviour
         }
         
     }
+
     void Swing()
     {
         GameObject slash = Instantiate(slashPrefab, slashPoint.position, slashPoint.rotation * Quaternion.Euler(0, 0, 90));
         SetSlashDamageOnHit(slash);
         SetSlashSize(slash);
+        SetSlashSpeed(slash);
+    }
+
+    private void SetSlashSpeed(GameObject slash)
+    {
+        var animator = slash.GetComponentInChildren<Animator>();
+        animator.SetFloat("slashSpeed", slashSpeed);
+        var slashCollisions = slash.GetComponent<SlashCollisions>();
+        slashCollisions.SlashLifetime /= slashSpeed;
     }
 
     private void SetSlashDamageOnHit(GameObject slash)
