@@ -2,7 +2,7 @@
 {
     protected override bool CanUpgrade()
     {
-        //return meleeController.slashSpeed <= 2.0f; //Todo implement swing speed
+        //return meleeController.slashSpeed < 2.0f; //Todo implement swing speed
         return false;
     }
 

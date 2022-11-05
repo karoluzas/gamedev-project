@@ -6,6 +6,7 @@ public abstract class SimpleUpgradeBase : MonoBehaviour
     protected MeleeController meleeController;
     protected BulletCollisions bulletCollisions;
     protected SlashCollisions slashCollisions;
+    protected float floatingPointAllowedDeviation = 0.0001f;
 
     public bool MaxUpgradeReached = false;
 

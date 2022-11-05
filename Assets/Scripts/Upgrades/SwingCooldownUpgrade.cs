@@ -2,7 +2,7 @@
 {
     protected override bool CanUpgrade()
     {
-        return meleeController.slashCooldown >= 0.3f;
+        return meleeController.slashCooldown > 0.1f + floatingPointAllowedDeviation;
     }
 
     protected override void UpgradeValue()

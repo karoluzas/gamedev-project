@@ -2,11 +2,11 @@
 {
     protected override bool CanUpgrade()
     {
-        return bulletCollisions.bulletRange <= 2.0f;
+        return bulletCollisions.bulletRange < 5.0f;
     }
 
     protected override void UpgradeValue()
     {
-        bulletCollisions.bulletRange += 0.25f;
+        bulletCollisions.bulletRange += 1.0f;
     }
 }

@@ -476,7 +476,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 189805919}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048012931}
+        m_TargetAssemblyTypeName: SimpleUpgradeBase, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &189805919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,7 +610,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 251580224}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048012930}
+        m_TargetAssemblyTypeName: SimpleUpgradeBase, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &251580224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -868,7 +892,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 348526299}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048012929}
+        m_TargetAssemblyTypeName: SimpleUpgradeBase, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &348526299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -990,7 +1026,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 426745035}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048012928}
+        m_TargetAssemblyTypeName: SimpleUpgradeBase, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &426745035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1112,7 +1160,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 451146339}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048012927}
+        m_TargetAssemblyTypeName: SimpleUpgradeBase, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &451146339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1280,7 +1340,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 472128551}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048012934}
+        m_TargetAssemblyTypeName: SimpleUpgradeBase, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &472128551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2584,6 +2656,14 @@ GameObject:
   - component: {fileID: 1048012924}
   - component: {fileID: 1048012926}
   - component: {fileID: 1048012925}
+  - component: {fileID: 1048012927}
+  - component: {fileID: 1048012934}
+  - component: {fileID: 1048012933}
+  - component: {fileID: 1048012932}
+  - component: {fileID: 1048012931}
+  - component: {fileID: 1048012930}
+  - component: {fileID: 1048012929}
+  - component: {fileID: 1048012928}
   m_Layer: 5
   m_Name: Simple Upgrades Menu
   m_TagString: Untagged
@@ -2650,6 +2730,110 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048012923}
   m_CullTransparentMesh: 1
+--- !u!114 &1048012927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048012923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14cac224a8ad7a64e9a3adf3bec590df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxUpgradeReached: 0
+--- !u!114 &1048012928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048012923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d21fe433e6e9b09499a34277c925b341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxUpgradeReached: 0
+--- !u!114 &1048012929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048012923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6abf8871b81e66b4db6d69a8056e32a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxUpgradeReached: 0
+--- !u!114 &1048012930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048012923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e4212dc63fdc3c418845bd201c7154f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxUpgradeReached: 0
+--- !u!114 &1048012931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048012923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2efeb300c33a194f90097eba9b31f7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxUpgradeReached: 0
+--- !u!114 &1048012932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048012923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830aa7b3b1333254e805bb08fa5d4a2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxUpgradeReached: 0
+--- !u!114 &1048012933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048012923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ba6db65d82af44485f5142ee76d760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxUpgradeReached: 0
+--- !u!114 &1048012934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048012923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0244c48f36c97749aa7ac435dfa271c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxUpgradeReached: 0
 --- !u!1 &1083515403
 GameObject:
   m_ObjectHideFlags: 0
@@ -4853,7 +5037,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1458617156}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048012932}
+        m_TargetAssemblyTypeName: SimpleUpgradeBase, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1458617156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8749,7 +8945,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1970092804}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048012933}
+        m_TargetAssemblyTypeName: SimpleUpgradeBase, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1970092804
 MonoBehaviour:
   m_ObjectHideFlags: 0
