@@ -4,11 +4,11 @@ public class BulletCooldownUpgrade : SimpleUpgradeBase
 {
     protected override bool CanUpgrade()
     {
-        return rangedController.fireCooldown > 0.1f + floatingPointAllowedDeviation;
+        return rangedController.fireCooldown > MaxValue + floatingPointAllowedDeviation;
     }
 
-    protected override void UpgradeValue()
+    protected override void ApplyUpgrade()
     {
-        rangedController.fireCooldown -= 0.1f;
+        rangedController.fireCooldown -= UpgradeValue;
     }
 }

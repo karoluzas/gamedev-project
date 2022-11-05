@@ -2,11 +2,11 @@
 {
     protected override bool CanUpgrade()
     {
-        return rangedController.damageOnHit < 15.0f;
+        return rangedController.damageOnHit < MaxValue - floatingPointAllowedDeviation;
     }
 
-    protected override void UpgradeValue()
+    protected override void ApplyUpgrade()
     {
-        rangedController.damageOnHit += 1.0f;
+        rangedController.damageOnHit += UpgradeValue;
     }
 }

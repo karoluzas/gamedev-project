@@ -2,11 +2,11 @@
 {
     protected override bool CanUpgrade()
     {
-        return rangedController.bulletForce < 20.0f - floatingPointAllowedDeviation;
+        return rangedController.bulletForce < MaxValue - floatingPointAllowedDeviation;
     }
 
-    protected override void UpgradeValue()
+    protected override void ApplyUpgrade()
     {
-        rangedController.bulletForce += 2.5f;
+        rangedController.bulletForce += UpgradeValue;
     }
 }

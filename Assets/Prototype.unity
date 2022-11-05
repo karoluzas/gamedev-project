@@ -2742,7 +2742,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14cac224a8ad7a64e9a3adf3bec590df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxUpgradeReached: 0
+  MaxValue: 20
+  UpgradeValue: 2.5
 --- !u!114 &1048012928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2755,7 +2756,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21fe433e6e9b09499a34277c925b341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxUpgradeReached: 0
+  MaxValue: 2
+  UpgradeValue: 0.1
 --- !u!114 &1048012929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2768,7 +2770,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6abf8871b81e66b4db6d69a8056e32a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxUpgradeReached: 0
+  MaxValue: 2
+  UpgradeValue: 0.5
 --- !u!114 &1048012930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2781,7 +2784,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4212dc63fdc3c418845bd201c7154f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxUpgradeReached: 0
+  MaxValue: 15
+  UpgradeValue: 2.5
 --- !u!114 &1048012931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2794,7 +2798,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2efeb300c33a194f90097eba9b31f7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxUpgradeReached: 0
+  MaxValue: 0.1
+  UpgradeValue: 0.1
 --- !u!114 &1048012932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2807,7 +2812,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830aa7b3b1333254e805bb08fa5d4a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxUpgradeReached: 0
+  MaxValue: 5
+  UpgradeValue: 1
 --- !u!114 &1048012933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2820,7 +2826,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ba6db65d82af44485f5142ee76d760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxUpgradeReached: 0
+  MaxValue: 15
+  UpgradeValue: 2.5
 --- !u!114 &1048012934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2833,7 +2840,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0244c48f36c97749aa7ac435dfa271c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxUpgradeReached: 0
+  MaxValue: 0.1
+  UpgradeValue: 0.1
 --- !u!1 &1083515403
 GameObject:
   m_ObjectHideFlags: 0

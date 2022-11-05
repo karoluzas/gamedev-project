@@ -2,11 +2,11 @@
 {
     protected override bool CanUpgrade()
     {
-        return meleeController.slashSize < 2.0f - floatingPointAllowedDeviation;
+        return meleeController.slashSize < MaxValue - floatingPointAllowedDeviation;
     }
 
-    protected override void UpgradeValue()
+    protected override void ApplyUpgrade()
     {
-        meleeController.slashSize += 0.5f;
+        meleeController.slashSize += UpgradeValue;
     }
 }

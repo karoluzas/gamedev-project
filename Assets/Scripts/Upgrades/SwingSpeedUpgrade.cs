@@ -2,12 +2,12 @@
 {
     protected override bool CanUpgrade()
     {
-        //return meleeController.slashSpeed < 2.0f; //Todo implement swing speed
+        //return meleeController.slashSpeed < MaxValue - floatingPointAllowedDeviation; //Todo implement swing speed
         return false;
     }
 
-    protected override void UpgradeValue()
+    protected override void ApplyUpgrade()
     {
-        //return meleeController.slashSpeed += 0.1f; //Todo implement swing speed
+        //return meleeController.slashSpeed += UpgradeValue; //Todo implement swing speed
     }
 }

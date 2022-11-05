@@ -6,7 +6,9 @@ public abstract class SimpleUpgradeBase : MonoBehaviour
     protected MeleeController meleeController;
     protected float floatingPointAllowedDeviation = 0.0001f;
 
-    public bool MaxUpgradeReached = false;
+    public float MaxValue = 0f;
+    public float UpgradeValue = 0f;
+    public bool MaxUpgradeReached { get; private set; } = false;
 
     protected void Start()
     {
@@ -23,7 +25,7 @@ public abstract class SimpleUpgradeBase : MonoBehaviour
     {
         if (CanUpgrade())
         {
-            UpgradeValue();
+            ApplyUpgrade();
         }
         else
         {
@@ -33,5 +35,5 @@ public abstract class SimpleUpgradeBase : MonoBehaviour
 
     protected abstract bool CanUpgrade();
     
-    protected abstract void UpgradeValue();
+    protected abstract void ApplyUpgrade();
 }

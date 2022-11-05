@@ -2,11 +2,11 @@
 {
     protected override bool CanUpgrade()
     {
-        return meleeController.damageOnHit < 15.0f - floatingPointAllowedDeviation;
+        return meleeController.damageOnHit < MaxValue - floatingPointAllowedDeviation;
     }
 
-    protected override void UpgradeValue()
+    protected override void ApplyUpgrade()
     {
-        meleeController.damageOnHit += 2.5f;
+        meleeController.damageOnHit += UpgradeValue;
     }
 }
