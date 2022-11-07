@@ -3,12 +3,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
+    public float health;
     public Rigidbody2D rb;
-    Vector2 movement;
-    bool facingRight = true;
     public Transform aimTransform;
-    private Vector3 mousePosition;
     public Camera sceneCamera;
+
+    private Vector2 movement;
+    private bool facingRight = true;
+    private Vector3 mousePosition;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -49,4 +51,13 @@ public class PlayerController : MonoBehaviour
         facingRight = !facingRight;
     }
 
+    public void DecreaseHealth(float amount)
+    {
+        if (health > 0)
+        {
+            health -= amount;
+            Debug.Log("Player health: " + health);
+            //Hurt Animation/Particles?
+        }
+    }
 }
