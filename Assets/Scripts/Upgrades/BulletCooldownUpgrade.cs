@@ -1,6 +1,4 @@
-﻿using System;
-
-public class BulletCooldownUpgrade : SimpleUpgradeBase
+﻿public class BulletCooldownUpgrade : SimpleUpgradeBase
 {
     protected override bool CanUpgrade()
     {

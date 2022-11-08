@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
@@ -18,20 +16,20 @@ public class SathanasAI : MonoBehaviour
     public float bulletForce = 4f;
     public float rateOfFire = 1f;
 
-    float timeLeft = 0f;
-    bool canFire;
+    private float timeLeft = 0f;
+    private bool canFire;
 
-    Path path;
-    int currentWaypoint = 0;
-    bool reachedEndOfPath = false;
+    private Path path;
+    private int currentWaypoint = 0;
+    private bool reachedEndOfPath = false;
 
-     
-    Seeker seeker;
-    Rigidbody2D rb;
-    GameObject aim;
+
+    private Seeker seeker;
+    private Rigidbody2D rb;
+    private GameObject aim;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
@@ -41,14 +39,14 @@ public class SathanasAI : MonoBehaviour
         seeker.StartPath(rb.position, target.position, OnPathComplete);
     }
 
-    void UpdatePath()
+    private void UpdatePath()
     {
         if (seeker.IsDone() && !InShootingRange())
             seeker.StartPath(rb.position, target.position, OnPathComplete);
 
     }
 
-    void OnPathComplete(Path p)
+    private void OnPathComplete(Path p)
     {
         if (!p.error)
         {
@@ -80,7 +78,7 @@ public class SathanasAI : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    private void FixedUpdate()
     {
 
         if(path == null)
@@ -110,7 +108,7 @@ public class SathanasAI : MonoBehaviour
         }
     }
 
-    bool InShootingRange()
+    private bool InShootingRange()
     {
         if (Vector2.Distance(rb.position, target.position) <= detectionRange)
         {
@@ -118,8 +116,8 @@ public class SathanasAI : MonoBehaviour
         }
         else return false;
     }
-    
-    void Fire()
+
+    private void Fire()
     {
         Vector2 direction = ((Vector2)target.position - rb.position).normalized;
 

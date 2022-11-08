@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
 public class BelphegorAI : MonoBehaviour
 {
-
     public Transform target;
 
     public float acceleration = 1f;
@@ -17,19 +14,19 @@ public class BelphegorAI : MonoBehaviour
     public float waitTime = 0.5f;
     public float chargeSpeed = 3f;
 
-    float timeLeft;
+    private float timeLeft;
 
-    Path path;
-    int currentWaypoint = 0;
-    bool reachedEndOfPath = false;
+    private Path path;
+    private int currentWaypoint = 0;
+    private bool reachedEndOfPath = false;
 
-    bool canCharge = false;
+    private bool canCharge = false;
 
-    Seeker seeker;
-    Rigidbody2D rb;
+    private Seeker seeker;
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
@@ -41,13 +38,13 @@ public class BelphegorAI : MonoBehaviour
 
     }
 
-    void UpdatePath()
+    private void UpdatePath()
     {
         if (seeker.IsDone() && !InRange())
             seeker.StartPath(rb.position, target.position, OnPathComplete);
     }
 
-    void OnPathComplete(Path p)
+    private void OnPathComplete(Path p)
     {
         if (!p.error)
         {
@@ -83,7 +80,7 @@ public class BelphegorAI : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (path == null)
             return;
@@ -113,7 +110,7 @@ public class BelphegorAI : MonoBehaviour
         }
     }
 
-    bool InRange()
+    private bool InRange()
     {
         if (Vector2.Distance(rb.position, target.position) <= detectionRange)
         {
@@ -124,7 +121,8 @@ public class BelphegorAI : MonoBehaviour
 
 
     }
-    void Charge()
+
+    private void Charge()
     {
         Vector2 direction = ((Vector2)target.position - rb.position).normalized;
         Vector2 chargeForce = direction * chargeSpeed;

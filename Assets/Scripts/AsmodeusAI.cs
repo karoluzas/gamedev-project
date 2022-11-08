@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
 public class AsmodeusAI : MonoBehaviour
 {
-
     public Transform target;
     public GameObject bulletPrefab;
 
@@ -18,24 +15,24 @@ public class AsmodeusAI : MonoBehaviour
     public float bulletForce = 4f;
     public float rateOfFire = 1f;
 
-    float angle = 0f;
+    private float angle = 0f;
 
     [SerializeField]
     private float angleBetweenBullets = 10f;
 
-    float timeLeft = 0f;
-    bool canFire;
+    private float timeLeft = 0f;
+    private bool canFire;
 
-    Path path;
-    int currentWaypoint = 0;
-    bool reachedEndOfPath = false;
+    private Path path;
+    private int currentWaypoint = 0;
+    private bool reachedEndOfPath = false;
 
 
-    Seeker seeker;
-    Rigidbody2D rb;
-    GameObject aim;
+    private Seeker seeker;
+    private Rigidbody2D rb;
+    private GameObject aim;
 
-    void Start()
+    private void Start()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
@@ -45,14 +42,14 @@ public class AsmodeusAI : MonoBehaviour
         seeker.StartPath(rb.position, target.position, OnPathComplete);
     }
 
-    void UpdatePath()
+    private void UpdatePath()
     {
         if (seeker.IsDone() && Vector2.Distance(rb.position, target.position) > detectionRange)
             seeker.StartPath(rb.position, target.position, OnPathComplete);
 
     }
 
-    void OnPathComplete(Path p)
+    private void OnPathComplete(Path p)
     {
         if (!p.error)
         {
@@ -84,7 +81,7 @@ public class AsmodeusAI : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    private void FixedUpdate()
     {
 
         if (path == null)
@@ -115,7 +112,7 @@ public class AsmodeusAI : MonoBehaviour
         }
     }
 
-    bool InShootingRange()
+    private bool InShootingRange()
     {
         if (Vector2.Distance(rb.position, target.position) <= detectionRange)
         {
@@ -124,7 +121,7 @@ public class AsmodeusAI : MonoBehaviour
         else return false;
     }
 
-    void Fire()
+    private void Fire()
     {
         for(int i = 0; i <= 2; ++i)
         {

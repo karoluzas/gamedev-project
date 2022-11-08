@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBulletCollision : MonoBehaviour
 {
     public float damageOnHit = 5f;
 
-    GameObject player;
-    PlayerController playerController;
+    private GameObject player;
+    private PlayerController playerController;
 
     private void Start()
     {

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyCollision : MonoBehaviour
@@ -7,11 +5,11 @@ public class EnemyCollision : MonoBehaviour
     public float damageOnHit = 1f;
     public float hitCooldown = 0.1f;
 
-    float timeLeft;
-    bool canDamage;
+    private float timeLeft;
+    private bool canDamage;
 
-    GameObject player;
-    PlayerController playerController;
+    private GameObject player;
+    private PlayerController playerController;
 
     private void Start()
     {
