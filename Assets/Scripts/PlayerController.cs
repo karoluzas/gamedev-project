@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -7,19 +5,23 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float health;
     public Rigidbody2D rb;
-    Vector2 movement;
-    bool facingRight = true;
     public Transform aimTransform;
-    private Vector3 mousePosition;
     public Camera sceneCamera;
 
-    void Start(){
+    private Vector2 movement;
+    private bool facingRight = true;
+    private Vector3 mousePosition;
+
+    void Start() {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update(){
+    void Update() {
         // Gun aiming rotation
-        mousePosition = sceneCamera.ScreenToWorldPoint(Input.mousePosition);
+        if (!MenuController.IsGamePaused)
+        {
+            mousePosition = sceneCamera.ScreenToWorldPoint(Input.mousePosition);
+        }
         Vector3 aimDirection = (mousePosition - transform.position).normalized;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
         aimTransform.eulerAngles = new Vector3(0, 0, aimAngle);
@@ -51,12 +53,11 @@ public class PlayerController : MonoBehaviour
 
     public void DecreaseHealth(float amount)
     {
-        if(health > 0)
+        if (health > 0)
         {
             health -= amount;
             Debug.Log("Player health: " + health);
             //Hurt Animation/Particles?
         }
     }
-
 }
