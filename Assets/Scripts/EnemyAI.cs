@@ -1,26 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
 public class EnemyAI : MonoBehaviour
 {
-
     public Transform target;
 
     public float acceleration = 1f;
     public float maxSpeed = 1f;
     public float nextWaypointDistance = 3f;
 
-    Path path;
-    int currentWaypoint = 0;
-    bool reachedEndOfPath = false;
+    private Path path;
+    private int currentWaypoint = 0;
+    private bool reachedEndOfPath = false;
 
-    Seeker seeker;
-    Rigidbody2D rb;
+    private Seeker seeker;
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
@@ -30,13 +27,13 @@ public class EnemyAI : MonoBehaviour
 
     }
 
-    void UpdatePath()
+    private void UpdatePath()
     {
         if(seeker.IsDone())
             seeker.StartPath(rb.position, target.position, OnPathComplete);       
     }
 
-    void OnPathComplete(Path p)
+    private void OnPathComplete(Path p)
     {
         if (!p.error)
         {
@@ -45,7 +42,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if(path == null)
             return;

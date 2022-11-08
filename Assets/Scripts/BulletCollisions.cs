@@ -3,9 +3,9 @@ using UnityEngine;
 //TODO - uncomment relevant places and update, when enemies are implemented
 public class BulletCollisions : MonoBehaviour
 {
-    float damageOnHit = 5f;
-    float bulletRange = 1f;
-    Vector3 lastPosition;
+    private float damageOnHit = 5f;
+    private float bulletRange = 1f;
+    private Vector3 lastPosition;
 
     public float DamageOnHit { set => damageOnHit = value; }
     public float BulletRange { set => bulletRange = value; }
@@ -13,14 +13,14 @@ public class BulletCollisions : MonoBehaviour
     //GameObject enemy;
     //EnemyController enemyController;
 
-    void Start()
+    private void Start()
     {
         //enemy = GameObject.Find("Enemy");
         //if (enemy)
         //    enemyController = enemy.GetComponent<EnemyController>();
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         //TODO - Damage enemy here once
         if(collision.gameObject.tag == "Player"){
@@ -36,12 +36,12 @@ public class BulletCollisions : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void Awake()
+    private void Awake()
     {
         lastPosition = transform.position;
     }
 
-    void Update()
+    private void Update()
     {
         if (bulletRange > 0)
         {

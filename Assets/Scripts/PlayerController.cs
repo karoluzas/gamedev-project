@@ -12,11 +12,11 @@ public class PlayerController : MonoBehaviour
     private bool facingRight = true;
     private Vector3 mousePosition;
 
-    void Start() {
+    private void Start() {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update() {
+    private void Update() {
         // Gun aiming rotation
         if (!MenuController.IsGamePaused)
         {
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
         aimTransform.eulerAngles = new Vector3(0, 0, aimAngle);
     }
 
-    void FixedUpdate(){
+    private void FixedUpdate(){
         // Player movement
         float movementHorizontal = Input.GetAxisRaw("Horizontal");
         float movementVertical = Input.GetAxisRaw("Vertical");
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Flip(){
+    private void Flip(){
         Vector3 currentScale = gameObject.transform.localScale;
         currentScale.x *= -1;
         gameObject.transform.localScale = currentScale;

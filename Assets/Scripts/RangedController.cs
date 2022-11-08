@@ -4,15 +4,16 @@ public class RangedController : MonoBehaviour
 {
     public Transform firePoint; 
     public GameObject bulletPrefab;
-    float timeLeft = 0;
-    bool canFire = true;
+    
+    private float timeLeft = 0;
+    private bool canFire = true;
 
     public float fireCooldown = 0.3f;
     public float bulletForce = 10f;
     public float damageOnHit = 5f;
     public float bulletRange = 1f;
 
-    void Update()
+    private void Update()
     {  
         if(timeLeft > 0)
         {
@@ -30,7 +31,8 @@ public class RangedController : MonoBehaviour
         }
         
     }
-    void Shoot()
+
+    private void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation * Quaternion.Euler(0, 0, 90));
         SetBulletRange(bullet);
