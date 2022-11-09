@@ -3,8 +3,8 @@ using Pathfinding;
 
 public class SathanasAI : MonoBehaviour
 {
-
-    public Transform target;
+    private GameObject player;
+    //public Transform target;
     public GameObject bulletPrefab;
 
     public float acceleration = 1f;
@@ -35,14 +35,16 @@ public class SathanasAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         aim = this.transform.Find("Aim").gameObject;
 
+        player = GameObject.FindWithTag("Player");
+
         InvokeRepeating("UpdatePath", 0f, .5f);
-        seeker.StartPath(rb.position, target.position, OnPathComplete);
+        seeker.StartPath(rb.position, player.transform.position, OnPathComplete);
     }
 
     private void UpdatePath()
     {
         if (seeker.IsDone() && !InShootingRange())
-            seeker.StartPath(rb.position, target.position, OnPathComplete);
+            seeker.StartPath(rb.position, player.transform.position, OnPathComplete);
 
     }
 
@@ -110,7 +112,7 @@ public class SathanasAI : MonoBehaviour
 
     private bool InShootingRange()
     {
-        if (Vector2.Distance(rb.position, target.position) <= detectionRange)
+        if (Vector2.Distance(rb.position, player.transform.position) <= detectionRange)
         {
             return true;
         }
@@ -119,7 +121,7 @@ public class SathanasAI : MonoBehaviour
 
     private void Fire()
     {
-        Vector2 direction = ((Vector2)target.position - rb.position).normalized;
+        Vector2 direction = ((Vector2)player.transform.position - rb.position).normalized;
 
         aim.transform.localPosition = new Vector3(0.2f * direction.x, 0.2f * direction.y);
 

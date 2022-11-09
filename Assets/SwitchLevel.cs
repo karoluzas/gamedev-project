@@ -9,10 +9,7 @@ public class SwitchLevel : MonoBehaviour
     public Animator transition;
     public float transitionTime;
     private void OnTriggerEnter2D(Collider2D other){
-        print("Trigger Entered");
-
         if(other.tag == "Player"){
-            print("Switching scene to " + sceneBuildIndex);
             StartCoroutine(LoadLevel(sceneBuildIndex));
         }
     }

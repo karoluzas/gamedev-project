@@ -3,7 +3,8 @@ using Pathfinding;
 
 public class AsmodeusAI : MonoBehaviour
 {
-    public Transform target;
+    //public Transform target;
+    private GameObject player;
     public GameObject bulletPrefab;
 
     public float acceleration = 1f;
@@ -38,14 +39,16 @@ public class AsmodeusAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         aim = this.transform.Find("Aim").gameObject;
 
+        player = GameObject.FindWithTag("Player");
+        
         InvokeRepeating("UpdatePath", 0f, .5f);
-        seeker.StartPath(rb.position, target.position, OnPathComplete);
+        seeker.StartPath(rb.position, player.transform.position, OnPathComplete);
     }
 
     private void UpdatePath()
     {
-        if (seeker.IsDone() && Vector2.Distance(rb.position, target.position) > detectionRange)
-            seeker.StartPath(rb.position, target.position, OnPathComplete);
+        if (seeker.IsDone() && Vector2.Distance(rb.position, player.transform.position) > detectionRange)
+            seeker.StartPath(rb.position, player.transform.position, OnPathComplete);
 
     }
 
@@ -87,7 +90,7 @@ public class AsmodeusAI : MonoBehaviour
         if (path == null)
             return;
 
-        if (currentWaypoint >= path.vectorPath.Count || Vector2.Distance(rb.position, target.position) < detectionRange)
+        if (currentWaypoint >= path.vectorPath.Count || Vector2.Distance(rb.position, player.transform.position) < detectionRange)
         {
             reachedEndOfPath = true;
             return;
@@ -114,7 +117,7 @@ public class AsmodeusAI : MonoBehaviour
 
     private bool InShootingRange()
     {
-        if (Vector2.Distance(rb.position, target.position) <= detectionRange)
+        if (Vector2.Distance(rb.position, player.transform.position) <= detectionRange)
         {
             return true;
         }

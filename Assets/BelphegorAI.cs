@@ -3,7 +3,8 @@ using Pathfinding;
 
 public class BelphegorAI : MonoBehaviour
 {
-    public Transform target;
+    //public Transform target;
+    private GameObject player;
 
     public float acceleration = 1f;
     public float maxSpeed = 1f;
@@ -33,15 +34,17 @@ public class BelphegorAI : MonoBehaviour
 
         timeLeft = waitTime;
 
+        player = GameObject.FindWithTag("Player");
+
         InvokeRepeating("UpdatePath", 0f, .5f);
-        seeker.StartPath(rb.position, target.position, OnPathComplete);
+        seeker.StartPath(rb.position, player.transform.position, OnPathComplete);
 
     }
 
     private void UpdatePath()
     {
         if (seeker.IsDone() && !InRange())
-            seeker.StartPath(rb.position, target.position, OnPathComplete);
+            seeker.StartPath(rb.position, player.transform.position, OnPathComplete);
     }
 
     private void OnPathComplete(Path p)
@@ -112,7 +115,7 @@ public class BelphegorAI : MonoBehaviour
 
     private bool InRange()
     {
-        if (Vector2.Distance(rb.position, target.position) <= detectionRange)
+        if (Vector2.Distance(rb.position, player.transform.position) <= detectionRange)
         {
             return true;
         }
@@ -124,7 +127,7 @@ public class BelphegorAI : MonoBehaviour
 
     private void Charge()
     {
-        Vector2 direction = ((Vector2)target.position - rb.position).normalized;
+        Vector2 direction = ((Vector2)player.transform.position - rb.position).normalized;
         Vector2 chargeForce = direction * chargeSpeed;
 
         rb.AddForce(chargeForce, ForceMode2D.Impulse);
