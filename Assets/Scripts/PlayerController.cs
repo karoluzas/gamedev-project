@@ -49,4 +49,8 @@ public class PlayerController : MonoBehaviour
         aimTransform.localScale = currentScale;
         facingRight = !facingRight;
     }
+
+    void OnLevelWasLoaded(int level){
+        transform.position = new Vector3(0,0,0);
+    }
 }
