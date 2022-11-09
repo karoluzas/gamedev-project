@@ -20,19 +20,23 @@ public class BulletCollisions : MonoBehaviour
         //    enemyController = enemy.GetComponent<EnemyController>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        //TODO - Damage enemy here once
-        if (collision.tag == "Enemy")
-        {
-            Destroy(gameObject);
-            //if (enemyController)
-            {
-               //enemyController.DecreaseHealth(damageOnHit);
-            }
-        }
-        Debug.Log("bulletcollisions");
-    }
+    // private void OnTriggerEnter2D(Collider2D collision)
+    // {
+    //     //TODO - Damage enemy here once
+    //     if (collision.tag == "Enemy_Sathanas")
+    //     {
+    //         Debug.Log("bulletcollisions");
+    //         Destroy(gameObject);
+    //         //Destroy(collision.gameObject);
+    //         //if (enemyController)
+    //         {
+    //            //enemyController.DecreaseHealth(damageOnHit);
+    //         }
+    //     }
+    //     if (collision.tag == "Bullet"){
+    //         print("labasrytas");
+    //     }
+    // }
 
     private void Awake()
     {

@@ -9,6 +9,8 @@ public class EnemyAI : MonoBehaviour
     public float maxSpeed = 1f;
     public float nextWaypointDistance = 3f;
 
+    public float health = 50f;
+
     private Path path;
     private int currentWaypoint = 0;
     private bool reachedEndOfPath = false;
@@ -27,6 +29,19 @@ public class EnemyAI : MonoBehaviour
         InvokeRepeating("UpdatePath", 0f, .5f);
         seeker.StartPath(rb.position, player.transform.position, OnPathComplete);
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Bullet")
+        {
+            Destroy(collision.gameObject);
+            health -= 10f;
+            print(health);
+            if(health <= 0){
+                Destroy(this.gameObject);
+            }
+        }
     }
 
     private void UpdatePath()

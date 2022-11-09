@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8550181729923948539}
   - component: {fileID: 8550181729923948516}
   - component: {fileID: 8550181729923948543}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Belphegor
   m_TagString: Enemy_Sathanas
   m_Icon: {fileID: 0}
@@ -114,7 +114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b973cd192262ef4b89fb3579e15111b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 6411898890120153311, guid: a7b77d89355717841be7c25584620f1d, type: 3}
   acceleration: 20000000
   maxSpeed: 2
   nextWaypointDistance: 2
@@ -145,7 +144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8550181730030687528}
   - component: {fileID: 8550181730030687535}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: '|BelphegorGFX'
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -28,6 +28,7 @@ public class AsmodeusAI : MonoBehaviour
     private int currentWaypoint = 0;
     private bool reachedEndOfPath = false;
 
+    public float health = 50f;
 
     private Seeker seeker;
     private Rigidbody2D rb;
@@ -50,6 +51,19 @@ public class AsmodeusAI : MonoBehaviour
         if (seeker.IsDone() && Vector2.Distance(rb.position, player.transform.position) > detectionRange)
             seeker.StartPath(rb.position, player.transform.position, OnPathComplete);
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Bullet")
+        {
+            Destroy(collision.gameObject);
+            health -= 10f;
+            print(health);
+            if(health <= 0){
+                Destroy(this.gameObject);
+            }
+        }
     }
 
     private void OnPathComplete(Path p)
