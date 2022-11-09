@@ -16,29 +16,18 @@ public class SlashCollisions : MonoBehaviour
         set { slashLifetime = value; }
     }
 
-    //GameObject enemy;
-    //EnemyController enemyController;
-
-    private void Start()
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        //enemy = GameObject.Find("Enemy");
-        //if (enemy)
-        //    enemyController = enemy.GetComponent<EnemyController>();
-
-    }
-    private void OnTriggerEnter2D(Collider2D collider) {
-        //TODO - Damage if(other.gameOjbect.tag == "enemy") here over the time (slashLifetime) it stays on screen
-        //check for only one damage event
-        if (collider.tag == "Enemy"){
-            
+        if (collider.tag == "Enemy_Sathanas")
+        {
+            Destroy(gameObject);
+            GameObject enemy = collider.gameObject;
+            if (enemy)
+            {
+                var healthController = enemy.GetComponent<HealthController>();
+                healthController.DecreaseHealth(damageOnHit);
+            }
         }
-        //{
-        //    if (enemyController)
-        //    {
-        //        enemyController.DecreaseHealth(damageOnHit);
-        //    }
-        //}
-        //Destroy(gameObject);
     }
 
     private void Update()

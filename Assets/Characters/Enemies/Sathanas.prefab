@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 7270123362031562877}
   - component: {fileID: 7270123362031562876}
   - component: {fileID: 7270123362031562873}
+  - component: {fileID: 6237302705505818754}
   m_Layer: 8
   m_Name: Sathanas
   m_TagString: Enemy_Sathanas
@@ -230,7 +231,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53d484eb651a544aa2b8b22cde7dc40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   bulletPrefab: {fileID: 2992932278811495360, guid: a410905a26513484784f93887d9874a3, type: 3}
   acceleration: 20000000
   maxSpeed: 0.5
@@ -238,6 +238,7 @@ MonoBehaviour:
   detectionRange: 1
   bulletForce: 4
   rateOfFire: 1
+  health: 50
 --- !u!114 &7270123362031562873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,3 +253,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageOnHit: 1
   hitCooldown: 0.1
+--- !u!114 &6237302705505818754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7270123362031562879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c505b11d6aa6c84a95d88df5eec8a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100

@@ -5,22 +5,22 @@ public class EnemyBulletCollision : MonoBehaviour
     public float damageOnHit = 5f;
 
     private GameObject player;
-    private PlayerController playerController;
+    private HealthController healthController;
 
     private void Start()
     {
         player = GameObject.Find("Player");
         if (player)
-            playerController = player.GetComponent<PlayerController>();
+            healthController = player.GetComponent<HealthController>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            if (playerController)
+            if (healthController)
             {
-                playerController.DecreaseHealth(damageOnHit);
+                healthController.DecreaseHealth(damageOnHit);
             }
         }
         Destroy(gameObject);

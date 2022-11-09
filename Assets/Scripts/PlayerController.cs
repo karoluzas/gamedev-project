@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
-    public float health;
     public Rigidbody2D rb;
     public Transform aimTransform;
     public Camera sceneCamera;
@@ -49,15 +48,5 @@ public class PlayerController : MonoBehaviour
         gameObject.transform.localScale = currentScale;
         aimTransform.localScale = currentScale;
         facingRight = !facingRight;
-    }
-
-    public void DecreaseHealth(float amount)
-    {
-        if (health > 0)
-        {
-            health -= amount;
-            Debug.Log("Player health: " + health);
-            //Hurt Animation/Particles?
-        }
     }
 }

@@ -10,33 +10,19 @@ public class BulletCollisions : MonoBehaviour
     public float DamageOnHit { set => damageOnHit = value; }
     public float BulletRange { set => bulletRange = value; }
 
-    //GameObject enemy;
-    //EnemyController enemyController;
-
-    private void Start()
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        //enemy = GameObject.Find("Enemy");
-        //if (enemy)
-        //    enemyController = enemy.GetComponent<EnemyController>();
+        if (collider.tag == "Enemy_Sathanas")
+        {
+            Destroy(gameObject);
+            GameObject enemy = collider.gameObject;
+            if (enemy)
+            {
+                var healthController = enemy.GetComponent<HealthController>();
+                healthController.DecreaseHealth(damageOnHit);
+            }
+        }
     }
-
-    // private void OnTriggerEnter2D(Collider2D collision)
-    // {
-    //     //TODO - Damage enemy here once
-    //     if (collision.tag == "Enemy_Sathanas")
-    //     {
-    //         Debug.Log("bulletcollisions");
-    //         Destroy(gameObject);
-    //         //Destroy(collision.gameObject);
-    //         //if (enemyController)
-    //         {
-    //            //enemyController.DecreaseHealth(damageOnHit);
-    //         }
-    //     }
-    //     if (collision.tag == "Bullet"){
-    //         print("labasrytas");
-    //     }
-    // }
 
     private void Awake()
     {
@@ -52,7 +38,8 @@ public class BulletCollisions : MonoBehaviour
             lastPosition = transform.position;
         }
 
-        if (bulletRange <= 0) {
+        if (bulletRange <= 0)
+        {
             Destroy(gameObject);
         }
     }

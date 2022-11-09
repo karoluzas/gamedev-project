@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 6984681624827468106}
   - component: {fileID: 6984681624827468107}
   - component: {fileID: 6984681624827468110}
+  - component: {fileID: 4300110771643845847}
   m_Layer: 8
   m_Name: Asmodeus
   m_TagString: Enemy_Sathanas
@@ -146,7 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a79d8c9e94258b45837c33a135a26d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 6411898890120153311, guid: a7b77d89355717841be7c25584620f1d, type: 3}
   bulletPrefab: {fileID: 2992932278811495360, guid: e283a8d6909811a429a51052f04064c9, type: 3}
   acceleration: 20000000
   maxSpeed: 0.5
@@ -155,6 +155,7 @@ MonoBehaviour:
   bulletForce: 4
   rateOfFire: 0.1
   angleBetweenBullets: 10
+  health: 50
 --- !u!114 &6984681624827468110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +170,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageOnHit: 1
   hitCooldown: 0.1
+--- !u!114 &4300110771643845847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6984681624827468104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c505b11d6aa6c84a95d88df5eec8a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &6984681624948446864
 GameObject:
   m_ObjectHideFlags: 0
