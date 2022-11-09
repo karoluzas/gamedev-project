@@ -10,10 +10,13 @@ public class BulletCollisions : MonoBehaviour
     public float DamageOnHit { set => damageOnHit = value; }
     public float BulletRange { set => bulletRange = value; }
 
+    public GameObject hitSound;
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.tag == "Enemy_Sathanas")
         {
+            Instantiate(hitSound);
             Destroy(gameObject);
             GameObject enemy = collider.gameObject;
             if (enemy)

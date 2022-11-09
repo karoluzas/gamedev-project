@@ -121,7 +121,6 @@ MonoBehaviour:
   detectionRange: 0.3
   waitTime: 5
   chargeSpeed: 5
-  health: 50
 --- !u!114 &8550181729923948543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  enemyDeathSound: {fileID: 2070612908562151909, guid: e4ca724c85d6b6a459af676abb6b6ca9, type: 3}
+  playerDeathSound: {fileID: 0}
 --- !u!1 &8550181730030687529
 GameObject:
   m_ObjectHideFlags: 0

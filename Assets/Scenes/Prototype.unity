@@ -668,6 +668,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1325122703720358394, guid: b7de3bfb7f9276041b8ff6f3c70ebb78, type: 3}
+      propertyPath: enemyDeathSound
+      value: 
+      objectReference: {fileID: 2070612908562151909, guid: e4ca724c85d6b6a459af676abb6b6ca9, type: 3}
     - target: {fileID: 7064336911748435201, guid: b7de3bfb7f9276041b8ff6f3c70ebb78, type: 3}
       propertyPath: m_Name
       value: Mammon
@@ -3047,6 +3051,14 @@ PrefabInstance:
       propertyPath: fireCooldown
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 4620934602269236134, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: enemyDeathSound
+      value: 
+      objectReference: {fileID: 2070612908562151909, guid: e4ca724c85d6b6a459af676abb6b6ca9, type: 3}
+    - target: {fileID: 4620934602269236134, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: playerDeathSound
+      value: 
+      objectReference: {fileID: 3508934177113592304, guid: 3d7ba7fc40e9b744daeb32fe101b1ed9, type: 3}
     - target: {fileID: 5613741598075864364, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: sceneCamera
       value: 
@@ -3095,6 +3107,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7760234507670275660, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: slashSound
+      value: 
+      objectReference: {fileID: 2093176244061096904, guid: 552451502ee6d7a47bd466a7d5fb1f5b, type: 3}
     - target: {fileID: 7828182944061342768, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: sceneCamera
       value: 

@@ -155,7 +155,6 @@ MonoBehaviour:
   bulletForce: 4
   rateOfFire: 0.1
   angleBetweenBullets: 10
-  health: 50
 --- !u!114 &6984681624827468110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +182,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  enemyDeathSound: {fileID: 2070612908562151909, guid: e4ca724c85d6b6a459af676abb6b6ca9, type: 3}
+  playerDeathSound: {fileID: 0}
 --- !u!1 &6984681624948446864
 GameObject:
   m_ObjectHideFlags: 0

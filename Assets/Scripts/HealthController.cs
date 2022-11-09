@@ -1,8 +1,11 @@
+using System.Collections;
 using UnityEngine;
 
 public class HealthController : MonoBehaviour
 {
     public float health = 0f;
+    public GameObject enemyDeathSound;
+    public GameObject playerDeathSound;
 
     public void DecreaseHealth(float amount)
     {
@@ -14,6 +17,12 @@ public class HealthController : MonoBehaviour
         }
         else
         {
+            if(gameObject.tag == "Enemy_Sathanas"){
+                Instantiate(enemyDeathSound);
+            }
+            if(gameObject.tag == "Player"){
+                Instantiate(playerDeathSound);
+            }
             Destroy(gameObject);
         }
     }
