@@ -18,7 +18,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private float sathanasInterval = 4f;
     [SerializeField]
-    private float asmodeusInterval = 12f;
+    private float asmodeusInterval = 20f;
     [SerializeField]
     private float belphegorInterval = 12f;
     
