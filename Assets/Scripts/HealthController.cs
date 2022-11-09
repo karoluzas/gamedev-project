@@ -6,6 +6,7 @@ public class HealthController : MonoBehaviour
     public float health = 0f;
     public GameObject enemyDeathSound;
     public GameObject playerDeathSound;
+    public GameObject rockBreakSound;
 
     public void DecreaseHealth(float amount)
     {
@@ -22,6 +23,9 @@ public class HealthController : MonoBehaviour
             }
             if(gameObject.tag == "Player"){
                 Instantiate(playerDeathSound);
+            }
+            if(gameObject.tag == "Rock"){
+                Instantiate(rockBreakSound);
             }
             Destroy(gameObject);
         }
