@@ -20,13 +20,17 @@ public class SlashCollisions : MonoBehaviour
     {
         if (collider.tag == "Enemy_Sathanas")
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             GameObject enemy = collider.gameObject;
             if (enemy)
             {
                 var healthController = enemy.GetComponent<HealthController>();
                 healthController.DecreaseHealth(damageOnHit);
             }
+        }
+        if(collider.tag == "Rock"){
+            Destroy(collider.gameObject);
+            //TODO - add inventory system so materials can be gathered
         }
     }
 
