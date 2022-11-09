@@ -22,7 +22,6 @@ public class SathanasAI : MonoBehaviour
     private Path path;
     private int currentWaypoint = 0;
     private bool reachedEndOfPath = false;
-    public float health = 50f;
 
     private Seeker seeker;
     private Rigidbody2D rb;
@@ -40,20 +39,6 @@ public class SathanasAI : MonoBehaviour
         InvokeRepeating("UpdatePath", 0f, .5f);
         seeker.StartPath(rb.position, player.transform.position, OnPathComplete);
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Bullet")
-        {
-            Destroy(collision.gameObject);
-            health -= 10f;
-            print(health);
-            if(health <= 0){
-                Destroy(this.gameObject);
-            }
-        }
-    }
-
     private void UpdatePath()
     {
         if (seeker.IsDone() && !InShootingRange())
