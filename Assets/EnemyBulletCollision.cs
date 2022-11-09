@@ -14,9 +14,9 @@ public class EnemyBulletCollision : MonoBehaviour
             playerController = player.GetComponent<PlayerController>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.collider.CompareTag("Player") || collision.otherCollider.CompareTag("Player"))
+        if (collision.tag == "Player")
         {
             if (playerController)
             {

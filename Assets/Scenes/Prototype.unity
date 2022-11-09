@@ -758,9 +758,10 @@ GameObject:
   - component: {fileID: 296369316}
   - component: {fileID: 296369315}
   - component: {fileID: 296369314}
+  - component: {fileID: 296369319}
   m_Layer: 8
   m_Name: Sathanas
-  m_TagString: Untagged
+  m_TagString: Enemy_Sathanas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -779,7 +780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1433467347}
   bulletPrefab: {fileID: 2992932278811495360, guid: a410905a26513484784f93887d9874a3, type: 3}
-  acceleration: 100
+  acceleration: 20000000
   maxSpeed: 0.5
   nextWaypointDistance: 3
   detectionRange: 1
@@ -797,7 +798,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10000
   m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -867,6 +868,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &296369319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296369313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be49fc46e7852046ab0b08cc054b70c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageOnHit: 1
+  hitCooldown: 0.1
 --- !u!1 &316190695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,6 +1177,7 @@ GameObject:
   - component: {fileID: 395809073}
   - component: {fileID: 395809072}
   - component: {fileID: 395809071}
+  - component: {fileID: 395809076}
   m_Layer: 0
   m_Name: Belphegor
   m_TagString: Enemy_Sathanas
@@ -1182,12 +1198,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1433467347}
-  acceleration: 100
-  maxSpeed: 0.3
-  nextWaypointDistance: 3
-  detectionRange: 0.8
-  waitTime: 0.5
-  chargeSpeed: 3
+  acceleration: 20000000
+  maxSpeed: 2
+  nextWaypointDistance: 2
+  detectionRange: 0.3
+  waitTime: 5
+  chargeSpeed: 5
 --- !u!50 &395809072
 Rigidbody2D:
   serializedVersion: 4
@@ -1200,7 +1216,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10000
   m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -1269,6 +1285,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &395809076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395809070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be49fc46e7852046ab0b08cc054b70c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageOnHit: 20
+  hitCooldown: 0.5
 --- !u!1 &426745032
 GameObject:
   m_ObjectHideFlags: 0
@@ -3244,6 +3274,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 658730756912365385, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 658730756912365385, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2254718921059602131, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: m_Name
       value: Gun Asset
@@ -3259,10 +3297,6 @@ PrefabInstance:
     - target: {fileID: 3276699521363211520, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: fireCooldown
       value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5613741598075864364, guid: a7b77d89355717841be7c25584620f1d, type: 3}
-      propertyPath: health
-      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5613741598075864364, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: sceneCamera
@@ -3335,6 +3369,7 @@ GameObject:
   - component: {fileID: 1120430060}
   - component: {fileID: 1120430059}
   - component: {fileID: 1120430058}
+  - component: {fileID: 1120430063}
   m_Layer: 8
   m_Name: Asmodeus
   m_TagString: Enemy_Sathanas
@@ -3356,7 +3391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1433467347}
   bulletPrefab: {fileID: 2992932278811495360, guid: e283a8d6909811a429a51052f04064c9, type: 3}
-  acceleration: 100
+  acceleration: 20000000
   maxSpeed: 0.5
   detectionRange: 1.25
   nextWaypointDistance: 3
@@ -3375,7 +3410,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10000
   m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -3445,6 +3480,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1120430063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120430057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be49fc46e7852046ab0b08cc054b70c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageOnHit: 1
+  hitCooldown: 0.1
 --- !u!1 &1199362060
 GameObject:
   m_ObjectHideFlags: 0
@@ -6602,7 +6651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1433467347}
-  acceleration: 200
+  acceleration: 2000000
   maxSpeed: 1
   nextWaypointDistance: 3
 --- !u!50 &1558725996
@@ -6617,7 +6666,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10000
   m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -7185,7 +7234,7 @@ GameObject:
   - component: {fileID: 1950281942}
   - component: {fileID: 1950281944}
   - component: {fileID: 1950281943}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9705,16 +9754,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 0, y: 0, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 1, y: 0, z: 0}
     second:
       serializedVersion: 2
@@ -11267,7 +11306,7 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 330
+  - m_RefCount: 329
     m_Data: {fileID: 11400000, guid: 22df9d65d5ecf8d4bb094df970a0e96c, type: 2}
   - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: 4b1b178b1d793bf4cbcf5cd6ea7651b1, type: 2}
@@ -11284,7 +11323,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 8c50dba29dc9a5d468099128edee9ee1, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 330
+  - m_RefCount: 329
     m_Data: {fileID: 386176744, guid: 17b7800adb3a9e0418da7ad4a35cdf5a, type: 3}
   - m_RefCount: 6
     m_Data: {fileID: -338492808, guid: 17b7800adb3a9e0418da7ad4a35cdf5a, type: 3}
@@ -11301,7 +11340,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 364311545, guid: 17b7800adb3a9e0418da7ad4a35cdf5a, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 400
+  - m_RefCount: 399
     m_Data:
       e00: 1
       e01: 0
@@ -11320,7 +11359,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 400
+  - m_RefCount: 399
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1

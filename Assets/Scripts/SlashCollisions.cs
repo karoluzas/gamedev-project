@@ -3,7 +3,7 @@ using UnityEngine;
 public class SlashCollisions : MonoBehaviour
 {
     private float damageOnHit = 5f;
-    private float slashLifetime = 0.2f;
+    private float slashLifetime = 0.15f;
 
     public float DamageOnHit
     {
@@ -26,16 +26,19 @@ public class SlashCollisions : MonoBehaviour
         //    enemyController = enemy.GetComponent<EnemyController>();
 
     }
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerEnter2D(Collider2D collider) {
         //TODO - Damage if(other.gameOjbect.tag == "enemy") here over the time (slashLifetime) it stays on screen
-        //if (collision.collider.CompareTag("Enemy") || collision.otherCollider.CompareTag("Enemy"))
+        //check for only one damage event
+        if (collider.tag == "Enemy"){
+            
+        }
         //{
         //    if (enemyController)
         //    {
         //        enemyController.DecreaseHealth(damageOnHit);
         //    }
         //}
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 
     private void Update()

@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
+  health: 200
   rb: {fileID: 658730756912365385}
   aimTransform: {fileID: 4017991304010389345}
   sceneCamera: {fileID: 0}
@@ -305,7 +306,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 4199425622631045821}
   bulletPrefab: {fileID: 2992932278811495360, guid: 5efaab38eae746a418c9bfb0a0d8d623, type: 3}
+  fireCooldown: 0.3
   bulletForce: 10
+  damageOnHit: 5
+  bulletRange: 1
 --- !u!114 &7760234507670275660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,3 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slashPoint: {fileID: 4259390124712241935}
   slashPrefab: {fileID: 7668388760291651899, guid: 426e15ef869b4344b9c9285ceeda7108, type: 3}
+  slashCooldown: 0.6
+  slashSize: 1
+  damageOnHit: 5
+  slashSpeed: 1

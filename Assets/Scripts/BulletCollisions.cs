@@ -20,20 +20,18 @@ public class BulletCollisions : MonoBehaviour
         //    enemyController = enemy.GetComponent<EnemyController>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         //TODO - Damage enemy here once
-        if(collision.gameObject.tag == "Player"){
-            return;
+        if (collision.tag == "Enemy")
+        {
+            Destroy(gameObject);
+            //if (enemyController)
+            {
+               //enemyController.DecreaseHealth(damageOnHit);
+            }
         }
-        //if (collision.collider.CompareTag("Enemy") || collision.otherCollider.CompareTag("Enemy"))
-        //{
-        //    if (enemyController)
-        //    {
-        //        enemyController.DecreaseHealth(damageOnHit);
-        //    }
-        //}
-        Destroy(gameObject);
+        Debug.Log("bulletcollisions");
     }
 
     private void Awake()
