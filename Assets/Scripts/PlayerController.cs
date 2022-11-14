@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
-    public float health;
     public Rigidbody2D rb;
     public Transform aimTransform;
     public Camera sceneCamera;
@@ -51,13 +50,7 @@ public class PlayerController : MonoBehaviour
         facingRight = !facingRight;
     }
 
-    public void DecreaseHealth(float amount)
-    {
-        if (health > 0)
-        {
-            health -= amount;
-            Debug.Log("Player health: " + health);
-            //Hurt Animation/Particles?
-        }
+    void OnLevelWasLoaded(int level){
+        transform.position = new Vector3(0,0,0);
     }
 }

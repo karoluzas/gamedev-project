@@ -10,30 +10,21 @@ public class BulletCollisions : MonoBehaviour
     public float DamageOnHit { set => damageOnHit = value; }
     public float BulletRange { set => bulletRange = value; }
 
-    //GameObject enemy;
-    //EnemyController enemyController;
+    public GameObject hitSound;
 
-    private void Start()
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        //enemy = GameObject.Find("Enemy");
-        //if (enemy)
-        //    enemyController = enemy.GetComponent<EnemyController>();
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        //TODO - Damage enemy here once
-        if(collision.gameObject.tag == "Player"){
-            return;
+        if (collider.tag == "Enemy_Sathanas")
+        {
+            Instantiate(hitSound);
+            Destroy(gameObject);
+            GameObject enemy = collider.gameObject;
+            if (enemy)
+            {
+                var healthController = enemy.GetComponent<HealthController>();
+                healthController.DecreaseHealth(damageOnHit);
+            }
         }
-        //if (collision.collider.CompareTag("Enemy") || collision.otherCollider.CompareTag("Enemy"))
-        //{
-        //    if (enemyController)
-        //    {
-        //        enemyController.DecreaseHealth(damageOnHit);
-        //    }
-        //}
-        Destroy(gameObject);
     }
 
     private void Awake()
@@ -50,7 +41,8 @@ public class BulletCollisions : MonoBehaviour
             lastPosition = transform.position;
         }
 
-        if (bulletRange <= 0) {
+        if (bulletRange <= 0)
+        {
             Destroy(gameObject);
         }
     }

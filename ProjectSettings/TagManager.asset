@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Water
   - Enemy_Sathanas
+  - Bullet
+  - Rock
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,8 @@ TagManager:
   - Obstacle
   - EnemyBullet
   - Bullet
-  - 
-  - 
+  - Player
+  - Materials
   - 
   - 
   - 

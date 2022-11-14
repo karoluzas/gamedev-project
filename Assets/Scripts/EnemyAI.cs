@@ -3,8 +3,8 @@ using Pathfinding;
 
 public class EnemyAI : MonoBehaviour
 {
-    public Transform target;
-
+    //public Transform target;
+    private GameObject player;
     public float acceleration = 1f;
     public float maxSpeed = 1f;
     public float nextWaypointDistance = 3f;
@@ -22,15 +22,17 @@ public class EnemyAI : MonoBehaviour
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
 
+        player = GameObject.FindWithTag("Player");
+
         InvokeRepeating("UpdatePath", 0f, .5f);
-        seeker.StartPath(rb.position, target.position, OnPathComplete);
+        seeker.StartPath(rb.position, player.transform.position, OnPathComplete);
 
     }
 
     private void UpdatePath()
     {
         if(seeker.IsDone())
-            seeker.StartPath(rb.position, target.position, OnPathComplete);       
+            seeker.StartPath(rb.position, player.transform.position, OnPathComplete);       
     }
 
     private void OnPathComplete(Path p)

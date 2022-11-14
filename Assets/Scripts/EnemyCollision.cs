@@ -9,24 +9,24 @@ public class EnemyCollision : MonoBehaviour
     private bool canDamage;
 
     private GameObject player;
-    private PlayerController playerController;
+    private HealthController healthController;
 
     private void Start()
     {
         player = GameObject.Find("Player");
-        if(player)
-            playerController = player.GetComponent<PlayerController>();
+        if (player)
+            healthController = player.GetComponent<HealthController>();
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.collider.CompareTag("Player"))
-        { 
-            if(playerController)
+        if (collision.collider.CompareTag("Player"))
+        {
+            if (healthController)
             {
                 if (canDamage)
                 {
-                    playerController.DecreaseHealth(damageOnHit);
+                    healthController.DecreaseHealth(damageOnHit);
                     canDamage = false;
                 }
             }
