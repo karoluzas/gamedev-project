@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Water
+  - Enemy_Sathanas
+  - Bullet
+  - Rock
   layers:
   - Default
   - TransparentFX
@@ -14,12 +17,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - Obstacle
+  - EnemyBullet
+  - Bullet
+  - Player
+  - Materials
   - 
   - 
   - 

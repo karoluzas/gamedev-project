@@ -1,30 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
     public Rigidbody2D rb;
-    Vector2 movement;
-    bool facingRight = true;
     public Transform aimTransform;
-    private Vector3 mousePosition;
     public Camera sceneCamera;
 
-    void Start(){
+    private Vector2 movement;
+    private bool facingRight = true;
+    private Vector3 mousePosition;
+
+    private void Start() {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update(){
+    private void Update() {
         // Gun aiming rotation
-        mousePosition = sceneCamera.ScreenToWorldPoint(Input.mousePosition);
+        if (!MenuController.IsGamePaused)
+        {
+            mousePosition = sceneCamera.ScreenToWorldPoint(Input.mousePosition);
+        }
         Vector3 aimDirection = (mousePosition - transform.position).normalized;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
         aimTransform.eulerAngles = new Vector3(0, 0, aimAngle);
     }
 
-    void FixedUpdate(){
+    private void FixedUpdate(){
         // Player movement
         float movementHorizontal = Input.GetAxisRaw("Horizontal");
         float movementVertical = Input.GetAxisRaw("Vertical");
@@ -40,7 +42,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Flip(){
+    private void Flip(){
         Vector3 currentScale = gameObject.transform.localScale;
         currentScale.x *= -1;
         gameObject.transform.localScale = currentScale;
@@ -48,4 +50,7 @@ public class PlayerController : MonoBehaviour
         facingRight = !facingRight;
     }
 
+    void OnLevelWasLoaded(int level){
+        transform.position = new Vector3(0,0,0);
+    }
 }

@@ -1,15 +1,49 @@
 using UnityEngine;
 
+//TODO - uncomment relevant places and update, when enemies are implemented
 public class BulletCollisions : MonoBehaviour
 {
+    private float damageOnHit = 5f;
+    private float bulletRange = 1f;
+    private Vector3 lastPosition;
 
-    void OnCollisionEnter2D(Collision2D collision)
+    public float DamageOnHit { set => damageOnHit = value; }
+    public float BulletRange { set => bulletRange = value; }
+
+    public GameObject hitSound;
+
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        //TODO - Damage enemy here once
-        if(collision.gameObject.tag == "Player"){
-            return;
+        if (collider.tag == "Enemy_Sathanas")
+        {
+            Instantiate(hitSound);
+            Destroy(gameObject);
+            GameObject enemy = collider.gameObject;
+            if (enemy)
+            {
+                var healthController = enemy.GetComponent<HealthController>();
+                healthController.DecreaseHealth(damageOnHit);
+            }
+        }
+    }
+
+    private void Awake()
+    {
+        lastPosition = transform.position;
+    }
+
+    private void Update()
+    {
+        if (bulletRange > 0)
+        {
+            float traveledRange = Vector3.Distance(transform.position, lastPosition);
+            bulletRange -= traveledRange;
+            lastPosition = transform.position;
         }
 
-        Destroy(gameObject);
+        if (bulletRange <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
