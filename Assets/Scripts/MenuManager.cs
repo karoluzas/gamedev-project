@@ -1,5 +1,13 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+
+[Serializable]
+public class MenuDetails
+{
+    public GameObject menu;
+    public KeyCode keyCodeToToggleMenu;
+}
 
 public class MenuManager : MonoBehaviour
 {
