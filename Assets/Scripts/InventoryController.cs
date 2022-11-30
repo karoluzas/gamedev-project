@@ -44,9 +44,10 @@ public class InventoryController : MonoBehaviour
 
     private void PrintInventory(){
         //This function is for debugging purposes
-        print("Iron: " + this.iron + " Diamond: " + this.diamond + " Obsidian: " + this.obsidian);
-        print("Demon Egg: " + this.demonEgg + " Rotten Flesh: " + this.rottenFlesh + " Orbs of Acid: " + this.orbsOfAcid);
-        print("Bones: " + this.bones + " Lava Orbs: " + this.lavaOrbs + " Demon Core: " + this.demonCore);
-        print("Demon Blood - " + this.demonBlood);
+        print(
+            "Iron: " + this.iron + " Diamond: " + this.diamond + " Obsidian: " + this.obsidian + "\n" +
+            "Demon Egg: " + this.demonEgg + " Rotten Flesh: " + this.rottenFlesh + " Orbs of Acid: " + this.orbsOfAcid + "\n" +
+            "Bones: " + this.bones + " Lava Orbs: " + this.lavaOrbs + " Demon Core: " + this.demonCore + "\n" +
+            "Demon Blood - " + this.demonBlood);
     }
 }
