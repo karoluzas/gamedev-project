@@ -111,8 +111,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03, y: -0.03}
-  m_Size: {x: 0.14, y: 0.25}
+  m_Offset: {x: -0.029999971, y: -0.06543644}
+  m_Size: {x: 0.1110723, y: 0.17912713}
   m_Direction: 0
 --- !u!50 &6984681624827468106
 Rigidbody2D:
@@ -184,6 +184,7 @@ MonoBehaviour:
   health: 100
   enemyDeathSound: {fileID: 2070612908562151909, guid: e4ca724c85d6b6a459af676abb6b6ca9, type: 3}
   playerDeathSound: {fileID: 0}
+  rockBreakSound: {fileID: 0}
 --- !u!1 &6984681624948446864
 GameObject:
   m_ObjectHideFlags: 0

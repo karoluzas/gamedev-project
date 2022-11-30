@@ -23,22 +23,30 @@ public class InventoryController : MonoBehaviour
         this.iron += iron;
         this.diamond += diamond;
         this.obsidian += obsidian;
-        print(this.iron + " " + this.diamond + " " + this.obsidian);
+        PrintInventory();
     }
     public void AddBushes(int demonEgg, int rottenFlesh, int orbsOfAcid){
         this.demonEgg += demonEgg;
         this.rottenFlesh += rottenFlesh;
         this.orbsOfAcid += orbsOfAcid;
-        print(this.demonEgg + " " + this.rottenFlesh + " " + this.orbsOfAcid);
+        PrintInventory();
     }
     public void AddAltairs(int bones, int lavaOrbs, int demonCore){
         this.bones += bones;
         this.lavaOrbs += lavaOrbs;
         this.demonCore += demonCore;
-        print(this.bones + " " + this.lavaOrbs + " " + this.demonCore);
+        PrintInventory();
     }
     public void AddDemonBlood(int demonBlood){
         this.demonBlood += demonBlood;
-        print("Current demon blood: " + this.demonBlood);
+        PrintInventory();
+    }
+
+    private void PrintInventory(){
+        //This function is for debugging purposes
+        print("Iron: " + this.iron + " Diamond: " + this.diamond + " Obsidian: " + this.obsidian);
+        print("Demon Egg: " + this.demonEgg + " Rotten Flesh: " + this.rottenFlesh + " Orbs of Acid: " + this.orbsOfAcid);
+        print("Bones: " + this.bones + " Lava Orbs: " + this.lavaOrbs + " Demon Core: " + this.demonCore);
+        print("Demon Blood - " + this.demonBlood);
     }
 }

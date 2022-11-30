@@ -8,6 +8,7 @@ TagManager:
   - Enemy_Sathanas
   - Bullet
   - Rock
+  - Demon Altar
   layers:
   - Default
   - TransparentFX
