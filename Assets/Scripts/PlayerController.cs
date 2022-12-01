@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update() {
         // Gun aiming rotation
-        if (!MenuManager.IsGamePaused)
+        if (!MenuController.IsGamePaused)
         {
             mousePosition = sceneCamera.ScreenToWorldPoint(Input.mousePosition);
         }
