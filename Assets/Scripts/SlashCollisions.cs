@@ -45,6 +45,15 @@ public class SlashCollisions : MonoBehaviour
             //TODO - add inventory system so materials can be gathered
             inventoryController.AddRocks(Random.Range(1,10), Random.Range(0,2), Random.Range(0,4));
         }
+        if(collider.tag == "Demon Altar"){
+            GameObject demonAltar = collider.gameObject;
+            if(demonAltar){
+                var healthController = demonAltar.GetComponent<HealthController>();
+                healthController.DecreaseHealth(damageOnHit);
+            }
+            //TODO - add inventory system so materials can be gathered
+            inventoryController.AddAltairs(Random.Range(1,10), Random.Range(0,2), Random.Range(0,4));
+        }
     }
 
     private void Update()
