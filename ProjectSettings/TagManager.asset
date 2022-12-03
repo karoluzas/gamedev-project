@@ -10,6 +10,7 @@ TagManager:
   - Rock
   - Demon Altar
   - Upgrade Station
+  - Slash
   layers:
   - Default
   - TransparentFX
@@ -46,4 +47,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Top
+    uniqueID: 3773958805
     locked: 0

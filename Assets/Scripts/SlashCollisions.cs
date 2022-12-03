@@ -6,6 +6,8 @@ public class SlashCollisions : MonoBehaviour
     private float slashLifetime = 0.15f;
     private InventoryController inventoryController;
     private GameObject player;
+    [SerializeField]
+    private Transform damagePopupPrefab;
     public float DamageOnHit
     {
         set { damageOnHit = value; }
@@ -32,6 +34,10 @@ public class SlashCollisions : MonoBehaviour
             GameObject enemy = collider.gameObject;
             if (enemy)
             {
+                Transform damagePopupTransform = Instantiate(damagePopupPrefab, new Vector3(transform.position.x + 0.25f, transform.position.y + Random.Range(-0.1f, 0.1f), 0), Quaternion.identity);
+                print(transform.position.x + " " + transform.position.y);
+                DamagePopupScript damagePopup = damagePopupTransform.GetComponent<DamagePopupScript>();
+                damagePopup.Setup(damageOnHit);
                 var healthController = enemy.GetComponent<HealthController>();
                 healthController.DecreaseHealth(damageOnHit);
             }

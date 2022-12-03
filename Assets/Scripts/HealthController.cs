@@ -26,7 +26,7 @@ public class HealthController : MonoBehaviour
             if(gameObject.tag == "Rock"){
                 Instantiate(rockBreakSound);
             }
-            Destroy(gameObject);
+            Destroy(gameObject, 0.1f);
         }
     }
 }
