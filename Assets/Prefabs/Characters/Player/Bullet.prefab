@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSound: {fileID: 6745024270195877588, guid: 443615fa2bba59c45b8df85655d8458e, type: 3}
+  damagePopupPrefab: {fileID: 2846658519630962561, guid: 685460d33db68b94abcc3127772f68f7, type: 3}
 --- !u!82 &-6369981124993243589
 AudioSource:
   m_ObjectHideFlags: 0

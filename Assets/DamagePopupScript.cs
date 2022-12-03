@@ -1,0 +1,46 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+
+public class DamagePopupScript : MonoBehaviour
+{
+    // private Transform transformatorius;
+
+    // private void Start(){
+    //     transformatorius = GetComponent<Transform>();
+    // }
+
+    // public static DamagePopupScript CreatePopup(Vector3 position, int damageAmount){
+    //     Transform damagePopupTransform = Instantiate(transformatorius, position, Quaternion.identity);
+    //     DamagePopupScript damagePopup = damagePopupTransform.GetComponent<DamagePopupScript>();
+    //     damagePopup.Setup(damageAmount);
+
+    //     return damagePopup;
+    // }
+
+    private TextMeshPro textMesh;
+    private float disappearTimer = 1f;
+    private Color textColor;
+
+    private void Awake(){
+        textMesh = transform.GetComponent<TextMeshPro>();
+    }
+    public void Setup(float damageAmount){
+        textMesh.SetText(damageAmount.ToString());
+    }
+    private void Update(){
+        float moveYSpeed = 0.2f;
+        transform.position += new Vector3(0, moveYSpeed) * Time.deltaTime;
+
+        disappearTimer -= Time.deltaTime;
+        if(disappearTimer <= 0){
+            textColor.a -= 3f * Time.deltaTime;
+            textMesh.color = textColor;
+            if(textColor.a <= 0){
+                Destroy(gameObject);
+            }
+        }
+    }
+}
+
