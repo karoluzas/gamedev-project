@@ -10,6 +10,7 @@ TagManager:
   - Rock
   - Demon Altar
   - Upgrade Station
+  - Slash
   layers:
   - Default
   - TransparentFX
