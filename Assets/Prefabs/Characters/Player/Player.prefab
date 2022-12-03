@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4199425622631045821}
   - component: {fileID: 8964528796434990265}
+  - component: {fileID: 1987080395993369360}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -103,7 +104,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: fd245132dba7da545a37888c8aad8811, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -115,6 +116,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1987080395993369360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2254718921059602131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ccd8b673f865347a17bb0efbfecdde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3185557607124738935
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,6 +267,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  enemyDeathSound: {fileID: 0}
+  playerDeathSound: {fileID: 0}
+  rockBreakSound: {fileID: 0}
 --- !u!58 &6843700351693135038
 CircleCollider2D:
   m_ObjectHideFlags: 0
