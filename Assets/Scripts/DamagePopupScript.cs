@@ -5,20 +5,6 @@ using UnityEngine;
 
 public class DamagePopupScript : MonoBehaviour
 {
-    // private Transform transformatorius;
-
-    // private void Start(){
-    //     transformatorius = GetComponent<Transform>();
-    // }
-
-    // public static DamagePopupScript CreatePopup(Vector3 position, int damageAmount){
-    //     Transform damagePopupTransform = Instantiate(transformatorius, position, Quaternion.identity);
-    //     DamagePopupScript damagePopup = damagePopupTransform.GetComponent<DamagePopupScript>();
-    //     damagePopup.Setup(damageAmount);
-
-    //     return damagePopup;
-    // }
-
     private TextMeshPro textMesh;
     private float disappearTimer = 1f;
     private Color textColor;
