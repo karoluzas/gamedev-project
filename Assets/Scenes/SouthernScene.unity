@@ -72772,10 +72772,10 @@ PrefabInstance:
     - target: {fileID: 5130426125480138952, guid: 360f6bdabe93c2a43a896307de469e0e, type: 3}
       propertyPath: materialPrefab
       value: 
-      objectReference: {fileID: 3784543286300369769, guid: 50be0315d5cc0d34f8c1db3d8d7d6c62, type: 3}
+      objectReference: {fileID: 2071600489575678400, guid: c0418c93587a7084ab5dd339661a658c, type: 3}
     - target: {fileID: 5130426125480138952, guid: 360f6bdabe93c2a43a896307de469e0e, type: 3}
       propertyPath: materialRespawnTime
-      value: 60
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 5130426125480138955, guid: 360f6bdabe93c2a43a896307de469e0e, type: 3}
       propertyPath: m_RootOrder
@@ -106744,10 +106744,10 @@ PrefabInstance:
     - target: {fileID: 5130426125480138952, guid: 360f6bdabe93c2a43a896307de469e0e, type: 3}
       propertyPath: materialPrefab
       value: 
-      objectReference: {fileID: 3784543286300369769, guid: 50be0315d5cc0d34f8c1db3d8d7d6c62, type: 3}
+      objectReference: {fileID: 2071600489575678400, guid: c0418c93587a7084ab5dd339661a658c, type: 3}
     - target: {fileID: 5130426125480138952, guid: 360f6bdabe93c2a43a896307de469e0e, type: 3}
       propertyPath: materialRespawnTime
-      value: 40
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5130426125480138955, guid: 360f6bdabe93c2a43a896307de469e0e, type: 3}
       propertyPath: m_RootOrder
@@ -106825,10 +106825,10 @@ PrefabInstance:
     - target: {fileID: 5130426125480138952, guid: 360f6bdabe93c2a43a896307de469e0e, type: 3}
       propertyPath: materialPrefab
       value: 
-      objectReference: {fileID: 3784543286300369769, guid: 50be0315d5cc0d34f8c1db3d8d7d6c62, type: 3}
+      objectReference: {fileID: 2071600489575678400, guid: c0418c93587a7084ab5dd339661a658c, type: 3}
     - target: {fileID: 5130426125480138952, guid: 360f6bdabe93c2a43a896307de469e0e, type: 3}
       propertyPath: materialRespawnTime
-      value: 60
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 5130426125480138955, guid: 360f6bdabe93c2a43a896307de469e0e, type: 3}
       propertyPath: m_RootOrder
@@ -106906,10 +106906,10 @@ PrefabInstance:
     - target: {fileID: 5130426125480138952, guid: 360f6bdabe93c2a43a896307de469e0e, type: 3}
       propertyPath: materialPrefab
       value: 
-      objectReference: {fileID: 3784543286300369769, guid: 50be0315d5cc0d34f8c1db3d8d7d6c62, type: 3}
+      objectReference: {fileID: 2071600489575678400, guid: c0418c93587a7084ab5dd339661a658c, type: 3}
     - target: {fileID: 5130426125480138952, guid: 360f6bdabe93c2a43a896307de469e0e, type: 3}
       propertyPath: materialRespawnTime
-      value: 90
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 5130426125480138955, guid: 360f6bdabe93c2a43a896307de469e0e, type: 3}
       propertyPath: m_RootOrder
