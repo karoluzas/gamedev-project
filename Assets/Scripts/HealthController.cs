@@ -23,7 +23,7 @@ public class HealthController : MonoBehaviour
             if(gameObject.tag == "Player"){
                 Instantiate(playerDeathSound);
             }
-            if(gameObject.tag == "Rock"){
+            if(gameObject.tag == "Rock" || gameObject.tag == "Demon Egg" || gameObject.tag == "Demon Altar" ){
                 Instantiate(rockBreakSound);
             }
             Destroy(gameObject, 0.1f);
