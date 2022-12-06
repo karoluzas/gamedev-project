@@ -107070,7 +107070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3041728994081442117, guid: 08c4f7f7c22cdac45a88ee57763d9592, type: 3}
       propertyPath: sceneName
-      value: MainScene
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3041728994081442117, guid: 08c4f7f7c22cdac45a88ee57763d9592, type: 3}
       propertyPath: sceneBuildIndex

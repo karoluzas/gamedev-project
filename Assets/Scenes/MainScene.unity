@@ -502,7 +502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3041728994081442117, guid: 08c4f7f7c22cdac45a88ee57763d9592, type: 3}
       propertyPath: sceneName
-      value: SouthernScene
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3041728994081442117, guid: 08c4f7f7c22cdac45a88ee57763d9592, type: 3}
       propertyPath: sceneBuildIndex
@@ -18900,7 +18900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3041728994081442117, guid: 08c4f7f7c22cdac45a88ee57763d9592, type: 3}
       propertyPath: sceneName
-      value: EasternScene
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3041728994081442117, guid: 08c4f7f7c22cdac45a88ee57763d9592, type: 3}
       propertyPath: sceneBuildIndex
@@ -32077,7 +32077,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3041728994081442117, guid: 08c4f7f7c22cdac45a88ee57763d9592, type: 3}
       propertyPath: sceneName
-      value: WesternScene
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3041728994081442123, guid: 08c4f7f7c22cdac45a88ee57763d9592, type: 3}
       propertyPath: m_RootOrder

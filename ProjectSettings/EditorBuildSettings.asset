@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SouthernScene.unity
     guid: 3657771027ce7cc41921eec2ace511f4
+  - enabled: 1
+    path: Assets/Scenes/TutorialScene.unity
+    guid: f6409d02728f8ae45aeba06590dabd21
   m_configObjects: {}
