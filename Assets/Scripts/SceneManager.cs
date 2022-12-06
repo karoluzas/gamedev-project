@@ -3,13 +3,13 @@ using UnityEngine;
 public class SceneManager : MonoBehaviour
 {
     [SerializeField]
-    private string gameStartScene;
+    private int gameStartScene;
 
     [SerializeField]
-    private string creditsScene;
+    private int creditsScene;
 
     [SerializeField]
-    private string tutorialScene;
+    private int tutorialScene;
 
     public void StartGame()
     {
