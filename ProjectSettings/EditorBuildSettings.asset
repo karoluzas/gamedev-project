@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WesternScene.unity
     guid: f9bab983f858f194f90f34291da62509
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: abcc547c99f7ef34883c399d10457440
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 074bd58ead30ab34f9dd57c8034ce0d2
   m_configObjects: {}
