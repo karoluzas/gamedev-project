@@ -4,11 +4,11 @@ using UnityEngine.SceneManagement;
 public class SwitchToMenu : MonoBehaviour
 {
     [SerializeField]
-    private int mainMenuScene;
+    private string mainMenuScene;
 
     public void LoadMenu()
     {
-        SceneManager.LoadScene(mainMenuScene);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(mainMenuScene);
     }
 
     public void Update()

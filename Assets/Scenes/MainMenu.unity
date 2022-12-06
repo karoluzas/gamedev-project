@@ -1418,9 +1418,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27dea87c6d2e3424c969c120da4525b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStartScene: 1
-  creditsScene: 2
-  tutorialScene: 0
+  gameStartScene: MainScene
+  creditsScene: CreditsScene
+  tutorialScene: TutorialScene
 --- !u!1 &1967364499
 GameObject:
   m_ObjectHideFlags: 0
