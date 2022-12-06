@@ -182,17 +182,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8939432314532444301, guid: fa87548eb93d7c54a8923be826552443, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa87548eb93d7c54a8923be826552443, type: 3}
 --- !u!4 &53324056 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 374301389610822777, guid: fa87548eb93d7c54a8923be826552443, type: 3}
   m_PrefabInstance: {fileID: 53324055}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &98230512 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 2093896762063674913, guid: e0a7019952543d740a3bf2a877b41c9b, type: 3}
-  m_PrefabInstance: {fileID: 335819945}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &188010911
 PrefabInstance:
@@ -216,7 +215,7 @@ PrefabInstance:
     - target: {fileID: 4877659157252441121, guid: 326032565be65b04eb9c544ed3868d81, type: 3}
       propertyPath: menus.Array.data[1].menuActivationArea
       value: 
-      objectReference: {fileID: 98230512}
+      objectReference: {fileID: 335819947}
     - target: {fileID: 4877659157252441121, guid: 326032565be65b04eb9c544ed3868d81, type: 3}
       propertyPath: menus.Array.data[1].keyCodeToToggleMenu
       value: 101
@@ -362,6 +361,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6070427794119370130, guid: e0a7019952543d740a3bf2a877b41c9b, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7364682562513381929, guid: e0a7019952543d740a3bf2a877b41c9b, type: 3}
       propertyPath: m_Name
       value: UpgradeStation
@@ -377,6 +380,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5436998859734977531, guid: e0a7019952543d740a3bf2a877b41c9b, type: 3}
   m_PrefabInstance: {fileID: 335819945}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &335819947 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4113246874849021745, guid: e0a7019952543d740a3bf2a877b41c9b, type: 3}
+  m_PrefabInstance: {fileID: 335819945}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f7ac671180769b4eb535ca4800513e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &336612337
 GameObject:
   m_ObjectHideFlags: 0

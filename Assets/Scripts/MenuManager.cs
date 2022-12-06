@@ -7,7 +7,7 @@ public class MenuDetails
 {
     public GameObject menu;
     public KeyCode keyCodeToToggleMenu;
-    public Collider2D menuActivationArea;
+    public MenuCollisions menuActivationArea;
 }
 
 public class MenuManager : MonoBehaviour
@@ -15,7 +15,6 @@ public class MenuManager : MonoBehaviour
     private static KeyCode? pausedMenuKeyCode = null;
     public static bool IsGamePaused = false;
 
-    public Collider2D playerCollisions;
     public List<MenuDetails> menus;
 
     private void Update()
@@ -23,7 +22,7 @@ public class MenuManager : MonoBehaviour
         foreach (var menuDetails in menus)
         {
             if (Input.GetKeyDown(menuDetails.keyCodeToToggleMenu) 
-                && (menuDetails.menuActivationArea == null || menuDetails.menuActivationArea.IsTouching(playerCollisions)))
+                && (menuDetails.menuActivationArea == null || menuDetails.menuActivationArea.IsMenuAvailable))
             {
                 if (IsGamePaused && pausedMenuKeyCode == menuDetails.keyCodeToToggleMenu)
                 {
