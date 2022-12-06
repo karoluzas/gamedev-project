@@ -14898,7 +14898,8 @@ PrefabInstance:
       propertyPath: sceneCamera
       value: 
       objectReference: {fileID: 1879747244}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7810574094660472778, guid: a7b77d89355717841be7c25584620f1d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a7b77d89355717841be7c25584620f1d, type: 3}
 --- !u!1 &1372297061
 GameObject:
@@ -17316,7 +17317,6 @@ GameObject:
   - component: {fileID: 1879747244}
   - component: {fileID: 1879747243}
   - component: {fileID: 1879747242}
-  - component: {fileID: 1879747241}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -17324,18 +17324,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1879747241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1879747240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c90a6589484eeab468f53ee9205a6543, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1879747242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17519,7 +17507,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1972251718}
   - component: {fileID: 1972251717}
-  - component: {fileID: 1972251716}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -17527,18 +17514,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1972251716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1972251714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c90a6589484eeab468f53ee9205a6543, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1972251717
 MonoBehaviour:
   m_ObjectHideFlags: 0

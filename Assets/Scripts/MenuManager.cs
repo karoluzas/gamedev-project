@@ -51,4 +51,11 @@ public class MenuManager : MonoBehaviour
         Time.timeScale = 0f;
         IsGamePaused = true;
     }
+
+    public void Reset()
+    {
+        pausedMenuKeyCode = null;
+        IsGamePaused = false;
+        Time.timeScale = 1f;
+    }
 }
