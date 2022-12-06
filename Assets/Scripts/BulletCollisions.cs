@@ -1,6 +1,5 @@
 using UnityEngine;
 
-//TODO - uncomment relevant places and update, when enemies are implemented
 public class BulletCollisions : MonoBehaviour
 {
     private float damageOnHit = 5f;
