@@ -12,6 +12,7 @@ TagManager:
   - Upgrade Station
   - Slash
   - Demon Egg
+  - Spaceship
   layers:
   - Default
   - TransparentFX
