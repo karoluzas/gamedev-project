@@ -57,7 +57,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2254718921059602131}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.073, y: -0.042, z: 0}
+  m_LocalPosition: {x: 0.073, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -300,6 +300,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 151264c99b6e5dc468c6db60df0376b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iron: 0
+  diamond: 0
+  obsidian: 0
+  demonEgg: 0
+  rottenFlesh: 0
+  orbsOfAcid: 0
+  bones: 0
+  lavaOrbs: 0
+  demonCore: 0
+  demonBlood: 0
 --- !u!114 &7810574094660472778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,7 +348,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8820206091230525821}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.042, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

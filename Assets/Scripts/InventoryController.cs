@@ -1,23 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InventoryController : MonoBehaviour
 {
     //Wester Zone Drops
-    private int iron = 0;
-    private int diamond = 0;
-    private int obsidian = 0;
+    public int iron = 0;
+    public int diamond = 0;
+    public int obsidian = 0;
     //Eastern Zone Drops
-    private int demonEgg = 0;
-    private int rottenFlesh = 0;
-    private int orbsOfAcid = 0;
+    public int demonEgg = 0;
+    public int rottenFlesh = 0;
+    public int orbsOfAcid = 0;
     //Southern Zone Drops
-    private int bones = 0;
-    private int lavaOrbs = 0;
-    private int demonCore = 0;
+    public int bones = 0;
+    public int lavaOrbs = 0;
+    public int demonCore = 0;
     //Enemy Drops
-    private int demonBlood = 0;
+    public int demonBlood = 0;
 
     public void AddRocks(int iron, int diamond, int obsidian){
         this.iron += iron;
@@ -25,18 +23,21 @@ public class InventoryController : MonoBehaviour
         this.obsidian += obsidian;
         PrintInventory();
     }
+
     public void AddBushes(int demonEgg, int rottenFlesh, int orbsOfAcid){
         this.demonEgg += demonEgg;
         this.rottenFlesh += rottenFlesh;
         this.orbsOfAcid += orbsOfAcid;
         PrintInventory();
     }
+
     public void AddAltairs(int bones, int lavaOrbs, int demonCore){
         this.bones += bones;
         this.lavaOrbs += lavaOrbs;
         this.demonCore += demonCore;
         PrintInventory();
     }
+
     public void AddDemonBlood(int demonBlood){
         this.demonBlood += demonBlood;
         PrintInventory();
@@ -45,9 +46,9 @@ public class InventoryController : MonoBehaviour
     private void PrintInventory(){
         //This function is for debugging purposes
         print(
-            "Iron: " + this.iron + " Diamond: " + this.diamond + " Obsidian: " + this.obsidian + "\n" +
-            "Demon Egg: " + this.demonEgg + " Rotten Flesh: " + this.rottenFlesh + " Orbs of Acid: " + this.orbsOfAcid + "\n" +
-            "Bones: " + this.bones + " Lava Orbs: " + this.lavaOrbs + " Demon Core: " + this.demonCore + "\n" +
-            "Demon Blood - " + this.demonBlood);
+            $"Iron: {iron} Diamond: {diamond} Obsidian: {obsidian}\n" +
+            $"Demon Egg: {demonEgg} Rotten Flesh: {rottenFlesh} Orbs of Acid: {orbsOfAcid}\n" +
+            $"Bones: {bones } Lava Orbs: {lavaOrbs} Demon Core: {demonCore}\n" +
+            $"Demon Blood - {demonBlood}");
     }
 }
