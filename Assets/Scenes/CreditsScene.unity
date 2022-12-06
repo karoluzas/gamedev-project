@@ -197,6 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuScene: 0
+  listenToEscapeKey: 1
 --- !u!1 &413788757
 GameObject:
   m_ObjectHideFlags: 0
