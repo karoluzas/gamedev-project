@@ -18865,6 +18865,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &1373155328 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 2093896762063674913, guid: e0a7019952543d740a3bf2a877b41c9b, type: 3}
+  m_PrefabInstance: {fileID: 498947264}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1402077540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19441,6 +19446,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6411898890120153311, guid: a7b77d89355717841be7c25584620f1d, type: 3}
   m_PrefabInstance: {fileID: 1107048722}
   m_PrefabAsset: {fileID: 0}
+--- !u!58 &1433467350 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6843700351693135038, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+  m_PrefabInstance: {fileID: 1107048722}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1491448421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19453,9 +19463,21 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4877659157252441121, guid: 326032565be65b04eb9c544ed3868d81, type: 3}
+      propertyPath: playerCollisions
+      value: 
+      objectReference: {fileID: 1433467350}
+    - target: {fileID: 4877659157252441121, guid: 326032565be65b04eb9c544ed3868d81, type: 3}
       propertyPath: menus.Array.data[1].menu
       value: 
       objectReference: {fileID: 1340855528}
+    - target: {fileID: 4877659157252441121, guid: 326032565be65b04eb9c544ed3868d81, type: 3}
+      propertyPath: menus.Array.data[0].menuActivationArea
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877659157252441121, guid: 326032565be65b04eb9c544ed3868d81, type: 3}
+      propertyPath: menus.Array.data[1].menuActivationArea
+      value: 
+      objectReference: {fileID: 1373155328}
     - target: {fileID: 4877659157252441121, guid: 326032565be65b04eb9c544ed3868d81, type: 3}
       propertyPath: menus.Array.data[1].keyCodeToToggleMenu
       value: 101

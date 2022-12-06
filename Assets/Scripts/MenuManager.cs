@@ -7,21 +7,23 @@ public class MenuDetails
 {
     public GameObject menu;
     public KeyCode keyCodeToToggleMenu;
+    public Collider2D menuActivationArea;
 }
 
 public class MenuManager : MonoBehaviour
 {
-    public static bool IsGamePaused = false;
-    
     private static KeyCode? pausedMenuKeyCode = null;
+    public static bool IsGamePaused = false;
 
+    public Collider2D playerCollisions;
     public List<MenuDetails> menus;
 
     private void Update()
     {
         foreach (var menuDetails in menus)
         {
-            if (Input.GetKeyDown(menuDetails.keyCodeToToggleMenu))
+            if (Input.GetKeyDown(menuDetails.keyCodeToToggleMenu) 
+                && (menuDetails.menuActivationArea == null || menuDetails.menuActivationArea.IsTouching(playerCollisions)))
             {
                 if (IsGamePaused && pausedMenuKeyCode == menuDetails.keyCodeToToggleMenu)
                 {
