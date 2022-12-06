@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SceneController : MonoBehaviour
@@ -12,9 +11,11 @@ public class SceneController : MonoBehaviour
     private HealthController healthController;
     private bool takingDamage = false;
 
-    private void Start(){
+    private void Start()
+    {
         player = GameObject.Find("Player");
-        if (player){
+        if (player)
+        {
             healthController = player.GetComponent<HealthController>();
         }
     }
@@ -29,7 +30,8 @@ public class SceneController : MonoBehaviour
         }
     }
 
-    private IEnumerator TakeDamage(int duration){
+    private IEnumerator TakeDamage(int duration)
+    {
         healthController.DecreaseHealth(1);
         takingDamage = true;
         yield return new WaitForSeconds(duration);
