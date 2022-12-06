@@ -26,9 +26,9 @@ TagManager:
   - Obstacle
   - EnemyBullet
   - Bullet
-  - Slash
   - Player
   - Materials
+  - Slash
   - 
   - 
   - 
