@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 5f95e73138ea7934faaddec5d9261587, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
+  flashDuration: 0.1
   enemyDeathSound: {fileID: 0}
   playerDeathSound: {fileID: 0}
   rockBreakSound: {fileID: 8647140846751501247, guid: cae47fefb3ff2704aaeaf7ccc7365327, type: 3}
