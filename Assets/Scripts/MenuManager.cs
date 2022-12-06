@@ -13,7 +13,7 @@ public class MenuDetails
 public class MenuManager : MonoBehaviour
 {
     private static KeyCode? pausedMenuKeyCode = null;
-    public static bool IsGamePaused = false;
+    public static bool IsGamePaused { get; private set; } = false;
 
     public List<MenuDetails> menus;
 
@@ -52,7 +52,7 @@ public class MenuManager : MonoBehaviour
         IsGamePaused = true;
     }
 
-    public void Reset()
+    public static void Reset()
     {
         pausedMenuKeyCode = null;
         IsGamePaused = false;
