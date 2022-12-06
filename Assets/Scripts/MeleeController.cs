@@ -15,21 +15,24 @@ public class MeleeController : MonoBehaviour
 
     private void Update()
     {
-        if(timeLeft > 0)
+
+        if (!MenuManager.IsGamePaused)
         {
-            canSlash = false;
-            timeLeft -= Time.deltaTime;
+            if (timeLeft > 0)
+            {
+                canSlash = false;
+                timeLeft -= Time.deltaTime;
+            }
+            else
+            {
+                canSlash = true;
+            }
+            if (Input.GetButtonDown("Fire2") && canSlash)
+            {
+                Swing();
+                timeLeft = slashCooldown;
+            }
         }
-        else
-        {
-            canSlash = true;
-        }
-        if(Input.GetButtonDown("Fire2") && canSlash)
-        {
-            Swing();
-            timeLeft = slashCooldown;
-        }
-        
     }
 
     private void Swing()

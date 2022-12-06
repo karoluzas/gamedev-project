@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class SceneController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField]
+    private float timer = 60f;
+    [SerializeField]
+    private int damageTimer = 5;
+    private GameObject player;
+    private HealthController healthController;
+    private bool takingDamage = false;
+
+    private void Start(){
+        player = GameObject.Find("Player");
+        if (player){
+            healthController = player.GetComponent<HealthController>();
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        timer -= Time.deltaTime;
+        if(timer < 0){
+            if(!takingDamage){
+                StartCoroutine(TakeDamage(damageTimer));
+            }
+        }
+    }
+
+    private IEnumerator TakeDamage(int duration){
+        healthController.DecreaseHealth(1);
+        takingDamage = true;
+        yield return new WaitForSeconds(duration);
+        takingDamage = false;
     }
 }

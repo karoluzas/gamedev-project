@@ -14,8 +14,9 @@ public class EnemyCollision : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Player");
-        if (player)
+        if (player){
             healthController = player.GetComponent<HealthController>();
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)

@@ -1,6 +1,5 @@
 using UnityEngine;
 
-//TODO - uncomment relevant places and update, when enemies are implemented
 public class BulletCollisions : MonoBehaviour
 {
     private float damageOnHit = 5f;
@@ -11,11 +10,18 @@ public class BulletCollisions : MonoBehaviour
     public float BulletRange { set => bulletRange = value; }
 
     public GameObject hitSound;
+    [SerializeField]
+    private Transform damagePopupPrefab;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.tag == "Enemy_Sathanas")
         {
+            Transform damagePopupTransform = Instantiate(damagePopupPrefab, new Vector3(transform.position.x + 0.25f, transform.position.y + Random.Range(-0.1f, 0.1f), 0), Quaternion.identity);
+            print(transform.position.x + " " + transform.position.y);
+            DamagePopupScript damagePopup = damagePopupTransform.GetComponent<DamagePopupScript>();
+            damagePopup.Setup(damageOnHit);
+
             Instantiate(hitSound);
             Destroy(gameObject);
             GameObject enemy = collider.gameObject;
