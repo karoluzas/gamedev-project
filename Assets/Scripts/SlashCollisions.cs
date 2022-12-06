@@ -60,6 +60,15 @@ public class SlashCollisions : MonoBehaviour
             //TODO - add inventory system so materials can be gathered
             inventoryController.AddAltairs(Random.Range(1,10), Random.Range(0,2), Random.Range(0,4));
         }
+        if(collider.tag == "Demon Egg"){
+            GameObject demonEgg = collider.gameObject;
+            if(demonEgg){
+                var healthController = demonEgg.GetComponent<HealthController>();
+                healthController.DecreaseHealth(damageOnHit);
+            }
+            //TODO - add inventory system so materials can be gathered
+            inventoryController.AddBushes(Random.Range(1,10), Random.Range(0,2), Random.Range(0,4));
+        }
     }
 
     private void Update()
