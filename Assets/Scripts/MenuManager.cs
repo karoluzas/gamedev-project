@@ -7,13 +7,13 @@ public class MenuDetails
 {
     public GameObject menu;
     public KeyCode keyCodeToToggleMenu;
+    public MenuCollisions menuActivationArea;
 }
 
 public class MenuManager : MonoBehaviour
 {
-    public static bool IsGamePaused = false;
-    
     private static KeyCode? pausedMenuKeyCode = null;
+    public static bool IsGamePaused = false;
 
     public List<MenuDetails> menus;
 
@@ -21,7 +21,8 @@ public class MenuManager : MonoBehaviour
     {
         foreach (var menuDetails in menus)
         {
-            if (Input.GetKeyDown(menuDetails.keyCodeToToggleMenu))
+            if (Input.GetKeyDown(menuDetails.keyCodeToToggleMenu) 
+                && (menuDetails.menuActivationArea == null || menuDetails.menuActivationArea.IsMenuAvailable))
             {
                 if (IsGamePaused && pausedMenuKeyCode == menuDetails.keyCodeToToggleMenu)
                 {

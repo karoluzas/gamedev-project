@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 8550181729923948543}
   - component: {fileID: 3838222287369799921}
   - component: {fileID: 5942620033626290757}
-  - component: {fileID: 5555977662491989980}
   m_Layer: 8
   m_Name: Belphegor
   m_TagString: Enemy_Sathanas
@@ -149,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  flashDuration: 0.1
   enemyDeathSound: {fileID: 2070612908562151909, guid: e4ca724c85d6b6a459af676abb6b6ca9, type: 3}
   playerDeathSound: {fileID: 0}
   rockBreakSound: {fileID: 0}
@@ -204,17 +204,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5555977662491989980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8550181729923948517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0c7e1928d68e1540acc79ee8bb8f3bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 5942620033626290757}
-  duration: 0.1

@@ -1,21 +1,22 @@
 using UnityEngine;
 
-public class TutorialCollisionsText : MonoBehaviour
+public class MenuCollisions : MonoBehaviour
 {
-    public GameObject text;
+    public bool IsMenuAvailable { get; private set; } = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            text.SetActive(true);
+            IsMenuAvailable = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            text.SetActive(false);
+            IsMenuAvailable = false;
         }
     }
 }
+

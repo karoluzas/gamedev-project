@@ -1,18 +1,29 @@
+using System.Collections;
 using UnityEngine;
 
 public class HealthController : MonoBehaviour
 {
     public float health = 0f;
+    public float flashDuration = 0.1f;
     public GameObject enemyDeathSound;
     public GameObject playerDeathSound;
     public GameObject rockBreakSound;
+    private SpriteRenderer sprite;
+
+    private void Start()
+    {
+        sprite = gameObject.GetComponent<SpriteRenderer>();
+    }
 
     public void DecreaseHealth(float amount)
     {
         if (health > 0)
         {
             health -= amount;
-            Debug.Log("Health: " + health);
+            if (gameObject.tag == "Player" || gameObject.tag == "Enemy_Sathanas")
+            {
+                StartCoroutine(FlashRed());
+            }
             //Hurt Animation/Particles?
         }
         else
@@ -28,5 +39,12 @@ public class HealthController : MonoBehaviour
             }
             Destroy(gameObject, 0.1f);
         }
+    }
+
+    public IEnumerator FlashRed()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(flashDuration);
+        sprite.color = Color.white;
     }
 }

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7982428106690326910}
   - component: {fileID: 4658620617347477079}
   - component: {fileID: 4159261461461971337}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Animated Slash
-  m_TagString: Untagged
+  m_TagString: Slash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -724289973, guid: 3e91df38cc3121241ada6f6e58e03bfa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 920044331064469649}
   - component: {fileID: 8832075470009937907}
   - component: {fileID: -6808097071209885764}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Slash
   m_TagString: Slash
   m_Icon: {fileID: 0}

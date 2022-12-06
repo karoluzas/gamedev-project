@@ -1,53 +1,54 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InventoryController : MonoBehaviour
 {
     //Wester Zone Drops
-    private int iron = 0;
-    private int diamond = 0;
-    private int obsidian = 0;
+    public int Iron { get; private set; } = 0;
+    public int Diamond { get; private set; } = 0;
+    public int Obsidian { get; private set; } = 0;
     //Eastern Zone Drops
-    private int demonEgg = 0;
-    private int rottenFlesh = 0;
-    private int orbsOfAcid = 0;
+    public int DemonEgg { get; private set; } = 0;
+    public int RottenFlesh { get; private set; } = 0;
+    public int OrbsOfAcid { get; private set; } = 0;
     //Southern Zone Drops
-    private int bones = 0;
-    private int lavaOrbs = 0;
-    private int demonCore = 0;
+    public int Bones { get; private set; } = 0;
+    public int LavaOrbs { get; private set; } = 0;
+    public int DemonCore { get; private set; } = 0;
     //Enemy Drops
-    private int demonBlood = 0;
+    public int DemonBlood { get; private set; } = 0;
 
     public void AddRocks(int iron, int diamond, int obsidian){
-        this.iron += iron;
-        this.diamond += diamond;
-        this.obsidian += obsidian;
+        Iron += iron;
+        Diamond += diamond;
+        Obsidian += obsidian;
         PrintInventory();
     }
+
     public void AddBushes(int demonEgg, int rottenFlesh, int orbsOfAcid){
-        this.demonEgg += demonEgg;
-        this.rottenFlesh += rottenFlesh;
-        this.orbsOfAcid += orbsOfAcid;
+        DemonEgg += demonEgg;
+        RottenFlesh += rottenFlesh;
+        OrbsOfAcid += orbsOfAcid;
         PrintInventory();
     }
+
     public void AddAltairs(int bones, int lavaOrbs, int demonCore){
-        this.bones += bones;
-        this.lavaOrbs += lavaOrbs;
-        this.demonCore += demonCore;
+        Bones += bones;
+        LavaOrbs += lavaOrbs;
+        DemonCore += demonCore;
         PrintInventory();
     }
+
     public void AddDemonBlood(int demonBlood){
-        this.demonBlood += demonBlood;
+        DemonBlood += demonBlood;
         PrintInventory();
     }
 
     private void PrintInventory(){
         //This function is for debugging purposes
         print(
-            "Iron: " + this.iron + " Diamond: " + this.diamond + " Obsidian: " + this.obsidian + "\n" +
-            "Demon Egg: " + this.demonEgg + " Rotten Flesh: " + this.rottenFlesh + " Orbs of Acid: " + this.orbsOfAcid + "\n" +
-            "Bones: " + this.bones + " Lava Orbs: " + this.lavaOrbs + " Demon Core: " + this.demonCore + "\n" +
-            "Demon Blood - " + this.demonBlood);
+            $"Iron: {Iron} Diamond: {Diamond} Obsidian: {Obsidian}\n" +
+            $"Demon Egg: {DemonEgg} Rotten Flesh: {RottenFlesh} Orbs of Acid: {OrbsOfAcid}\n" +
+            $"Bones: {Bones } Lava Orbs: {LavaOrbs} Demon Core: {DemonCore}\n" +
+            $"Demon Blood - {DemonBlood}");
     }
 }

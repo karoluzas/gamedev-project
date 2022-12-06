@@ -14,22 +14,24 @@ public class RangedController : MonoBehaviour
     public float bulletRange = 1f;
 
     private void Update()
-    {  
-        if(timeLeft > 0)
+    {
+        if (!MenuManager.IsGamePaused)
         {
-            canFire = false;
-            timeLeft -= Time.deltaTime;
+            if (timeLeft > 0)
+            {
+                canFire = false;
+                timeLeft -= Time.deltaTime;
+            }
+            else
+            {
+                canFire = true;
+            }
+            if (Input.GetButtonDown("Fire1") && canFire)
+            {
+                Shoot();
+                timeLeft = fireCooldown;
+            }
         }
-        else
-        {
-            canFire = true;
-        }
-        if(Input.GetButtonDown("Fire1") && canFire)
-        {
-            Shoot();
-            timeLeft = fireCooldown;
-        }
-        
     }
 
     private void Shoot()
