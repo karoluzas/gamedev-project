@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class EnemyCollision : MonoBehaviour
@@ -11,14 +10,12 @@ public class EnemyCollision : MonoBehaviour
 
     private GameObject player;
     private HealthController healthController;
-    private SpriteRenderer sprite;
 
     private void Start()
     {
         player = GameObject.Find("Player");
         if (player){
             healthController = player.GetComponent<HealthController>();
-            sprite = player.GetComponent<SpriteRenderer>();
         }
     }
 
@@ -31,7 +28,6 @@ public class EnemyCollision : MonoBehaviour
                 if (canDamage)
                 {
                     healthController.DecreaseHealth(damageOnHit);
-                    StartCoroutine(FlashRed());
                     canDamage = false;
                 }
             }
@@ -49,11 +45,5 @@ public class EnemyCollision : MonoBehaviour
         {
             timeLeft -= Time.deltaTime;
         }
-    }
-
-    public IEnumerator FlashRed(){
-        sprite.color = Color.red;
-        yield return new WaitForSeconds(0.5f);
-        sprite.color = Color.white;
     }
 }

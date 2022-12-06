@@ -46,7 +46,6 @@ GameObject:
   - component: {fileID: 7270123362031562876}
   - component: {fileID: 7270123362031562873}
   - component: {fileID: 6237302705505818754}
-  - component: {fileID: 5514327864298659001}
   - component: {fileID: 3990775103286201316}
   m_Layer: 8
   m_Name: Sathanas
@@ -182,23 +181,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
+  flashDuration: 0.1
   enemyDeathSound: {fileID: 2070612908562151909, guid: e4ca724c85d6b6a459af676abb6b6ca9, type: 3}
   playerDeathSound: {fileID: 0}
   rockBreakSound: {fileID: 0}
---- !u!114 &5514327864298659001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7270123362031562879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0c7e1928d68e1540acc79ee8bb8f3bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 3990775103286201316}
-  duration: 0.1
 --- !u!212 &3990775103286201316
 SpriteRenderer:
   m_ObjectHideFlags: 0

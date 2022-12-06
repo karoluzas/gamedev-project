@@ -269,6 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  flashDuration: 0.5
   enemyDeathSound: {fileID: 0}
   playerDeathSound: {fileID: 0}
   rockBreakSound: {fileID: 0}
