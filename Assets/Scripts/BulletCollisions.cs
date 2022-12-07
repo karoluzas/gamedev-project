@@ -10,8 +10,7 @@ public class BulletCollisions : MonoBehaviour
     public float BulletRange { set => bulletRange = value; }
 
     public GameObject hitSound;
-    [SerializeField]
-    private Transform damagePopupPrefab;
+    public Transform damagePopupPrefab;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {

@@ -4,8 +4,7 @@ public class SlashCollisions : MonoBehaviour
 {
     private float damageOnHit = 5f;
     private float slashLifetime = 0.15f;
-    private InventoryController inventoryController;
-    private GameObject player;
+
     [SerializeField]
     private Transform damagePopupPrefab;
     public float DamageOnHit
@@ -19,18 +18,10 @@ public class SlashCollisions : MonoBehaviour
         set { slashLifetime = value; }
     }
 
-    private void Start()
-    {
-        player = GameObject.Find("Player");
-        if (player)
-            inventoryController = player.GetComponent<InventoryController>();
-    }
-
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.tag == "Enemy_Sathanas")
         {
-            //Destroy(gameObject);
             GameObject enemy = collider.gameObject;
             if (enemy)
             {
@@ -42,32 +33,15 @@ public class SlashCollisions : MonoBehaviour
                 healthController.DecreaseHealth(damageOnHit);
             }
         }
-        if(collider.tag == "Rock"){
-            GameObject rock = collider.gameObject;
-            if(rock){
-                var healthController = rock.GetComponent<HealthController>();
+
+        if(collider.tag == "Rock" || collider.tag == "Demon Altar" || collider.tag == "Demon Egg")
+        {
+            GameObject gatherable = collider.gameObject;
+            if (gatherable)
+            {
+                var healthController = gatherable.GetComponent<HealthController>();
                 healthController.DecreaseHealth(damageOnHit);
             }
-
-            inventoryController.AddRocks(Random.Range(1,10), Random.Range(0,2), Random.Range(0,4));
-        }
-        if(collider.tag == "Demon Altar"){
-            GameObject demonAltar = collider.gameObject;
-            if(demonAltar){
-                var healthController = demonAltar.GetComponent<HealthController>();
-                healthController.DecreaseHealth(damageOnHit);
-            }
-
-            inventoryController.AddAltairs(Random.Range(1,10), Random.Range(0,2), Random.Range(0,4));
-        }
-        if(collider.tag == "Demon Egg"){
-            GameObject demonEgg = collider.gameObject;
-            if(demonEgg){
-                var healthController = demonEgg.GetComponent<HealthController>();
-                healthController.DecreaseHealth(damageOnHit);
-            }
-
-            inventoryController.AddBushes(Random.Range(1,10), Random.Range(0,2), Random.Range(0,4));
         }
     }
 
