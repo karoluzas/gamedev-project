@@ -56,4 +56,10 @@ public abstract class SpaceshipFixBase : MonoBehaviour
     protected abstract void ApplyFix();
 
     protected abstract bool CanFix();
+
+    protected void SetText(GameObject textObject, float value)
+    {
+        var textMeshPro = textObject.GetComponent<TextMeshProUGUI>();
+        textMeshPro.SetText($"{value} x");
+    }
 }

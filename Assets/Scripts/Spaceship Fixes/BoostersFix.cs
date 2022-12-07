@@ -13,12 +13,9 @@ public class BoostersFix : SpaceshipFixBase
 
     protected override void InitializeValueText()
     {
-        var ironValueTextMeshPro = IronValueText.GetComponent<TextMeshProUGUI>();
-        ironValueTextMeshPro.SetText($"{IronNeededForFix} x");
-        var lavaOrbsValueTextMeshPro = LavaOrbsValueText.GetComponent<TextMeshProUGUI>();
-        lavaOrbsValueTextMeshPro.SetText($"{LavaOrbsNeededForFix} x");
-        var orbsOfAcidValueTextMeshPro = OrbsOfAcidValueText.GetComponent<TextMeshProUGUI>();
-        orbsOfAcidValueTextMeshPro.SetText($"{OrbsOfAcidNeededForFix} x");
+        SetText(IronValueText, IronNeededForFix);
+        SetText(LavaOrbsValueText, LavaOrbsNeededForFix);
+        SetText(OrbsOfAcidValueText, OrbsOfAcidNeededForFix);
     }
 
     protected override void ApplyFix()

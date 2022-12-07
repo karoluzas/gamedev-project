@@ -13,12 +13,9 @@ public class EngineFix : SpaceshipFixBase
 
     protected override void InitializeValueText()
     {
-        var ironValueTextMeshPro = IronValueText.GetComponent<TextMeshProUGUI>();
-        ironValueTextMeshPro.SetText($"{IronNeededForFix} x");
-        var obsidianValueTextMeshPro = ObsidianValueText.GetComponent<TextMeshProUGUI>();
-        obsidianValueTextMeshPro.SetText($"{ObsidianNeededForFix} x");
-        var demonCoreValueTextMeshPro = DemonCoreValueText.GetComponent<TextMeshProUGUI>();
-        demonCoreValueTextMeshPro.SetText($"{DemonCoreNeededForFix} x");
+        SetText(IronValueText, IronNeededForFix);
+        SetText(ObsidianValueText, ObsidianNeededForFix);
+        SetText(DemonCoreValueText, DemonCoreNeededForFix);
     }
 
     protected override void ApplyFix()

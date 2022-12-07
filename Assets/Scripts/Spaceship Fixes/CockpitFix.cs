@@ -13,12 +13,9 @@ public class CockpitFix : SpaceshipFixBase
 
     protected override void InitializeValueText()
     {
-        var ironValueTextMeshPro = IronValueText.GetComponent<TextMeshProUGUI>();
-        ironValueTextMeshPro.SetText($"{IronNeededForFix} x");
-        var bonesValueTextMeshPro = BonesValueText.GetComponent<TextMeshProUGUI>();
-        bonesValueTextMeshPro.SetText($"{BonesNeededForFix} x");
-        var diamondValueTextMeshPro = DiamondValueText.GetComponent<TextMeshProUGUI>();
-        diamondValueTextMeshPro.SetText($"{DiamondNeededForFix} x");
+        SetText(IronValueText, IronNeededForFix);
+        SetText(BonesValueText, BonesNeededForFix);
+        SetText(DiamondValueText, DiamondNeededForFix);
     }
 
     protected override void ApplyFix()
