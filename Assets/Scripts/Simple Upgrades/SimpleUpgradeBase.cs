@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class SimpleUpgradeBase : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public abstract class SimpleUpgradeBase : MonoBehaviour
     public int DemonBloodNeededForUpgrade = 0;
     public float MaxValue = 0f;
     public float UpgradeValue = 0f;
+    public GameObject UpgradeButton;
+    public GameObject UpgradeValueText;
 
     protected void Start()
     {
@@ -24,6 +28,26 @@ public abstract class SimpleUpgradeBase : MonoBehaviour
             meleeController = playerController.aimTransform.GetComponent<MeleeController>();
             inventoryController = playerController.GetComponent<InventoryController>();
         }
+        var textMeshPro = UpgradeValueText.GetComponent<TextMeshProUGUI>();
+        textMeshPro.SetText($"{DemonBloodNeededForUpgrade} x");
+    }
+
+    protected void Update()
+    {
+        var button = UpgradeButton.GetComponent<Button>();
+        if (!IsGatherableAmountEnoughForUpgrade() || !CanUpgradeUpToMaxValue())
+        {
+            button.interactable = false;
+            if (!CanUpgradeUpToMaxValue())
+            {
+                var textMeshPro = button.GetComponentInChildren<TextMeshProUGUI>();
+                textMeshPro.SetText("Max upgrade reached");
+            }
+        }
+        else
+        {
+            button.interactable = true;
+        }
     }
 
     public void Upgrade()
@@ -32,11 +56,6 @@ public abstract class SimpleUpgradeBase : MonoBehaviour
         {
             ApplyUpgrade();
             inventoryController.demonBlood -= DemonBloodNeededForUpgrade;
-            if (!CanUpgradeUpToMaxValue())
-            {
-                MaxUpgradeReached = true;
-                MaxUpgradeReachedText = "Max upgrade reached";
-            }
         }
     }
 
