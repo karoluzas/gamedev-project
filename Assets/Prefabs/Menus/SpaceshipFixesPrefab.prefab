@@ -567,9 +567,9 @@ GameObject:
   - component: {fileID: 627352755819874491}
   - component: {fileID: 1061747830545894418}
   - component: {fileID: 8471181422312474897}
-  - component: {fileID: 6568396565871045895}
   - component: {fileID: 4197907288879982}
   - component: {fileID: 8728721523037531952}
+  - component: {fileID: 6568396565871045895}
   m_Layer: 5
   m_Name: SpaceshipFixesPrefab
   m_TagString: Untagged
@@ -636,22 +636,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6568396565871045895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878538345033603360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e68e8e108392f746ad09ae0912a3d65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FixButton: {fileID: 7313622484742250746}
-  IronNeededForFix: 0
-  LavaOrbsNeededForFix: 0
-  OrbsOfAcidNeededForFix: 0
 --- !u!114 &4197907288879982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -668,6 +652,9 @@ MonoBehaviour:
   IronNeededForFix: 0
   BonesNeededForFix: 0
   DiamondNeededForFix: 0
+  IronValueText: {fileID: 4417186798996941792}
+  BonesValueText: {fileID: 7563834297855702685}
+  DiamondValueText: {fileID: 8215785339508070287}
 --- !u!114 &8728721523037531952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,6 +671,28 @@ MonoBehaviour:
   IronNeededForFix: 0
   ObsidianNeededForFix: 0
   DemonCoreNeededForFix: 0
+  IronValueText: {fileID: 8868497445393061810}
+  ObsidianValueText: {fileID: 5049486384430609006}
+  DemonCoreValueText: {fileID: 9195586172471474792}
+--- !u!114 &6568396565871045895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878538345033603360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e68e8e108392f746ad09ae0912a3d65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FixButton: {fileID: 7313622484742250746}
+  IronNeededForFix: 0
+  LavaOrbsNeededForFix: 0
+  OrbsOfAcidNeededForFix: 0
+  IronValueText: {fileID: 1272336086082974261}
+  LavaOrbsValueText: {fileID: 331710094978991932}
+  OrbsOfAcidValueText: {fileID: 7874738174235810468}
 --- !u!1 &2121059408656085383
 GameObject:
   m_ObjectHideFlags: 0

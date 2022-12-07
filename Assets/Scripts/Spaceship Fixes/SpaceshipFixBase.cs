@@ -10,7 +10,9 @@ public abstract class SpaceshipFixBase : MonoBehaviour
 
     public GameObject FixButton;
 
-    protected void Start()
+    protected abstract void InitializeValueText();
+
+    protected virtual void Start()
     {
         GameObject player = GameObject.Find("Player");
         if (player)
@@ -18,6 +20,7 @@ public abstract class SpaceshipFixBase : MonoBehaviour
             var playerController = player.GetComponent<PlayerController>();
             inventoryController = playerController.GetComponent<InventoryController>();
         }
+        InitializeValueText();
     }
 
     protected void Update()
