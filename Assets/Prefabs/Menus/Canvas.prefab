@@ -117,6 +117,7 @@ MonoBehaviour:
   menus:
   - menu: {fileID: 5730618083349516538}
     keyCodeToToggleMenu: 27
+    menuActivationArea: {fileID: 0}
 --- !u!1001 &7261741731323948297
 PrefabInstance:
   m_ObjectHideFlags: 0

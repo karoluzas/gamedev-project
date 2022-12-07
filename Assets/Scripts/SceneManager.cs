@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
@@ -13,16 +14,16 @@ public class SceneManager : MonoBehaviour
 
     public void StartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(gameStartScene);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(gameStartScene, LoadSceneMode.Single);
     }
 
     public void SwitchToCredits()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(creditsScene);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(creditsScene, LoadSceneMode.Single);
     }
 
     public void SwitchToTutorial()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(tutorialScene);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(tutorialScene, LoadSceneMode.Single);
     }
 }
