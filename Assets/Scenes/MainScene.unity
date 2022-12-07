@@ -1318,6 +1318,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3276699521363211520, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: bulletSound
+      value: 
+      objectReference: {fileID: 8149681509281866598, guid: 1b08cc88e2cc4374fb2a1133aa0c5ae8, type: 3}
+    - target: {fileID: 3276699521363211520, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: fireCooldown
       value: 0.3
       objectReference: {fileID: 0}

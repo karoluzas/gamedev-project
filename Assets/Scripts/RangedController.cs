@@ -4,6 +4,7 @@ public class RangedController : MonoBehaviour
 {
     public Transform firePoint; 
     public GameObject bulletPrefab;
+    public GameObject bulletSound;
     
     private float timeLeft = 0;
     private bool canFire = true;
@@ -41,6 +42,7 @@ public class RangedController : MonoBehaviour
         SetBulletDamageOnHit(bullet);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
+        Instantiate(bulletSound);
     }
 
     private void SetBulletRange(GameObject bullet)

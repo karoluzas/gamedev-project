@@ -301,16 +301,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 151264c99b6e5dc468c6db60df0376b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iron: 0
-  diamond: 0
-  obsidian: 0
-  demonEgg: 0
-  rottenFlesh: 0
-  orbsOfAcid: 0
-  bones: 0
-  lavaOrbs: 0
-  demonCore: 0
-  demonBlood: 0
 --- !u!114 &7810574094660472778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,6 +362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 4199425622631045821}
   bulletPrefab: {fileID: 2992932278811495360, guid: 5efaab38eae746a418c9bfb0a0d8d623, type: 3}
+  bulletSound: {fileID: 8149681509281866598, guid: 1b08cc88e2cc4374fb2a1133aa0c5ae8, type: 3}
   fireCooldown: 0.3
   bulletForce: 10
   damageOnHit: 5
@@ -390,6 +381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slashPoint: {fileID: 4259390124712241935}
   slashPrefab: {fileID: 7668388760291651899, guid: 426e15ef869b4344b9c9285ceeda7108, type: 3}
+  slashSound: {fileID: 1834533351015646705, guid: 46982c6884b3c6e41b6850349572f235, type: 3}
   slashCooldown: 0.6
   slashSize: 1
   damageOnHit: 5
