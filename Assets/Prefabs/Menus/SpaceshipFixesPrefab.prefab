@@ -2657,7 +2657,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4197907288879982}
+      - m_Target: {fileID: 8728721523037531952}
         m_TargetAssemblyTypeName: SpaceshipFixBase, Assembly-CSharp
         m_MethodName: Fix
         m_Mode: 1
@@ -2791,7 +2791,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4197907288879982}
+      - m_Target: {fileID: 6568396565871045895}
         m_TargetAssemblyTypeName: SpaceshipFixBase, Assembly-CSharp
         m_MethodName: Fix
         m_Mode: 1
