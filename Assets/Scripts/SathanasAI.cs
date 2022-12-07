@@ -4,7 +4,6 @@ using Pathfinding;
 public class SathanasAI : MonoBehaviour
 {
     private GameObject player;
-    //public Transform target;
     public GameObject bulletPrefab;
 
     public float acceleration = 1f;
@@ -39,6 +38,7 @@ public class SathanasAI : MonoBehaviour
         InvokeRepeating("UpdatePath", 0f, .5f);
         seeker.StartPath(rb.position, player.transform.position, OnPathComplete);
     }
+
     private void UpdatePath()
     {
         if (seeker.IsDone() && !InShootingRange())

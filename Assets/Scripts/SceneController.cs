@@ -20,7 +20,7 @@ public class SceneController : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
     {
         timer -= Time.deltaTime;
         if(timer < 0)

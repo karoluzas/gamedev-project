@@ -9,16 +9,17 @@ public class TutorialWalking : MonoBehaviour
     public GameObject craftingText;
     public GameObject tutorialStation;
     public GameObject tutorialSpaceship;
-    bool afterFirstRoom = false;
-    bool afterSecondRoom = false;
-    bool afterThirdRoom = false;
+    private bool afterFirstRoom = false;
+    private bool afterSecondRoom = false;
+    private bool afterThirdRoom = false;
 
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         if(other.tag == "Player")
         {
             var walkingText = GameObject.Find("WalkingText");
-            GameObject.Destroy(walkingText);
+            Destroy(walkingText);
             
             combatText.SetActive(true);
             tutorialEnemy.SetActive(true);
@@ -26,11 +27,12 @@ public class TutorialWalking : MonoBehaviour
             afterFirstRoom = true;
         }
     }
-    void Update()
+
+    private void Update()
     {
         if(afterFirstRoom && GameObject.Find("Mammon") == null && !afterSecondRoom)
         {
-            GameObject.Destroy(combatText);
+            Destroy(combatText);
 
             gatheringText.SetActive(true);
             tutorialRock.SetActive(true);
@@ -39,7 +41,7 @@ public class TutorialWalking : MonoBehaviour
         }
         if(afterSecondRoom && GameObject.FindWithTag("Rock") == null && !afterThirdRoom)
         {
-            GameObject.Destroy(gatheringText);
+            Destroy(gatheringText);
 
             tutorialStation.SetActive(true);
             tutorialSpaceship.SetActive(true);

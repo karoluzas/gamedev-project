@@ -1,6 +1,6 @@
 ﻿public class SwingSizeUpgrade : SimpleUpgradeBase
 {
-    protected override bool CanUpgrade()
+    protected override bool CanUpgradeUpToMaxValue()
     {
         return meleeController.slashSize < MaxValue - floatingPointAllowedDeviation;
     }
