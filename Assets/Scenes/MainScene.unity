@@ -564,6 +564,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3041728994937200653, guid: 08c4f7f7c22cdac45a88ee57763d9592, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08c4f7f7c22cdac45a88ee57763d9592, type: 3}
 --- !u!1 &316190695
@@ -1372,6 +1376,10 @@ PrefabInstance:
     - target: {fileID: 6411898890120153311, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810574094660472778, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: InventoryUI
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7828182944061342768, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: sceneCamera
@@ -11922,6 +11930,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceshipFixesPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 3940504915932402491, guid: cbdcfd5cddf949744b7276e3211007a7, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940504915932402491, guid: cbdcfd5cddf949744b7276e3211007a7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e1ab88c245fbc784fb6e70b80ee1e505, type: 3}
     - target: {fileID: 6568396565871045895, guid: cbdcfd5cddf949744b7276e3211007a7, type: 3}
       propertyPath: IronNeededForFix
       value: 30

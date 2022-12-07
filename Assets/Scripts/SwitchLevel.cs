@@ -20,6 +20,6 @@ public class SwitchLevel : MonoBehaviour
     {
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(1);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName, LoadSceneMode.Single);            
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 }

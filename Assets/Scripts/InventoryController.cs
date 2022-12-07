@@ -17,6 +17,22 @@ public class InventoryController : MonoBehaviour
     //Enemy Drops
     public int demonBlood = 0;
 
+    private static UIManager _UIManager;
+
+    private void Start()
+    {
+    }
+
+    private void Update()
+    {
+        if(_UIManager == null && UnityEngine.SceneManagement.SceneManager.GetSceneByName("HUDScene").isLoaded)
+        {
+            _UIManager = GameObject.Find("HUD Canvas").GetComponent<UIManager>();
+        }
+        else
+            _UIManager.UpdateValues(new int[] { iron, diamond, obsidian, demonEgg, rottenFlesh, orbsOfAcid, bones, lavaOrbs, demonCore, demonBlood });
+    }
+
     public void AddRocks(int iron, int diamond, int obsidian)
     {
         this.iron += iron;
