@@ -7,6 +7,7 @@ public class HealthController : MonoBehaviour
     public float flashDuration = 0.1f;
     public GameObject enemyDeathSound;
     public GameObject playerDeathSound;
+    public GameObject playerHurtSound;
     public GameObject rockBreakSound;
     private SpriteRenderer sprite;
 
@@ -23,6 +24,10 @@ public class HealthController : MonoBehaviour
             if (gameObject.tag == "Player" || gameObject.tag == "Enemy_Sathanas")
             {
                 StartCoroutine(FlashRed());
+            }
+            if(gameObject.tag == "Player")
+            {
+                Instantiate(playerHurtSound);
             }
             //Hurt Animation/Particles?
         }

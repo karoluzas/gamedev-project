@@ -272,7 +272,8 @@ MonoBehaviour:
   health: 200
   flashDuration: 0.5
   enemyDeathSound: {fileID: 0}
-  playerDeathSound: {fileID: 0}
+  playerDeathSound: {fileID: 3508934177113592304, guid: 3d7ba7fc40e9b744daeb32fe101b1ed9, type: 3}
+  playerHurtSound: {fileID: 7905974694255407319, guid: e30085af872dfd84baa9a54f13f37bd8, type: 3}
   rockBreakSound: {fileID: 0}
 --- !u!58 &6843700351693135038
 CircleCollider2D:
