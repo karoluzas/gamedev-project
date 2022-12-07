@@ -17,7 +17,7 @@ public class InventoryController : MonoBehaviour
     //Enemy Drops
     public int demonBlood = 0;
 
-    private static UIManager _UIManager;
+    private static GameObject InventoryGUI;
 
     private void Start()
     {
@@ -25,12 +25,10 @@ public class InventoryController : MonoBehaviour
 
     private void Update()
     {
-        if(_UIManager == null)
+        if((InventoryGUI = GameObject.Find("InventoryParent")) != null)
         {
-            _UIManager = GameObject.Find("InventoryParent").GetComponent<UIManager>();
+            InventoryGUI.GetComponent<UIManager>().UpdateValues(new int[] { iron, diamond, obsidian, demonEgg, rottenFlesh, orbsOfAcid, bones, lavaOrbs, demonCore, demonBlood });
         }
-        else
-            _UIManager.UpdateValues(new int[] { iron, diamond, obsidian, demonEgg, rottenFlesh, orbsOfAcid, bones, lavaOrbs, demonCore, demonBlood });
     }
 
     public void AddRocks(int iron, int diamond, int obsidian)
