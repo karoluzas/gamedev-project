@@ -22,7 +22,6 @@ public class InventoryController : MonoBehaviour
         this.iron += iron;
         this.diamond += diamond;
         this.obsidian += obsidian;
-        print("WESTERN ZONE" + this.iron + " " + this.diamond + " " + this.obsidian );
     }
 
     public void AddBushes(int demonEgg, int rottenFlesh, int orbsOfAcid)
@@ -30,7 +29,6 @@ public class InventoryController : MonoBehaviour
         this.demonEgg += demonEgg;
         this.rottenFlesh += rottenFlesh;
         this.orbsOfAcid += orbsOfAcid;
-        print("EASTERN ZONE" + this.demonEgg + " " + this.rottenFlesh + " " + this.orbsOfAcid);
     }
 
     public void AddAltairs(int bones, int lavaOrbs, int demonCore)
@@ -38,12 +36,10 @@ public class InventoryController : MonoBehaviour
         this.bones += bones;
         this.lavaOrbs += lavaOrbs;
         this.demonCore += demonCore;
-        print("SOUTHERN ZONE" + this.bones + " " + this.lavaOrbs + " " + this.demonCore );
     }
 
     public void AddDemonBlood(int demonBlood)
     {
         this.demonBlood += demonBlood;
-        print("DEMON BLOOD" + this.demonBlood);
     }
 }

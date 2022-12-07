@@ -17,7 +17,6 @@ public class BulletCollisions : MonoBehaviour
         if (collider.tag == "Enemy_Sathanas")
         {
             Transform damagePopupTransform = Instantiate(damagePopupPrefab, new Vector3(transform.position.x + 0.25f, transform.position.y + Random.Range(-0.1f, 0.1f), 0), Quaternion.identity);
-            print(transform.position.x + " " + transform.position.y);
             DamagePopupScript damagePopup = damagePopupTransform.GetComponent<DamagePopupScript>();
             damagePopup.Setup(damageOnHit);
 
