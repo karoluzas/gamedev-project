@@ -16,8 +16,9 @@ public class MaterialSpawner : MonoBehaviour
         StartCoroutine(SpawnMaterial(materialRespawnTime, materialPrefab));
     }
 
-    private IEnumerator SpawnMaterial(float interval, GameObject material){
-        GameObject newMaterial = Instantiate(material, new Vector3(Random.Range(x1, x2), Random.Range(y1, y2), 0), Quaternion.identity);
+    private IEnumerator SpawnMaterial(float interval, GameObject material)
+    {
+        Instantiate(material, new Vector3(Random.Range(x1, x2), Random.Range(y1, y2), 0), Quaternion.identity);
         yield return new WaitForSeconds(interval);
         StartCoroutine(SpawnMaterial(interval, material));
     }

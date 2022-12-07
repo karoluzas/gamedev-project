@@ -7,21 +7,28 @@ public class DamagePopupScript : MonoBehaviour
     private float disappearTimer = 1f;
     private Color textColor;
 
-    private void Awake(){
+    private void Awake()
+    {
         textMesh = transform.GetComponent<TextMeshPro>();
     }
-    public void Setup(float damageAmount){
+
+    public void Setup(float damageAmount)
+    {
         textMesh.SetText(damageAmount.ToString());
     }
-    private void Update(){
+
+    private void Update()
+    {
         float moveYSpeed = 0.2f;
         transform.position += new Vector3(0, moveYSpeed) * Time.deltaTime;
 
         disappearTimer -= Time.deltaTime;
-        if(disappearTimer <= 0){
+        if(disappearTimer <= 0)
+        {
             textColor.a -= 3f * Time.deltaTime;
             textMesh.color = textColor;
-            if(textColor.a <= 0){
+            if(textColor.a <= 0)
+            {
                 Destroy(gameObject);
             }
         }

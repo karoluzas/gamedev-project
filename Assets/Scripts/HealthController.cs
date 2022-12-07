@@ -9,10 +9,14 @@ public class HealthController : MonoBehaviour
     public GameObject playerDeathSound;
     public GameObject rockBreakSound;
     private SpriteRenderer sprite;
+    private InventoryController inventoryController;
 
     private void Start()
     {
         sprite = gameObject.GetComponent<SpriteRenderer>();
+        var player = GameObject.Find("Player");
+        if (player)
+            inventoryController = player.GetComponent<InventoryController>();
     }
 
     public void DecreaseHealth(float amount)
@@ -30,12 +34,25 @@ public class HealthController : MonoBehaviour
         {
             if(gameObject.tag == "Enemy_Sathanas"){
                 Instantiate(enemyDeathSound);
+                inventoryController.AddDemonBlood(Random.Range(1, 5));
             }
             if(gameObject.tag == "Player"){
                 Instantiate(playerDeathSound);
             }
-            if(gameObject.tag == "Rock" || gameObject.tag == "Demon Egg" || gameObject.tag == "Demon Altar" ){
+            if(gameObject.tag == "Rock")
+            {
                 Instantiate(rockBreakSound);
+                inventoryController.AddRocks(Random.Range(1, 10), Random.Range(0, 2), Random.Range(0, 4));
+            }
+            if (gameObject.tag == "Demon Egg")
+            {
+                Instantiate(rockBreakSound);
+                inventoryController.AddBushes(Random.Range(1, 10), Random.Range(0, 2), Random.Range(0, 4));
+            }
+            if (gameObject.tag == "Demon Altar")
+            {
+                Instantiate(rockBreakSound);
+                inventoryController.AddAltairs(Random.Range(1, 10), Random.Range(0, 2), Random.Range(0, 4));
             }
             Destroy(gameObject, 0.1f);
         }
