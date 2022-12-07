@@ -630,9 +630,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e68e8e108392f746ad09ae0912a3d65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IronNeededForFix: 30
-  LavaOrbsNeededForFix: 10
-  OrbsOfAcidNeededForFix: 2
+  IronNeededForFix: 0
+  LavaOrbsNeededForFix: 0
+  OrbsOfAcidNeededForFix: 0
 --- !u!114 &4197907288879982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,9 +645,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c27ca18e0dc46ac4a9b94f3ccee7cc8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IronNeededForFix: 30
-  BonesNeededForFix: 20
-  DiamondNeededForFix: 3
+  IronNeededForFix: 0
+  BonesNeededForFix: 0
+  DiamondNeededForFix: 0
 --- !u!114 &8728721523037531952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,9 +660,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a3cf7da6228c24bbeb652c9ffcb04c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IronNeededForFix: 20
-  ObsidianNeededForFix: 1
-  DemonCoreNeededForFix: 1
+  IronNeededForFix: 0
+  ObsidianNeededForFix: 0
+  DemonCoreNeededForFix: 0
 --- !u!1 &2121059408656085383
 GameObject:
   m_ObjectHideFlags: 0

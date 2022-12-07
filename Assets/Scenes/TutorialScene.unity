@@ -42497,6 +42497,46 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: iron
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: bones
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: diamond
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: demonEgg
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: lavaOrbs
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: obsidian
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: demonCore
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: demonBlood
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: orbsOfAcid
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: rottenFlesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2254718921059602131, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: m_Name
       value: Gun Asset
@@ -42522,9 +42562,17 @@ PrefabInstance:
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4620934602269236134, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: flashDuration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620934602269236134, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: playerHurtSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620934602269236134, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: playerDeathSound
       value: 
-      objectReference: {fileID: 3508934177113592304, guid: 3d7ba7fc40e9b744daeb32fe101b1ed9, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5613741598075864364, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: sceneCamera
       value: 

@@ -1325,10 +1325,6 @@ PrefabInstance:
       propertyPath: fireCooldown
       value: 0.3
       objectReference: {fileID: 0}
-    - target: {fileID: 4620934602269236134, guid: a7b77d89355717841be7c25584620f1d, type: 3}
-      propertyPath: playerDeathSound
-      value: 
-      objectReference: {fileID: 3508934177113592304, guid: 3d7ba7fc40e9b744daeb32fe101b1ed9, type: 3}
     - target: {fileID: 5613741598075864364, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: sceneCamera
       value: 
@@ -11870,6 +11866,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1491448422}
     m_Modifications:
+    - target: {fileID: 4197907288879982, guid: cbdcfd5cddf949744b7276e3211007a7, type: 3}
+      propertyPath: IronNeededForFix
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197907288879982, guid: cbdcfd5cddf949744b7276e3211007a7, type: 3}
+      propertyPath: BonesNeededForFix
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197907288879982, guid: cbdcfd5cddf949744b7276e3211007a7, type: 3}
+      propertyPath: DiamondNeededForFix
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 627352755819874491, guid: cbdcfd5cddf949744b7276e3211007a7, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -11913,6 +11921,30 @@ PrefabInstance:
     - target: {fileID: 1878538345033603360, guid: cbdcfd5cddf949744b7276e3211007a7, type: 3}
       propertyPath: m_Name
       value: SpaceshipFixesPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568396565871045895, guid: cbdcfd5cddf949744b7276e3211007a7, type: 3}
+      propertyPath: IronNeededForFix
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568396565871045895, guid: cbdcfd5cddf949744b7276e3211007a7, type: 3}
+      propertyPath: LavaOrbsNeededForFix
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568396565871045895, guid: cbdcfd5cddf949744b7276e3211007a7, type: 3}
+      propertyPath: OrbsOfAcidNeededForFix
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728721523037531952, guid: cbdcfd5cddf949744b7276e3211007a7, type: 3}
+      propertyPath: IronNeededForFix
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728721523037531952, guid: cbdcfd5cddf949744b7276e3211007a7, type: 3}
+      propertyPath: ObsidianNeededForFix
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728721523037531952, guid: cbdcfd5cddf949744b7276e3211007a7, type: 3}
+      propertyPath: DemonCoreNeededForFix
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbdcfd5cddf949744b7276e3211007a7, type: 3}
@@ -12428,6 +12460,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1491448422}
     m_Modifications:
+    - target: {fileID: 2408144854976898384, guid: bfbc8a2e9fbdbcd43b02039dc6fe32c6, type: 3}
+      propertyPath: DemonBloodNeededForUpgrade
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408144854976898385, guid: bfbc8a2e9fbdbcd43b02039dc6fe32c6, type: 3}
+      propertyPath: DemonBloodNeededForUpgrade
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408144854976898386, guid: bfbc8a2e9fbdbcd43b02039dc6fe32c6, type: 3}
+      propertyPath: DemonBloodNeededForUpgrade
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408144854976898388, guid: bfbc8a2e9fbdbcd43b02039dc6fe32c6, type: 3}
+      propertyPath: DemonBloodNeededForUpgrade
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408144854976898389, guid: bfbc8a2e9fbdbcd43b02039dc6fe32c6, type: 3}
+      propertyPath: DemonBloodNeededForUpgrade
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408144854976898390, guid: bfbc8a2e9fbdbcd43b02039dc6fe32c6, type: 3}
+      propertyPath: DemonBloodNeededForUpgrade
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408144854976898391, guid: bfbc8a2e9fbdbcd43b02039dc6fe32c6, type: 3}
+      propertyPath: DemonBloodNeededForUpgrade
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2408144854976898472, guid: bfbc8a2e9fbdbcd43b02039dc6fe32c6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -12467,6 +12527,10 @@ PrefabInstance:
     - target: {fileID: 2408144854976898472, guid: bfbc8a2e9fbdbcd43b02039dc6fe32c6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408144854976898475, guid: bfbc8a2e9fbdbcd43b02039dc6fe32c6, type: 3}
+      propertyPath: DemonBloodNeededForUpgrade
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2408144855237427946, guid: bfbc8a2e9fbdbcd43b02039dc6fe32c6, type: 3}
       propertyPath: m_AnchorMax.y
