@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 public class CockpitFix : SpaceshipFixBase
@@ -10,6 +9,9 @@ public class CockpitFix : SpaceshipFixBase
     public GameObject IronValueText;
     public GameObject BonesValueText;
     public GameObject DiamondValueText;
+
+    protected override bool IsFixed => spaceshipFixesManager.IsCockpitFixed;
+    protected override string FixedText => spaceshipFixesManager.CockpitFixedText;
 
     protected override void InitializeValueText()
     {
@@ -23,7 +25,8 @@ public class CockpitFix : SpaceshipFixBase
         inventoryController.iron -= IronNeededForFix;
         inventoryController.bones -= BonesNeededForFix;
         inventoryController.diamond -= DiamondNeededForFix;
-        fixedText = "Cockpit Fixed";
+        spaceshipFixesManager.IsCockpitFixed = true;
+        spaceshipFixesManager.CockpitFixedText = "Cockpit Fixed";
     }
 
     protected override bool CanFix()
