@@ -5,13 +5,14 @@ using UnityEngine.UI;
 public abstract class SpaceshipFixBase : MonoBehaviour
 {
     protected InventoryController inventoryController;
+    protected string fixedText;
+    private bool isFixed = false;
 
     public GameObject FixButton;
 
-    public bool IsFixed { get; private set; } = false;
-    public string FixedText { get; protected set; }
+    protected abstract void InitializeValueText();
 
-    protected void Start()
+    protected virtual void Start()
     {
         GameObject player = GameObject.Find("Player");
         if (player)
@@ -19,18 +20,22 @@ public abstract class SpaceshipFixBase : MonoBehaviour
             var playerController = player.GetComponent<PlayerController>();
             inventoryController = playerController.GetComponent<InventoryController>();
         }
+        InitializeValueText();
     }
 
     protected void Update()
     {
         var button = FixButton.GetComponent<Button>();
-        if (!CanFix() || IsFixed)
+        if (fixedText != null)
+        Debug.Log(fixedText);
+        Debug.Log(isFixed);
+        if (!CanFix() || isFixed)
         {
             button.interactable = false;
-            if (IsFixed)
+            if (isFixed)
             {
                 var textMeshPro = button.GetComponentInChildren<TextMeshProUGUI>();
-                textMeshPro.SetText(FixedText);
+                textMeshPro.SetText(fixedText);
             }
         }
         else
@@ -44,11 +49,17 @@ public abstract class SpaceshipFixBase : MonoBehaviour
         if (CanFix())
         {
             ApplyFix();
-            IsFixed = true;
+            isFixed = true;
         }
     }
 
     protected abstract void ApplyFix();
 
     protected abstract bool CanFix();
+
+    protected void SetText(GameObject textObject, float value)
+    {
+        var textMeshPro = textObject.GetComponent<TextMeshProUGUI>();
+        textMeshPro.SetText($"{value} x");
+    }
 }

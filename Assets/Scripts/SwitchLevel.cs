@@ -16,7 +16,7 @@ public class SwitchLevel : MonoBehaviour
         }
     }
 
-    IEnumerator LoadLevel(int sceneName)
+    private IEnumerator LoadLevel(int sceneName)
     {
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(1);
