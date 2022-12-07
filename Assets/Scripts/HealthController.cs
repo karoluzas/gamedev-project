@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthController : MonoBehaviour
 {
@@ -41,8 +42,12 @@ public class HealthController : MonoBehaviour
                 Instantiate(enemyDeathSound);
                 inventoryController.AddDemonBlood(Random.Range(1, 5));
             }
-            if(gameObject.tag == "Player"){
-                Instantiate(playerDeathSound);
+            if(gameObject.tag == "Player")
+            {
+                if (playerDeathSound)
+                    Instantiate(playerDeathSound);
+                EndGame();
+                return;
             }
             if(gameObject.tag == "Rock")
             {
@@ -60,10 +65,17 @@ public class HealthController : MonoBehaviour
                 inventoryController.AddAltairs(Random.Range(1, 10), Random.Range(0, 2), Random.Range(0, 4));
             }
             Destroy(gameObject, 0.1f);
+ 
         }
     }
 
-    public IEnumerator FlashRed()
+    private void EndGame(){
+        Destroy(gameObject);
+        CarryOverScene.Reset();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0, LoadSceneMode.Single);
+    }
+
+    private IEnumerator FlashRed()
     {
         sprite.color = Color.red;
         yield return new WaitForSeconds(flashDuration);
