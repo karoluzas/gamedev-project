@@ -42389,6 +42389,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3276699521363211520, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: bulletSound
+      value: 
+      objectReference: {fileID: 8149681509281866598, guid: 1b08cc88e2cc4374fb2a1133aa0c5ae8, type: 3}
+    - target: {fileID: 3276699521363211520, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: fireCooldown
       value: 0.3
       objectReference: {fileID: 0}
@@ -42444,6 +42448,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7760234507670275660, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: slashSound
+      value: 
+      objectReference: {fileID: 1834533351015646705, guid: 46982c6884b3c6e41b6850349572f235, type: 3}
     - target: {fileID: 7828182944061342768, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: sceneCamera
       value: 

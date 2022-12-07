@@ -7,6 +7,7 @@ public class MeleeController : MonoBehaviour
 
     public Transform slashPoint;
     public GameObject slashPrefab;
+    public GameObject slashSound;
 
     public float slashCooldown = 0.6f;
     public float slashSize = 1f;
@@ -41,6 +42,7 @@ public class MeleeController : MonoBehaviour
         SetSlashDamageOnHit(slash);
         SetSlashSize(slash);
         SetSlashSpeed(slash);
+        Instantiate(slashSound);
     }
 
     private void SetSlashSpeed(GameObject slash)
