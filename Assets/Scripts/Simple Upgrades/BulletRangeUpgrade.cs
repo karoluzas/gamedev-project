@@ -1,6 +1,6 @@
 ﻿public class BulletRangeUpgrade : SimpleUpgradeBase
 {
-    protected override bool CanUpgrade()
+    protected override bool CanUpgradeUpToMaxValue()
     {
         return rangedController.bulletRange < MaxValue - floatingPointAllowedDeviation;
     }

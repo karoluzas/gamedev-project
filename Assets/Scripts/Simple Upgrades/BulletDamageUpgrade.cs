@@ -1,6 +1,6 @@
 ﻿public class BulletDamageUpgrade : SimpleUpgradeBase
 {
-    protected override bool CanUpgrade()
+    protected override bool CanUpgradeUpToMaxValue()
     {
         return rangedController.damageOnHit < MaxValue - floatingPointAllowedDeviation;
     }
