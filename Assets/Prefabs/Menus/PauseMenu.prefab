@@ -538,8 +538,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8469852817819926412}
-        m_TargetAssemblyTypeName: CarryOverReset, Assembly-CSharp
+      - m_Target: {fileID: 7312797830354676483}
+        m_TargetAssemblyTypeName: PauseMenuReset, Assembly-CSharp
         m_MethodName: Reset
         m_Mode: 1
         m_Arguments:
@@ -550,8 +550,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7312797830354676483}
-        m_TargetAssemblyTypeName: PauseMenuReset, Assembly-CSharp
+      - m_Target: {fileID: 8469852817819926412}
+        m_TargetAssemblyTypeName: CarryOverReset, Assembly-CSharp
         m_MethodName: Reset
         m_Mode: 1
         m_Arguments:
