@@ -8,9 +8,6 @@ public abstract class SimpleUpgradeBase : MonoBehaviour
     protected RangedController rangedController;
     protected MeleeController meleeController;
     protected float floatingPointAllowedDeviation = 0.0001f;
-    
-    public bool MaxUpgradeReached { get; private set; } = false;
-    public string MaxUpgradeReachedText { get; private set; }
 
     public int DemonBloodNeededForUpgrade = 0;
     public float MaxValue = 0f;
