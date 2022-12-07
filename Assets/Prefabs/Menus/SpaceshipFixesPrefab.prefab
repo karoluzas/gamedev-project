@@ -122,9 +122,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SimpleUpgradeBase, Assembly-CSharp
-        m_MethodName: Upgrade
+      - m_Target: {fileID: 4197907288879982}
+        m_TargetAssemblyTypeName: SpaceshipFixBase, Assembly-CSharp
+        m_MethodName: Fix
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -391,9 +391,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SimpleUpgradeBase, Assembly-CSharp
-        m_MethodName: Upgrade
+      - m_Target: {fileID: 6568396565871045895}
+        m_TargetAssemblyTypeName: SpaceshipFixBase, Assembly-CSharp
+        m_MethodName: Fix
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1062,9 +1062,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SimpleUpgradeBase, Assembly-CSharp
-        m_MethodName: Upgrade
+      - m_Target: {fileID: 8728721523037531952}
+        m_TargetAssemblyTypeName: SpaceshipFixBase, Assembly-CSharp
+        m_MethodName: Fix
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

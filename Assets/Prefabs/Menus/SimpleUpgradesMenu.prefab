@@ -2882,7 +2882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4212dc63fdc3c418845bd201c7154f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DemonBloodNeededForUpgrade: 0
+  DemonBloodNeededForUpgrade: 5
   MaxValue: 15
   UpgradeValue: 2.5
 --- !u!114 &2408144854976898389
