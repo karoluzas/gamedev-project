@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -35,7 +34,8 @@ public class EnemySpawner : MonoBehaviour
         StartCoroutine(SpawnEnemy(belphegorInterval, belphegorPrefab));
     }
 
-    private IEnumerator SpawnEnemy(float interval, GameObject enemy){
+    private IEnumerator SpawnEnemy(float interval, GameObject enemy)
+    {
         yield return new WaitForSeconds(interval);
         //GameObject newEnemy = Instantiate(enemy, new Vector3(Random.Range(-5f, 1.5f), Random.Range(-2f, 0.4f), 0), Quaternion.identity);
         GameObject newEnemy = Instantiate(enemy, new Vector3(Random.Range(x1, x2), Random.Range(y1, y2), 0), Quaternion.identity);

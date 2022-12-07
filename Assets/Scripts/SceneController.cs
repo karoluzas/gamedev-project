@@ -23,8 +23,10 @@ public class SceneController : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        if(timer < 0){
-            if(!takingDamage){
+        if(timer < 0)
+        {
+            if(!takingDamage)
+            {
                 StartCoroutine(TakeDamage(damageTimer));
             }
         }
