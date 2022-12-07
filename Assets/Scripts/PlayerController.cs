@@ -6,10 +6,12 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Transform aimTransform;
     public Camera sceneCamera;
+    public GameObject footstepSound;
 
     private Vector2 movement;
     private bool facingRight = true;
     private Vector3 mousePosition;
+    private int footstepTimer = 0;
 
     private void Start()
     {
@@ -35,8 +37,14 @@ public class PlayerController : MonoBehaviour
         float movementHorizontal = Input.GetAxisRaw("Horizontal");
         float movementVertical = Input.GetAxisRaw("Vertical");
 
+        footstepTimer += 1;
+
         movement = new Vector2(movementHorizontal, movementVertical).normalized;
         rb.velocity = movement * moveSpeed;
+        if((rb.velocity.x != 0 || rb.velocity.y != 0) && footstepTimer > 20){
+            Instantiate(footstepSound);
+            footstepTimer = 0;
+        }
 
         if(movementHorizontal > 0 && !facingRight)
         {

@@ -256,6 +256,7 @@ MonoBehaviour:
   rb: {fileID: 658730756912365385}
   aimTransform: {fileID: 4017991304010389345}
   sceneCamera: {fileID: 0}
+  footstepSound: {fileID: 2658185252039167369, guid: c72aacc6c8505a14da7d08e3ab296458, type: 3}
 --- !u!114 &4620934602269236134
 MonoBehaviour:
   m_ObjectHideFlags: 0
