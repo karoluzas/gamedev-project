@@ -24,6 +24,9 @@ public abstract class SpaceshipFixBase : MonoBehaviour
     protected void Update()
     {
         var button = FixButton.GetComponent<Button>();
+        if (FixedText != null)
+        Debug.Log(FixedText);
+        Debug.Log(IsFixed);
         if (!CanFix() || IsFixed)
         {
             button.interactable = false;
