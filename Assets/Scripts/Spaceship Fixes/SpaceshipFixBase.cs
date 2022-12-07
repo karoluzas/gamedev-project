@@ -1,8 +1,12 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class SpaceshipFixBase : MonoBehaviour
 {
     protected InventoryController inventoryController;
+
+    public GameObject FixButton;
 
     public bool IsFixed { get; private set; } = false;
     public string FixedText { get; protected set; }
@@ -14,6 +18,24 @@ public abstract class SpaceshipFixBase : MonoBehaviour
         {
             var playerController = player.GetComponent<PlayerController>();
             inventoryController = playerController.GetComponent<InventoryController>();
+        }
+    }
+
+    protected void Update()
+    {
+        var button = FixButton.GetComponent<Button>();
+        if (!CanFix() || IsFixed)
+        {
+            button.interactable = false;
+            if (IsFixed)
+            {
+                var textMeshPro = button.GetComponentInChildren<TextMeshProUGUI>();
+                textMeshPro.SetText(FixedText);
+            }
+        }
+        else
+        {
+            button.interactable = true;
         }
     }
 
