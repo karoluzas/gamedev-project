@@ -110,7 +110,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 21300000, guid: 9e91ee336ef51434ab1848f7a5044f31, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 396b1d2be2715c041a9e3df4d9986529, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: 9e91ee336ef51434ab1848f7a5044f31, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: acc37c1da35e91c4889c4f4d1923edb8, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -379,7 +379,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 21300000, guid: 9e91ee336ef51434ab1848f7a5044f31, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 396b1d2be2715c041a9e3df4d9986529, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: 9e91ee336ef51434ab1848f7a5044f31, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: acc37c1da35e91c4889c4f4d1923edb8, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -549,6 +549,9 @@ GameObject:
   - component: {fileID: 627352755819874491}
   - component: {fileID: 1061747830545894418}
   - component: {fileID: 8471181422312474897}
+  - component: {fileID: 6568396565871045895}
+  - component: {fileID: 4197907288879982}
+  - component: {fileID: 8728721523037531952}
   m_Layer: 5
   m_Name: SpaceshipFixesPrefab
   m_TagString: Untagged
@@ -615,6 +618,51 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6568396565871045895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878538345033603360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e68e8e108392f746ad09ae0912a3d65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IronNeededForFix: 30
+  LavaOrbsNeededForFix: 10
+  OrbsOfAcidNeededForFix: 2
+--- !u!114 &4197907288879982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878538345033603360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c27ca18e0dc46ac4a9b94f3ccee7cc8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IronNeededForFix: 30
+  BonesNeededForFix: 20
+  DiamondNeededForFix: 3
+--- !u!114 &8728721523037531952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878538345033603360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a3cf7da6228c24bbeb652c9ffcb04c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IronNeededForFix: 20
+  ObsidianNeededForFix: 1
+  DemonCoreNeededForFix: 1
 --- !u!1 &2121059408656085383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,7 +1050,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 21300000, guid: 9e91ee336ef51434ab1848f7a5044f31, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 396b1d2be2715c041a9e3df4d9986529, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: 9e91ee336ef51434ab1848f7a5044f31, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: acc37c1da35e91c4889c4f4d1923edb8, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted

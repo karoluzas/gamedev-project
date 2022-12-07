@@ -1,6 +1,6 @@
 ﻿public class BulletCooldownUpgrade : SimpleUpgradeBase
 {
-    protected override bool CanUpgrade()
+    protected override bool CanUpgradeUpToMaxValue()
     {
         return rangedController.fireCooldown > MaxValue + floatingPointAllowedDeviation;
     }

@@ -1,6 +1,6 @@
 ﻿public class SwingSpeedUpgrade : SimpleUpgradeBase
 {
-    protected override bool CanUpgrade()
+    protected override bool CanUpgradeUpToMaxValue()
     {
         return meleeController.slashSpeed < MaxValue - floatingPointAllowedDeviation;
     }

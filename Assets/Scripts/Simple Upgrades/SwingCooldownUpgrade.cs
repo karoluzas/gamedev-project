@@ -1,6 +1,6 @@
 ﻿public class SwingCooldownUpgrade : SimpleUpgradeBase
 {
-    protected override bool CanUpgrade()
+    protected override bool CanUpgradeUpToMaxValue()
     {
         return meleeController.slashCooldown > MaxValue + floatingPointAllowedDeviation;
     }

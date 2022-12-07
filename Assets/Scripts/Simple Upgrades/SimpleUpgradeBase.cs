@@ -2,11 +2,13 @@
 
 public abstract class SimpleUpgradeBase : MonoBehaviour
 {
+    private InventoryController inventoryController;
     protected RangedController rangedController;
     protected MeleeController meleeController;
     protected float floatingPointAllowedDeviation = 0.0001f;
     
     public bool MaxUpgradeReached { get; private set; } = false;
+    public string MaxUpgradeReachedText { get; private set; }
 
     public int DemonBloodNeededForUpgrade = 0;
     public float MaxValue = 0f;
@@ -20,22 +22,30 @@ public abstract class SimpleUpgradeBase : MonoBehaviour
             var playerController = player.GetComponent<PlayerController>();
             rangedController = playerController.aimTransform.GetComponent<RangedController>();
             meleeController = playerController.aimTransform.GetComponent<MeleeController>();
+            inventoryController = playerController.GetComponent<InventoryController>();
         }
     }
 
     public void Upgrade()
     {
-        if (CanUpgrade())
+        if (IsGatherableAmountEnoughForUpgrade() && CanUpgradeUpToMaxValue())
         {
             ApplyUpgrade();
-        }
-        else
-        {
-            MaxUpgradeReached = true;
+            inventoryController.demonBlood -= DemonBloodNeededForUpgrade;
+            if (!CanUpgradeUpToMaxValue())
+            {
+                MaxUpgradeReached = true;
+                MaxUpgradeReachedText = "Max upgrade reached";
+            }
         }
     }
 
-    protected abstract bool CanUpgrade();
+    private bool IsGatherableAmountEnoughForUpgrade()
+    {
+        return inventoryController.demonBlood >= DemonBloodNeededForUpgrade;
+    }
+
+    protected abstract bool CanUpgradeUpToMaxValue();
     
     protected abstract void ApplyUpgrade();
 }
