@@ -8,6 +8,7 @@ public abstract class SimpleUpgradeBase : MonoBehaviour
     
     public bool MaxUpgradeReached { get; private set; } = false;
 
+    public int DemonBloodNeededForUpgrade = 0;
     public float MaxValue = 0f;
     public float UpgradeValue = 0f;
 

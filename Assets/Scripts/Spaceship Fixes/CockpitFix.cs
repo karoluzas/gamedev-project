@@ -1,21 +1,21 @@
 public class CockpitFix : SpaceshipFixBase
 {
-    public int ironNeededForFix = 0;
-    public int bonesNeededForFix = 0;
-    public int diamondNeededForFix = 0;
+    public int IronNeededForFix = 0;
+    public int BonesNeededForFix = 0;
+    public int DiamondNeededForFix = 0;
 
     protected override void ApplyFix()
     {
-        inventoryController.iron -= ironNeededForFix;
-        inventoryController.bones -= bonesNeededForFix;
-        inventoryController.diamond -= diamondNeededForFix;
+        inventoryController.iron -= IronNeededForFix;
+        inventoryController.bones -= BonesNeededForFix;
+        inventoryController.diamond -= DiamondNeededForFix;
         FixedText = "Cockpit Fixed";
     }
 
     protected override bool CanFix()
     {
-        return inventoryController.iron >= ironNeededForFix
-               && inventoryController.bones >= bonesNeededForFix
-               && inventoryController.diamond >= diamondNeededForFix;
+        return inventoryController.iron >= IronNeededForFix
+               && inventoryController.bones >= BonesNeededForFix
+               && inventoryController.diamond >= DiamondNeededForFix;
     }
 }

@@ -1,21 +1,21 @@
 public class BoostersFix : SpaceshipFixBase
 {
-    public int ironNeededForFix = 0;
-    public int lavaOrbsNeededForFix = 0;
-    public int orbsOfAcidNeededForFix = 0;
+    public int IronNeededForFix = 0;
+    public int LavaOrbsNeededForFix = 0;
+    public int OrbsOfAcidNeededForFix = 0;
 
     protected override void ApplyFix()
     {
-        inventoryController.iron -= ironNeededForFix;
-        inventoryController.lavaOrbs -= lavaOrbsNeededForFix;
-        inventoryController.orbsOfAcid -= orbsOfAcidNeededForFix;
+        inventoryController.iron -= IronNeededForFix;
+        inventoryController.lavaOrbs -= LavaOrbsNeededForFix;
+        inventoryController.orbsOfAcid -= OrbsOfAcidNeededForFix;
         FixedText = "Boosters Fixed";
     }
 
     protected override bool CanFix()
     {
-        return inventoryController.iron >= ironNeededForFix
-               && inventoryController.lavaOrbs >= lavaOrbsNeededForFix
-               && inventoryController.orbsOfAcid >= orbsOfAcidNeededForFix;
+        return inventoryController.iron >= IronNeededForFix
+               && inventoryController.lavaOrbs >= LavaOrbsNeededForFix
+               && inventoryController.orbsOfAcid >= OrbsOfAcidNeededForFix;
     }
 }
