@@ -5,11 +5,10 @@ using UnityEngine.UI;
 public abstract class SpaceshipFixBase : MonoBehaviour
 {
     protected InventoryController inventoryController;
+    protected string fixedText;
+    private bool isFixed = false;
 
     public GameObject FixButton;
-
-    public bool IsFixed { get; private set; } = false;
-    public string FixedText { get; protected set; }
 
     protected void Start()
     {
@@ -24,16 +23,16 @@ public abstract class SpaceshipFixBase : MonoBehaviour
     protected void Update()
     {
         var button = FixButton.GetComponent<Button>();
-        if (FixedText != null)
-        Debug.Log(FixedText);
-        Debug.Log(IsFixed);
-        if (!CanFix() || IsFixed)
+        if (fixedText != null)
+        Debug.Log(fixedText);
+        Debug.Log(isFixed);
+        if (!CanFix() || isFixed)
         {
             button.interactable = false;
-            if (IsFixed)
+            if (isFixed)
             {
                 var textMeshPro = button.GetComponentInChildren<TextMeshProUGUI>();
-                textMeshPro.SetText(FixedText);
+                textMeshPro.SetText(fixedText);
             }
         }
         else
@@ -47,7 +46,7 @@ public abstract class SpaceshipFixBase : MonoBehaviour
         if (CanFix())
         {
             ApplyFix();
-            IsFixed = true;
+            isFixed = true;
         }
     }
 

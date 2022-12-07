@@ -9,7 +9,7 @@ public class EngineFix : SpaceshipFixBase
         inventoryController.iron -= IronNeededForFix;
         inventoryController.obsidian -= ObsidianNeededForFix;
         inventoryController.demonCore -= DemonCoreNeededForFix;
-        FixedText = "Engine Fixed";
+        fixedText = "Engine Fixed";
     }
 
     protected override bool CanFix()

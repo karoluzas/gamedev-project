@@ -9,7 +9,7 @@ public class BoostersFix : SpaceshipFixBase
         inventoryController.iron -= IronNeededForFix;
         inventoryController.lavaOrbs -= LavaOrbsNeededForFix;
         inventoryController.orbsOfAcid -= OrbsOfAcidNeededForFix;
-        FixedText = "Boosters Fixed";
+        fixedText = "Boosters Fixed";
     }
 
     protected override bool CanFix()

@@ -9,7 +9,7 @@ public class CockpitFix : SpaceshipFixBase
         inventoryController.iron -= IronNeededForFix;
         inventoryController.bones -= BonesNeededForFix;
         inventoryController.diamond -= DiamondNeededForFix;
-        FixedText = "Cockpit Fixed";
+        fixedText = "Cockpit Fixed";
     }
 
     protected override bool CanFix()
