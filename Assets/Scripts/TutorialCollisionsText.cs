@@ -11,6 +11,7 @@ public class TutorialCollisionsText : MonoBehaviour
             text.SetActive(true);
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")

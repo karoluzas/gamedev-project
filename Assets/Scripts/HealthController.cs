@@ -39,7 +39,8 @@ public class HealthController : MonoBehaviour
         }
         else
         {
-            if(gameObject.tag == "Enemy_Sathanas"){
+            if(gameObject.tag == "Enemy_Sathanas")
+            {
                 if (enemyDeathSound)
                     Instantiate(enemyDeathSound);
                 inventoryController.AddDemonBlood(Random.Range(1, 5));
@@ -71,7 +72,7 @@ public class HealthController : MonoBehaviour
         }
     }
 
-    public IEnumerator FlashRed()
+    private IEnumerator FlashRed()
     {
         sprite.color = Color.red;
         yield return new WaitForSeconds(flashDuration);

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MaterialSpawner : MonoBehaviour
@@ -11,7 +10,7 @@ public class MaterialSpawner : MonoBehaviour
     [SerializeField]
     private float y1, y2;
     
-    void Start()
+    private void Start()
     {
         StartCoroutine(SpawnMaterial(materialRespawnTime, materialPrefab));
     }

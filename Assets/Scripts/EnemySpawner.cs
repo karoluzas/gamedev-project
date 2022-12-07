@@ -26,7 +26,7 @@ public class EnemySpawner : MonoBehaviour
     private float y1, y2;
     
     
-    void Start()
+    private void Start()
     {
         StartCoroutine(SpawnEnemy(mammonInterval,mammonPrefab));
         StartCoroutine(SpawnEnemy(sathanasInterval, sathanasPrefab));

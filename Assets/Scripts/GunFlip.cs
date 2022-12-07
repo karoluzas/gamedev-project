@@ -9,7 +9,7 @@ public class GunFlip : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
     }
 
-    void Update()
+    private void Update()
     {
         if(transform.eulerAngles.z < 89 || transform.eulerAngles.z > 269)
         {
