@@ -5,24 +5,7 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject InventoryParent;
-    [SerializeField]
     private GameObject[] materialText;
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Tab))
-            InventoryParent.SetActive(true);
-        
-        if(Input.GetKeyUp(KeyCode.Tab)) 
-            InventoryParent.SetActive(false);
-    }
 
     public void UpdateValues(int[] materials)
     {

@@ -25,9 +25,9 @@ public class InventoryController : MonoBehaviour
 
     private void Update()
     {
-        if(_UIManager == null && UnityEngine.SceneManagement.SceneManager.GetSceneByName("HUDScene").isLoaded)
+        if(_UIManager == null)
         {
-            _UIManager = GameObject.Find("HUD Canvas").GetComponent<UIManager>();
+            _UIManager = GameObject.Find("InventoryParent").GetComponent<UIManager>();
         }
         else
             _UIManager.UpdateValues(new int[] { iron, diamond, obsidian, demonEgg, rottenFlesh, orbsOfAcid, bones, lavaOrbs, demonCore, demonBlood });

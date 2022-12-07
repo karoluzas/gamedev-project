@@ -8,6 +8,7 @@ public class MenuDetails
     public GameObject menu;
     public KeyCode keyCodeToToggleMenu;
     public MenuCollisions menuActivationArea;
+    public bool interruptGameplay;
 }
 
 public class MenuManager : MonoBehaviour
@@ -29,10 +30,22 @@ public class MenuManager : MonoBehaviour
                     Resume(menuDetails.menu);
                     pausedMenuKeyCode = null;
                 }
-                else if (pausedMenuKeyCode == null)
+                else if (pausedMenuKeyCode == null && menuDetails.interruptGameplay == true)
                 {
                     Pause(menuDetails.menu);
                     pausedMenuKeyCode = menuDetails.keyCodeToToggleMenu;
+                }
+                else if (menuDetails.interruptGameplay == false)
+                {
+                    Toggle(menuDetails.menu);
+                }
+            }
+            if (Input.GetKeyUp(menuDetails.keyCodeToToggleMenu)
+                && (menuDetails.menuActivationArea == null || menuDetails.menuActivationArea.IsMenuAvailable))
+            {
+                if(menuDetails.menu.activeSelf == true && menuDetails.interruptGameplay == false)
+                {
+                    Toggle(menuDetails.menu);
                 }
             }
         }
@@ -50,6 +63,11 @@ public class MenuManager : MonoBehaviour
         menu.SetActive(true);
         Time.timeScale = 0f;
         IsGamePaused = true;
+    }
+
+    private void Toggle(GameObject menu)
+    {
+        menu.SetActive(!menu.activeSelf);
     }
 
     public static void Reset()
