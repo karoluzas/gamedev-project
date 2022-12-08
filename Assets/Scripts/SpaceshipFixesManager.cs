@@ -9,4 +9,6 @@ public class SpaceshipFixesManager : MonoBehaviour
     public string BoostersFixedText { get; set; }
     public string EngineFixedText { get; set; }
     public string CockpitFixedText { get; set; }
+
+    public bool IsGameWon => IsBoostersFixed && IsEngineFixed && IsCockpitFixed;
 }
