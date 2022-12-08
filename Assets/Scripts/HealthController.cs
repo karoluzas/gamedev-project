@@ -29,6 +29,9 @@ public class HealthController : MonoBehaviour
     {
         if (_healthUIManager == null)
             _healthUIManager = GameObject.Find("HealthParent").GetComponent<HealthUIManager>();
+        if (gameObject.tag == "Player"){
+            _healthUIManager.UpdateHealth((int)health >= 0 ? (int)health : 0);
+        }
     }
 
     public void DecreaseHealth(float amount)
@@ -46,7 +49,7 @@ public class HealthController : MonoBehaviour
                 if (playerHurtSound)
                     Instantiate(playerHurtSound);
 
-                _healthUIManager.UpdateHealth((int)health >= 0 ? (int)health : 0);
+                //_healthUIManager.UpdateHealth((int)health >= 0 ? (int)health : 0);
             }
             //Hurt Animation/Particles?
         }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4387442130469414993}
   - component: {fileID: -2764496208286968476}
   - component: {fileID: 3950840737092364569}
+  - component: {fileID: 4607853395566028860}
   m_Layer: 11
   m_Name: Bullet
   m_TagString: Bullet
@@ -148,3 +149,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitSound: {fileID: 6745024270195877588, guid: 443615fa2bba59c45b8df85655d8458e, type: 3}
   damagePopupPrefab: {fileID: 2846658519630962561, guid: 685460d33db68b94abcc3127772f68f7, type: 3}
+--- !u!114 &4607853395566028860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2992932278811495360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3da206db2ebf4478bb6e31041a3067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
