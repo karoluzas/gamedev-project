@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3240927555731577995}
   - component: {fileID: 9078860275778701752}
   - component: {fileID: 5446272370843866676}
+  - component: {fileID: 25015645121617079}
   m_Layer: 13
   m_Name: DemonAltarGatherable
   m_TagString: Demon Altar
@@ -5002,5 +5003,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a032a12329ec3a14e88c6fe033f1e961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &25015645121617079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3784543286300369769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3da206db2ebf4478bb6e31041a3067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
