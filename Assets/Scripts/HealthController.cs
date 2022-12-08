@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthController : MonoBehaviour
 {
@@ -43,33 +44,42 @@ public class HealthController : MonoBehaviour
             {
                 if (enemyDeathSound)
                     Instantiate(enemyDeathSound);
-                inventoryController.AddDemonBlood(Random.Range(1, 5));
+                inventoryController.AddDemonBlood(Random.Range(4, 5));
             }
             if(gameObject.tag == "Player")
             {
                 if (playerDeathSound)
                     Instantiate(playerDeathSound);
+                EndGame();
+                return;
             }
             if(gameObject.tag == "Rock")
             {
                 if (rockBreakSound)
                     Instantiate(rockBreakSound);
-                inventoryController.AddRocks(Random.Range(1, 10), Random.Range(0, 2), Random.Range(0, 4));
+                inventoryController.AddRocks(Random.Range(5, 10), Random.Range(2, 5), Random.Range(2, 4));
             }
             if (gameObject.tag == "Demon Egg")
             {
                 if (rockBreakSound)
                     Instantiate(rockBreakSound);
-                inventoryController.AddBushes(Random.Range(1, 10), Random.Range(0, 2), Random.Range(0, 4));
+                inventoryController.AddBushes(Random.Range(5, 10), Random.Range(2, 5), Random.Range(2, 4));
             }
             if (gameObject.tag == "Demon Altar")
             {
                 if (rockBreakSound)
                     Instantiate(rockBreakSound);
-                inventoryController.AddAltairs(Random.Range(1, 10), Random.Range(0, 2), Random.Range(0, 4));
+                inventoryController.AddAltairs(Random.Range(5, 10), Random.Range(2, 5), Random.Range(2, 4));
             }
             Destroy(gameObject, 0.1f);
+ 
         }
+    }
+
+    private void EndGame(){
+        Destroy(gameObject);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(7, LoadSceneMode.Single);
+        CarryOverScene.Reset();
     }
 
     private IEnumerator FlashRed()

@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 public class EngineFix : SpaceshipFixBase
@@ -10,6 +9,9 @@ public class EngineFix : SpaceshipFixBase
     public GameObject IronValueText;
     public GameObject ObsidianValueText;
     public GameObject DemonCoreValueText;
+
+    protected override bool IsFixed => spaceshipFixesManager.IsEngineFixed;
+    protected override string FixedText => spaceshipFixesManager.EngineFixedText;
 
     protected override void InitializeValueText()
     {
@@ -23,7 +25,8 @@ public class EngineFix : SpaceshipFixBase
         inventoryController.iron -= IronNeededForFix;
         inventoryController.obsidian -= ObsidianNeededForFix;
         inventoryController.demonCore -= DemonCoreNeededForFix;
-        fixedText = "Engine Fixed";
+        spaceshipFixesManager.IsEngineFixed = true;
+        spaceshipFixesManager.EngineFixedText = "Engine Fixed";
     }
 
     protected override bool CanFix()
