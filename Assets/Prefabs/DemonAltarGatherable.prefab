@@ -153,6 +153,7 @@ MonoBehaviour:
   flashDuration: 0.1
   enemyDeathSound: {fileID: 0}
   playerDeathSound: {fileID: 0}
+  playerHurtSound: {fileID: 0}
   rockBreakSound: {fileID: 8647140846751501247, guid: cae47fefb3ff2704aaeaf7ccc7365327, type: 3}
 --- !u!198 &3240927555731577995
 ParticleSystem:

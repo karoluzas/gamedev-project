@@ -7,13 +7,18 @@ public class CarryOverScene : MonoBehaviour
 
     private void Awake()
     {
+        RemoveAdditionalPlayer();
+        objects.Add(gameObject);
+        DontDestroyOnLoad(gameObject);
+    }
+
+    private void RemoveAdditionalPlayer()
+    {
         GameObject[] playerObjects = GameObject.FindGameObjectsWithTag("Player");
         if (playerObjects.Length > 1)
         {
             Destroy(gameObject);
         }
-        objects.Add(gameObject);
-        DontDestroyOnLoad(gameObject);
     }
 
     public static void Reset()

@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
@@ -13,7 +12,7 @@ public class UIManager : MonoBehaviour
         {
             if(materialText[i] != null)
             {
-                var textMeshRef = (TMPro.TextMeshProUGUI)materialText[i].GetComponent(typeof(TMPro.TextMeshProUGUI));
+                var textMeshRef = materialText[i].GetComponent<TextMeshProUGUI>();
                 textMeshRef.text = materials[i].ToString();
             }
         }

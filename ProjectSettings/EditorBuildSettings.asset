@@ -31,8 +31,5 @@ EditorBuildSettings:
     guid: 4cb3011655672bc498e10f9e3f2cdf5a
   - enabled: 1
     path: Assets/Scenes/WinnerScene.unity
-    guid: 5373fd442c182d749b3cea85d8421254
-  - enabled: 1
-    path: Assets/Scenes/HUDScene.unity
-    guid: 6a9517e62131c9b4cb5e53bb6ffddb24
+    guid: 54da6a1f58d934441b91c890899e44b7
   m_configObjects: {}
