@@ -22,7 +22,9 @@ public class HealthController : MonoBehaviour
         {
             inventoryController = player.GetComponent<InventoryController>();
         }
-        if (player)
+        if (_healthUIManager == null)
+            _healthUIManager = GameObject.Find("HealthParent").GetComponent<HealthUIManager>();
+        if (gameObject.tag == "Player")
         {
             _healthUIManager.UpdateHealth((int)health >= 0 ? (int)health : 0);
         }
