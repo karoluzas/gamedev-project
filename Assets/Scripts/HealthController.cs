@@ -22,14 +22,20 @@ public class HealthController : MonoBehaviour
         {
             inventoryController = player.GetComponent<InventoryController>();
         }
-            
+        if (_healthUIManager == null)
+            _healthUIManager = GameObject.Find("HealthParent").GetComponent<HealthUIManager>();
+        if (gameObject.tag == "Player")
+        {
+            _healthUIManager.UpdateHealth((int)health >= 0 ? (int)health : 0);
+        }
     }
 
     private void Update()
     {
         if (_healthUIManager == null)
             _healthUIManager = GameObject.Find("HealthParent").GetComponent<HealthUIManager>();
-        if (gameObject.tag == "Player"){
+        if (gameObject.tag == "Player")
+        {
             _healthUIManager.UpdateHealth((int)health >= 0 ? (int)health : 0);
         }
     }
@@ -48,8 +54,6 @@ public class HealthController : MonoBehaviour
             {
                 if (playerHurtSound)
                     Instantiate(playerHurtSound);
-
-                //_healthUIManager.UpdateHealth((int)health >= 0 ? (int)health : 0);
             }
             //Hurt Animation/Particles?
         }
