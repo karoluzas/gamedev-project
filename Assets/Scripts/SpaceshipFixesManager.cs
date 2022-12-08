@@ -31,6 +31,7 @@ public class SpaceshipFixesManager : MonoBehaviour
 
     private IEnumerator EndGame()
     {
+        MenuManager.Reset();
         yield return new WaitForSeconds(0.1f);
         Destroy(gameObject);
         UnityEngine.SceneManagement.SceneManager.LoadScene(8, LoadSceneMode.Single);

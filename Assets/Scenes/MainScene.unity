@@ -1310,46 +1310,6 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
-      propertyPath: iron
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
-      propertyPath: bones
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
-      propertyPath: diamond
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
-      propertyPath: demonEgg
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
-      propertyPath: lavaOrbs
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
-      propertyPath: obsidian
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
-      propertyPath: demonCore
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
-      propertyPath: demonBlood
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
-      propertyPath: orbsOfAcid
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
-      propertyPath: rottenFlesh
-      value: 500
-      objectReference: {fileID: 0}
     - target: {fileID: 2254718921059602131, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: m_Name
       value: Gun Asset
