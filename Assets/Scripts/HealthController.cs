@@ -78,7 +78,7 @@ public class HealthController : MonoBehaviour
 
     private void EndGame(){
         Destroy(gameObject);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0, LoadSceneMode.Single);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(7, LoadSceneMode.Single);
         CarryOverScene.Reset();
     }
 
