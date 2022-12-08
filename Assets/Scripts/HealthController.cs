@@ -12,14 +12,23 @@ public class HealthController : MonoBehaviour
     public GameObject rockBreakSound;
     private SpriteRenderer sprite;
     private InventoryController inventoryController;
-    private GameObject healthGUI;
+    private HealthUIManager _healthUIManager;
 
     private void Start()
     {
         sprite = gameObject.GetComponent<SpriteRenderer>();
         var player = GameObject.Find("Player");
         if (player)
+        {
             inventoryController = player.GetComponent<InventoryController>();
+        }
+            
+    }
+
+    private void Update()
+    {
+        if (_healthUIManager == null)
+            _healthUIManager = GameObject.Find("HealthParent").GetComponent<HealthUIManager>();
     }
 
     public void DecreaseHealth(float amount)
@@ -36,6 +45,8 @@ public class HealthController : MonoBehaviour
             {
                 if (playerHurtSound)
                     Instantiate(playerHurtSound);
+
+                _healthUIManager.UpdateHealth((int)health >= 0 ? (int)health : 0);
             }
             //Hurt Animation/Particles?
         }

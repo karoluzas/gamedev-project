@@ -1312,43 +1312,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: iron
-      value: 1000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: bones
-      value: 1000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: diamond
-      value: 1000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: demonEgg
-      value: 1000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: lavaOrbs
-      value: 1000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: obsidian
-      value: 1000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: demonCore
-      value: 1000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: demonBlood
-      value: 1000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: orbsOfAcid
-      value: 1000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1205676469953892238, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: rottenFlesh
-      value: 1000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 2254718921059602131, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: m_Name
@@ -1374,6 +1374,14 @@ PrefabInstance:
       propertyPath: fireCooldown
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 4620934602269236134, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: healthGUI
+      value: 
+      objectReference: {fileID: 4197727004999905425, guid: 6a65c7d718782754fb7c61128cf32a80, type: 3}
+    - target: {fileID: 4620934602269236134, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: rockBreakSound
+      value: 
+      objectReference: {fileID: 8647140846751501247, guid: cae47fefb3ff2704aaeaf7ccc7365327, type: 3}
     - target: {fileID: 5613741598075864364, guid: a7b77d89355717841be7c25584620f1d, type: 3}
       propertyPath: sceneCamera
       value: 
@@ -20865,6 +20873,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 104237314159854957, guid: 326032565be65b04eb9c544ed3868d81, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3800483493896635465, guid: 326032565be65b04eb9c544ed3868d81, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.099990845
@@ -34360,6 +34372,7 @@ GameObject:
   - component: {fileID: 2104044217}
   - component: {fileID: 2104044216}
   - component: {fileID: 2104044218}
+  - component: {fileID: 2104044219}
   m_Layer: 0
   m_Name: AudioSource
   m_TagString: GameMusic
@@ -34487,7 +34500,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2104044215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdfa661f947ce2f45af08451300f0ddf, type: 3}
+  m_Script: {fileID: 11500000, guid: 21f6312e55281e8439686812852fb237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2104044219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104044215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c90a6589484eeab468f53ee9205a6543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &3041728994765200562

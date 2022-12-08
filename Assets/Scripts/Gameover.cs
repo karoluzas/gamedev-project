@@ -14,6 +14,7 @@ public class GameOver : MonoBehaviour
 
     private IEnumerator Timer()
     {
+        
         yield return new WaitForSeconds(3);
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
     }
