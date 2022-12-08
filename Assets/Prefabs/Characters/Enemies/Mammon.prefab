@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c505b11d6aa6c84a95d88df5eec8a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 30
+  health: 25
   flashDuration: 0.1
   enemyDeathSound: {fileID: 2070612908562151909, guid: e4ca724c85d6b6a459af676abb6b6ca9, type: 3}
   playerDeathSound: {fileID: 0}
