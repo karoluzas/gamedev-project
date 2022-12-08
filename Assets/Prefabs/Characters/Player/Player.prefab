@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 6843700351693135038}
   - component: {fileID: 1205676469953892238}
   - component: {fileID: 7810574094660472778}
+  - component: {fileID: 8267360850277267761}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -303,6 +304,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 151264c99b6e5dc468c6db60df0376b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iron: 0
+  diamond: 0
+  obsidian: 0
+  demonEgg: 0
+  rottenFlesh: 0
+  orbsOfAcid: 0
+  bones: 0
+  lavaOrbs: 0
+  demonCore: 0
+  demonBlood: 0
 --- !u!114 &7810574094660472778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,6 +324,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c90a6589484eeab468f53ee9205a6543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8267360850277267761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3185557607124738935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2df41948936b44389df40942e4bce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8820206091230525821

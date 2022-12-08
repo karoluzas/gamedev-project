@@ -359,8 +359,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Karolis V\u0117g\u0117la\n\nDeividas Brazauskas\nDeividas Ku\u010Dinskas\nErnestas
-    \u0160\u010Devinskas\nKarolis V\u0117g\u0117la\n\nKarolis V\u0117g\u0117la\n\nDeividas
-    Ku\u010Dinskas\n\nDeividas Brazauskas\n\nA* Pathfinding Project"
+    \u0160\u010Devinskas\nKarolis V\u0117g\u0117la\n\nErnestas \u0160\u010Dervinskas\n\nKarolis
+    V\u0117g\u0117la\n\nDeividas Ku\u010Dinskas\n\nDeividas Brazauskas\n\nA* Pathfinding
+    Project\nNightCafe Studio"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -423,7 +424,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -150.51837, z: -89.378784, w: -155.24203}
+  m_margin: {x: 0, y: -150.51837, z: -89.378784, w: -289.69354}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -703,8 +704,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Project Manager\n\nProgrammers\n\n\n\n\nArt Designer\n\nSound Designer\n\nMusic
-    Designer\n\nAdditional Assets \n"
+  m_text: "Project Manager\n\nProgrammers\n\n\n\n\nLead Programmer\n\nArt Designer\n\nSound
+    Designer\n\nMusic Designer\n\nAdditional Assets \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -767,7 +768,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -150.51837, z: -89.378784, w: -155.24203}
+  m_margin: {x: 0, y: -150.51837, z: -89.378784, w: -249.61665}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
