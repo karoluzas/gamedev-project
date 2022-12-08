@@ -1,22 +1,20 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Gameover : MonoBehaviour
+public class GameOver : MonoBehaviour
 {
     [SerializeField]
     private int sceneIndex;
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
-        StartCoroutine(timer());
+        StartCoroutine(Timer());
     }
 
-    private IEnumerator timer()
+    private IEnumerator Timer()
     {
         yield return new WaitForSeconds(3);
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
-
     }
 }
