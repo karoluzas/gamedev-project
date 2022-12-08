@@ -11,23 +11,23 @@ public class RenderOrder : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
-        biggerOrder = GetComponent<Renderer>().sortingOrder + 1;
-        smallerOrder = GetComponent<Renderer>().sortingOrder - 1;
+        smallerOrder = GetComponent<Renderer>().sortingOrder;
+        biggerOrder = smallerOrder + 3;
     }
 
     private void Update()
     {
         if (tags.Contains(gameObject.tag))
         {
-            Vector3 currentScale = gameObject.transform.localScale;
-            Vector3 playerScale = player.transform.localScale;
-            if (currentScale.y > playerScale.y)
+            float objectPositionOnYAxis = gameObject.transform.position.y;
+            float playerPositionOnYAxis = player.transform.position.y;
+            if (objectPositionOnYAxis > playerPositionOnYAxis)
             {
-                GetComponent<Renderer>().sortingOrder = biggerOrder;
+                GetComponent<Renderer>().sortingOrder = smallerOrder;
             }
             else
             {
-                GetComponent<Renderer>().sortingOrder = smallerOrder;
+                GetComponent<Renderer>().sortingOrder = biggerOrder;
             }
                 
         }

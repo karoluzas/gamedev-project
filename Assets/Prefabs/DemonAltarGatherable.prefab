@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3240927555731577995}
   - component: {fileID: 9078860275778701752}
   - component: {fileID: 5446272370843866676}
+  - component: {fileID: 548634715164249605}
   m_Layer: 13
   m_Name: DemonAltarGatherable
   m_TagString: Demon Altar
@@ -124,7 +125,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.006644726, y: -0.04134792}
+  m_Offset: {x: -0.006644726, y: -0.01}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -135,7 +136,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.24520302, y: 0.39730418}
+  m_Size: {x: 0.24520302, y: 0.31}
   m_EdgeRadius: 0
 --- !u!114 &5380398066570373776
 MonoBehaviour:
@@ -153,6 +154,7 @@ MonoBehaviour:
   flashDuration: 0.1
   enemyDeathSound: {fileID: 0}
   playerDeathSound: {fileID: 0}
+  playerHurtSound: {fileID: 0}
   rockBreakSound: {fileID: 8647140846751501247, guid: cae47fefb3ff2704aaeaf7ccc7365327, type: 3}
 --- !u!198 &3240927555731577995
 ParticleSystem:
@@ -5001,5 +5003,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a032a12329ec3a14e88c6fe033f1e961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &548634715164249605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3784543286300369769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3da206db2ebf4478bb6e31041a3067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
