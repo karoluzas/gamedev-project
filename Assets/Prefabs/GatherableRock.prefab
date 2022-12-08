@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 938974087952985631}
   - component: {fileID: 7292897890415809729}
   - component: {fileID: 3403525296008662449}
-  - component: {fileID: 3710130795542715571}
   m_Layer: 13
   m_Name: GatherableRock
   m_TagString: Rock
@@ -5005,15 +5004,3 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &3710130795542715571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2649712036075391413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f3da206db2ebf4478bb6e31041a3067, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
