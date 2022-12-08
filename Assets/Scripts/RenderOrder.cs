@@ -4,15 +4,15 @@ using UnityEngine;
 public class RenderOrder : MonoBehaviour
 {
     private GameObject player;
+    private int biggerOrder;
+    private int smallerOrder;
     private string[] tags = new[] { "Upgrade Station", "Demon Altar", "Spaceship", "Rock", "Demon Egg" };
-    private int biggerLayer;
-    private int smallerLayer;
 
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
-        biggerLayer = gameObject.layer + 1;
-        smallerLayer = gameObject.layer - 1;
+        biggerOrder = GetComponent<Renderer>().sortingOrder + 1;
+        smallerOrder = GetComponent<Renderer>().sortingOrder - 1;
     }
 
     private void Update()
@@ -23,7 +23,11 @@ public class RenderOrder : MonoBehaviour
             Vector3 playerScale = player.transform.localScale;
             if (currentScale.y > playerScale.y)
             {
-                gameObject.layer += 1;
+                GetComponent<Renderer>().sortingOrder = biggerOrder;
+            }
+            else
+            {
+                GetComponent<Renderer>().sortingOrder = smallerOrder;
             }
                 
         }
