@@ -12,15 +12,20 @@ public class SpaceshipFixesManager : MonoBehaviour
     public string EngineFixedText { get; set; }
     public string CockpitFixedText { get; set; }
 
+    public bool IgnoreGameWon = false;
+
     private bool IsGameWon => IsBoostersFixed && IsEngineFixed && IsCockpitFixed;
     private bool GameIsInEndingProcess = false;
 
     private void Update()
     {
-        if (IsGameWon && !GameIsInEndingProcess)
+        if (!IgnoreGameWon)
         {
-            GameIsInEndingProcess = true;
-            StartCoroutine(EndGame());
+            if (IsGameWon && !GameIsInEndingProcess)
+            {
+                GameIsInEndingProcess = true;
+                StartCoroutine(EndGame());
+            }
         }
     }
 

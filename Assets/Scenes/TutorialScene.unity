@@ -211,6 +211,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 104237314159854957, guid: 326032565be65b04eb9c544ed3868d81, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4877659157252441121, guid: 326032565be65b04eb9c544ed3868d81, type: 3}
       propertyPath: menus.Array.size
       value: 4
@@ -43553,6 +43557,10 @@ PrefabInstance:
       propertyPath: sceneCamera
       value: 
       objectReference: {fileID: 1879747244}
+    - target: {fileID: 8267360850277267761, guid: a7b77d89355717841be7c25584620f1d, type: 3}
+      propertyPath: IgnoreGameWon
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7810574094660472778, guid: a7b77d89355717841be7c25584620f1d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a7b77d89355717841be7c25584620f1d, type: 3}
