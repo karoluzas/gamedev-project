@@ -9,7 +9,6 @@ public class Gameover : MonoBehaviour
     void Start()
     {
         StartCoroutine(timer());
-
     }
 
     private IEnumerator timer()
