@@ -13,6 +13,7 @@ TagManager:
   - Slash
   - Demon Egg
   - Spaceship
+  - GameMusic
   layers:
   - Default
   - TransparentFX

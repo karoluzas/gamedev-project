@@ -17,6 +17,20 @@ public class InventoryController : MonoBehaviour
     //Enemy Drops
     public int demonBlood = 0;
 
+    private static GameObject InventoryGUI;
+
+    private void Start()
+    {
+    }
+
+    private void Update()
+    {
+        if((InventoryGUI = GameObject.Find("InventoryParent")) != null)
+        {
+            InventoryGUI.GetComponent<UIManager>().UpdateValues(new int[] { iron, diamond, obsidian, demonEgg, rottenFlesh, orbsOfAcid, bones, lavaOrbs, demonCore, demonBlood });
+        }
+    }
+
     public void AddRocks(int iron, int diamond, int obsidian)
     {
         this.iron += iron;

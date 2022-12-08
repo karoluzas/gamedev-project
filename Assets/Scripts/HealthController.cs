@@ -12,6 +12,7 @@ public class HealthController : MonoBehaviour
     public GameObject rockBreakSound;
     private SpriteRenderer sprite;
     private InventoryController inventoryController;
+    private GameObject healthGUI;
 
     private void Start()
     {
