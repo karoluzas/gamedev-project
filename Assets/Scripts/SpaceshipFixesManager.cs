@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpaceshipFixesManager : MonoBehaviour
 {
@@ -16,7 +17,14 @@ public class SpaceshipFixesManager : MonoBehaviour
     {
         if (IsGameWon)
         {
-
+            EndGame();
         }
+    }
+
+    private void EndGame()
+    {
+        Destroy(gameObject);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(8, LoadSceneMode.Single);
+        CarryOverScene.Reset();
     }
 }
