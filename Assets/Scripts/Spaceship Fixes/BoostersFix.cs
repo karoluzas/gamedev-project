@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 public class BoostersFix : SpaceshipFixBase
@@ -10,6 +9,9 @@ public class BoostersFix : SpaceshipFixBase
     public GameObject IronValueText;
     public GameObject LavaOrbsValueText;
     public GameObject OrbsOfAcidValueText;
+
+    protected override bool IsFixed => spaceshipFixesManager.IsBoostersFixed;
+    protected override string FixedText => spaceshipFixesManager.BoostersFixedText;
 
     protected override void InitializeValueText()
     {
@@ -23,7 +25,8 @@ public class BoostersFix : SpaceshipFixBase
         inventoryController.iron -= IronNeededForFix;
         inventoryController.lavaOrbs -= LavaOrbsNeededForFix;
         inventoryController.orbsOfAcid -= OrbsOfAcidNeededForFix;
-        fixedText = "Boosters Fixed";
+        spaceshipFixesManager.IsBoostersFixed = true;
+        spaceshipFixesManager.BoostersFixedText = "Boosters Fixed";
     }
 
     protected override bool CanFix()
